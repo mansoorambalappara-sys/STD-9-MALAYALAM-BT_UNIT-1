@@ -1,883 +1,747 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="ml" dir="ltr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>നടക്കുന്തോറും തെളിയും വഴികൾ - STD 9 UNIT 1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>നടക്കുന്നതോറും തെളിയും വഴികൾ - STD 9 UNIT 1 മലയാളം</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Quicksand:wght@400;500;600;700&family=Anek+Malayalam:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Anek+Malayalam:wght@400;500;600;700&family=Anek+Malayalam:wght@400;500;600;700;800&family=Anek+Malayalam:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root {
-    --primary: #2E7D32; --secondary: #FF7043; --accent: #FFC107; --blue: #1565C0;
-    --purple: #7B1FA2; --teal: #00897B; --ink: #1B2A2F; --shadow: 0 8px 20px rgba(0,0,0,.15);
-    --radius: 20px;
+:root{--primary:#E65100;--secondary:#7B1FA2;--accent:#FFC107;--blue:#1565C0;--purple:#7B1FA2;--teal:#00897B;--green:#2E7D32;--shadow:0 8px 20px rgba(0,0,0,.15);--radius:20px}
+*{box-sizing:border-box;user-select:none;-webkit-user-select:none;margin:0;padding:0}
+body{background:linear-gradient(180deg,#FFF3E0 0%,#FCE4EC 40%,#fff 70%);min-height:100vh;overflow-x:hidden;color:#263238;font-family:'Anek Malayalam','Anek Malayalam','Segoe UI',sans-serif}
+h1,h2,h3,.hi-title{font-family:'Anek Malayalam','Anek Malayalam',cursive}
+.ml{font-family:'Anek Malayalam',sans-serif;font-weight:600}
+.hi{font-family:'Anek Malayalam','Anek Malayalam',sans-serif}
+#app{position:relative;z-index:1;max-width:1050px;margin:0 auto;min-height:100vh;display:flex;flex-direction:column;padding:15px}
+header{background:rgba(255,255,255,.97);padding:12px 20px;border-radius:var(--radius);box-shadow:var(--shadow);display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;flex-wrap:wrap;gap:10px}
+.logo-area{display:flex;align-items:center;gap:10px;cursor:pointer}
+.logo-area h1{font-size:1.25rem;color:var(--primary);font-weight:800;font-family:'Anek Malayalam','Anek Malayalam',cursive}
+.logo-area .sub{font-size:.85rem;color:#6A1B9A}
+.logo-area span{font-size:.78rem;background:var(--accent);color:#333;padding:3px 10px;border-radius:12px;font-weight:bold}
+.stats-bar{display:flex;align-items:center;gap:15px;background:#FFF9C4;padding:8px 16px;border-radius:30px;border:2px solid #FBC02D;font-weight:bold;font-size:1.05rem}
+.stat-item{display:flex;align-items:center;gap:5px}
+.controls{display:flex;gap:8px}
+.icon-btn{background:#fff;border:2px solid #E0E0E0;width:40px;height:40px;border-radius:50%;display:flex;justify-content:center;align-items:center;font-size:1.1rem;cursor:pointer;box-shadow:0 3px 6px rgba(0,0,0,.1)}
+.icon-btn:hover{transform:scale(1.1)}
+.progress-container{width:100%;background:rgba(255,255,255,.6);height:10px;border-radius:10px;overflow:hidden;margin-bottom:15px;box-shadow:inset 0 2px 4px rgba(0,0,0,.1)}
+.progress-bar{height:100%;width:0%;background:linear-gradient(90deg,#E65100,#FF9800);transition:width .4s ease}
+.screen{display:none;flex-direction:column;align-items:center;width:100%;flex:1;animation:fadeIn .3s ease-in-out}
+.screen.active{display:flex}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.home-card{background:rgba(255,255,255,.95);border-radius:25px;padding:30px 20px;text-align:center;box-shadow:var(--shadow);width:100%;max-width:720px;margin:auto;border:4px solid #fff}
+.main-title{color:#BF360C;font-size:2rem;margin-bottom:6px}
+.sub-title{color:#6A1B9A;font-size:1.2rem;margin-bottom:8px;font-weight:700}
+.author-tag{background:#F3E5F5;color:#6A1B9A;display:inline-block;padding:4px 16px;border-radius:20px;font-size:.9rem;margin-bottom:22px;font-weight:bold}
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;width:100%}
+.btn-menu{padding:16px 18px;border:none;border-radius:20px;font-size:1.02rem;font-weight:bold;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 6px 0 rgba(0,0,0,.2);text-shadow:1px 1px 2px rgba(0,0,0,.3);transition:all .2s;font-family:'Anek Malayalam','Anek Malayalam',cursive}
+.btn-menu:active{transform:translateY(4px);box-shadow:0 2px 0 rgba(0,0,0,.2)}
+.b1{background:linear-gradient(135deg,#FF7043,#E64A19)}.b2{background:linear-gradient(135deg,#AB47BC,#8E24AA)}
+.b3{background:linear-gradient(135deg,#42A5F5,#1565C0)}.b4{background:linear-gradient(135deg,#7E57C2,#5E35B1)}
+.b5{background:linear-gradient(135deg,#26A69A,#00897B)}.b6{background:linear-gradient(135deg,#FFA726,#EF6C00)}
+.b7{background:linear-gradient(135deg,#8D6E63,#6D4C41)}.b8{background:linear-gradient(135deg,#78909C,#546E7A)}
+.b9{background:linear-gradient(135deg,#5C6BC0,#3949AB)}.b10{background:linear-gradient(135deg,#EC407A,#C2185B)}
+.b11{background:linear-gradient(135deg,#8D6E63,#5D4037)}.b12{background:linear-gradient(135deg,#26C6DA,#00ACC1)}
+.b13{background:linear-gradient(135deg,#66BB6A,#2E7D32)}.b14{background:linear-gradient(135deg,#FFB300,#FF8F00)}
+.b15{background:linear-gradient(135deg,#5C6BC0,#303F9F)}.b16{background:linear-gradient(135deg,#EF5350,#C62828)}
+.b17{background:linear-gradient(135deg,#AB47BC,#6A1B9A)}.b18{background:linear-gradient(135deg,#26A69A,#00695C)}
+.lesson-pick{background:#fff;border:3px solid #FFCC80;border-radius:18px;padding:18px 22px;margin-bottom:14px;cursor:pointer;display:flex;align-items:center;gap:14px;box-shadow:0 4px 12px rgba(0,0,0,.08);transition:all .2s;width:100%;max-width:520px}
+.lesson-pick:hover{border-color:#E65100;background:#FFF3E0;transform:translateY(-3px)}
+.lesson-pick .lp-emoji{font-size:2.4rem}
+.lesson-pick .lp-title{font-size:1.25rem;font-weight:800;color:#BF360C;font-family:'Anek Malayalam','Anek Malayalam',cursive}
+.lesson-pick .lp-sub{font-size:.9rem;color:#546E7A}
+.section-header{width:100%;display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;background:#fff;padding:12px 20px;border-radius:15px;box-shadow:var(--shadow);flex-wrap:wrap;gap:10px}
+.section-title{font-size:1.15rem;color:var(--primary);font-weight:800;display:flex;align-items:center;gap:8px;font-family:'Anek Malayalam','Anek Malayalam',cursive}
+.back-btn{background:linear-gradient(135deg,#607D8B,#546E7A);color:#fff;border:none;padding:8px 20px;border-radius:20px;font-weight:bold;cursor:pointer}
+.content-box{background:rgba(255,255,255,.97);border-radius:22px;padding:24px;box-shadow:var(--shadow);width:100%;max-width:850px;margin:0 auto 20px;border:3px solid #fff}
+.cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:18px;width:100%;padding-bottom:20px}
+.word-card{background:#fff;border-radius:20px;padding:14px;text-align:center;box-shadow:var(--shadow);border:3px solid #fff;transition:all .3s;cursor:pointer;display:flex;flex-direction:column;align-items:center}
+.word-card:hover{transform:translateY(-6px);border-color:var(--accent)}
+.word-card.playing{animation:pulseCard .6s infinite alternate;border-color:var(--primary);background:#FFF8E1}
+@keyframes pulseCard{from{transform:scale(1)}to{transform:scale(1.05)}}
+.card-emoji{font-size:3.4rem;margin-bottom:8px}
+.word-eng{font-size:1.45rem;margin-bottom:6px;font-weight:800;color:#BF360C;font-family:'Anek Malayalam','Anek Malayalam',cursive}
+.word-meaning{font-size:.95rem;color:#555;margin-bottom:8px}
+.replay-btn{background:#F3E5F5;color:#6A1B9A;border:none;padding:5px 12px;border-radius:15px;font-size:.85rem;font-weight:bold;cursor:pointer}
+.story-title-wrap{text-align:center;width:100%;margin-bottom:18px}
+.story-title{text-align:center;font-size:1.5rem;margin-bottom:16px;background:linear-gradient(90deg,#FFCC80,#FF8A65);display:inline-block;padding:8px 30px;border-radius:30px;color:#BF360C!important;font-family:'Anek Malayalam','Anek Malayalam',cursive}
+.story-para.reading-now{background:linear-gradient(90deg,#FFF8E1,#E8F5E9);box-shadow:0 0 0 3px #43A047;transform:scale(1.01)}
+.story-para{background:#FFF3E0;border-left:5px solid var(--primary);padding:14px 18px;border-radius:14px;margin-bottom:14px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.story-para p{font-size:1.25rem;line-height:2;flex:1;min-width:250px;font-family:'Anek Malayalam','Anek Malayalam',sans-serif}
+.mini-play{background:var(--blue);color:#fff;border:none;width:42px;height:42px;border-radius:50%;cursor:pointer;font-size:1.1rem;flex-shrink:0}
+.read-all-btn{background:linear-gradient(135deg,#FF7043,#E64A19);color:#fff;border:none;padding:12px 30px;border-radius:25px;font-size:1.05rem;font-weight:bold;cursor:pointer;margin-bottom:18px;box-shadow:0 4px 10px rgba(230,74,25,.4);font-family:'Anek Malayalam','Anek Malayalam',cursive}
+.activity-block{background:#FFF8E1;border:2px solid #FFE082;border-radius:18px;padding:20px;margin-bottom:22px;width:100%}
+.activity-heading{color:#E65100;font-size:1.2rem;margin-bottom:14px;font-weight:800;font-family:'Anek Malayalam','Anek Malayalam',cursive}
+.activity-sub{font-size:.98rem;color:#455A64;margin-bottom:10px}
+.activity-line{font-size:1.15rem;line-height:2.1;margin-bottom:10px;font-family:'Anek Malayalam',sans-serif}
+.fillbox{border:2px solid #90A4AE;border-radius:10px;padding:6px 10px;font-size:1.05rem;font-family:'Anek Malayalam','Anek Malayalam',sans-serif;font-weight:700;color:#BF360C;min-width:110px;text-align:center;background:#fff}
+select.fillbox{cursor:pointer}
+.check-btn{background:var(--primary);color:#fff;border:none;padding:8px 22px;border-radius:20px;font-weight:bold;cursor:pointer;margin-top:8px;font-family:'Anek Malayalam',cursive}
+.word-bank{background:#F3E5F5;border-radius:12px;padding:10px 16px;margin-bottom:14px;font-size:1.05rem;display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+.word-bank span{background:#fff;padding:5px 14px;border-radius:14px;border:2px solid #CE93D8}
+.result-msg{font-weight:bold;margin-top:8px;font-size:1.02rem}
+.model-answer-box{background:#F3E5F5;border:2px solid #CE93D8;border-radius:14px;padding:14px 18px;margin-top:10px;font-size:1.1rem;line-height:1.9;display:none;font-family:'Anek Malayalam',sans-serif}
+.reveal-model-btn{background:var(--purple);color:#fff;border:none;padding:8px 20px;border-radius:18px;font-size:.9rem;cursor:pointer;margin-top:6px;font-family:'Anek Malayalam',cursive;font-weight:bold}
+.write-box{width:100%;min-height:80px;border:2px dashed #90A4AE;border-radius:12px;padding:10px 14px;font-size:1.1rem;font-family:'Anek Malayalam','Anek Malayalam',sans-serif;margin-bottom:10px;resize:vertical}
+.game-box{background:rgba(255,255,255,.95);border-radius:25px;padding:25px;box-shadow:var(--shadow);width:100%;max-width:750px;margin:0 auto;display:flex;flex-direction:column;align-items:center;border:4px solid #fff}
+.game-instruction{font-size:1.1rem;color:#37474F;margin-bottom:20px;text-align:center;background:#FCE4EC;padding:8px 20px;border-radius:20px;font-weight:bold;font-family:'Anek Malayalam','Anek Malayalam',cursive}
+.g1-image-box{width:170px;height:170px;background:#F5F5F5;border-radius:20px;display:flex;justify-content:center;align-items:center;margin-bottom:22px;border:3px solid #E0E0E0;padding:10px;font-size:5rem}
+.options-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;width:100%;max-width:480px}
+.img-opt{font-size:3rem!important;min-height:100px}
+.meaning-box{font-size:1.4rem;font-weight:800;color:#6A1B9A;background:#F3E5F5;padding:16px 30px;border-radius:20px;margin-bottom:22px;border:2px dashed #AB47BC;text-align:center}
+.listen-btn-big{background:linear-gradient(135deg,#5E35B1,#4527A0);color:#fff;border:none;width:96px;height:96px;border-radius:50%;font-size:2.6rem;cursor:pointer;margin-bottom:22px;box-shadow:0 6px 0 #311B92}
+.listen-btn-big:active{transform:translateY(4px);box-shadow:0 2px 0 #311B92}
+.option-btn{background:#fff;border:3px solid #FFAB91;padding:14px;border-radius:18px;font-size:1.25rem;font-weight:bold;color:#BF360C!important;cursor:pointer;box-shadow:0 4px 0 #FF8A65;font-family:'Anek Malayalam','Anek Malayalam',cursive}
+.option-btn:hover{background:#FBE9E7}
+.option-btn.correct{background:#C8E6C9!important;border-color:#4CAF50!important;color:#2E7D32!important;box-shadow:0 4px 0 #388E3C!important}
+.option-btn.wrong{background:#FFCDD2!important;border-color:#F44336!important;color:#C62828!important;box-shadow:0 4px 0 #D32F2F!important}
+.match-container{display:flex;justify-content:space-between;width:100%;gap:18px;margin-bottom:18px}
+.match-column{display:flex;flex-direction:column;gap:14px;flex:1}
+.match-item{background:#fff;border:3px solid #CFD8DC;border-radius:15px;padding:10px;display:flex;align-items:center;justify-content:center;min-height:78px;cursor:pointer}
+.match-item:hover{border-color:var(--blue);background:#E3F2FD}
+.match-item.selected{border-color:var(--accent);background:#FFF8E1}
+.match-item.matched{border-color:#4CAF50;background:#E8F5E9;opacity:.6;pointer-events:none}
+.match-item.wrong{border-color:#F44336!important;background:#FFCDD2!important}
+.match-item .text-thumb{font-size:1.2rem;font-weight:bold;font-family:'Anek Malayalam','Anek Malayalam',cursive;text-align:center}
+.missing-word-display{font-size:2rem;font-weight:bold;color:#BF360C!important;background:#FFF3E0;padding:14px 36px;border-radius:20px;margin-bottom:22px;border:2px dashed #FF7043;font-family:'Anek Malayalam',cursive;letter-spacing:3px}
+.letters-options{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+.letter-btn{background:#fff;border:3px solid #BA68C8;width:64px;height:64px;border-radius:50%;font-size:1.5rem;font-weight:bold;color:#6A1B9A!important;display:flex;justify-content:center;align-items:center;cursor:pointer;box-shadow:0 5px 0 #9C27B0;font-family:'Anek Malayalam',cursive}
+.target-pic{font-size:5rem;margin-bottom:14px;text-align:center}
+.drop-slots{display:flex;gap:8px;margin-bottom:22px;flex-wrap:wrap;justify-content:center}
+.letter-slot{width:52px;height:52px;border:3px dashed #B0BEC5;background:#ECEFF1;border-radius:14px;display:flex;justify-content:center;align-items:center;font-size:1.4rem;font-weight:bold;color:#BF360C;font-family:'Anek Malayalam',cursive}
+.scrambled-letters{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.tile-btn{width:50px;height:50px;background:#FFE082;border:2px solid #FFB300;border-radius:12px;font-size:1.35rem;font-weight:bold;color:#E65100!important;display:flex;justify-content:center;align-items:center;cursor:pointer;box-shadow:0 4px 0 #FFA000;font-family:'Anek Malayalam',cursive}
+.quiz-q{background:#fff;border-radius:16px;padding:16px 20px;margin-bottom:16px;box-shadow:0 3px 10px rgba(0,0,0,.08);border-left:5px solid var(--blue)}
+.quiz-q .qtext{font-size:1.15rem;margin-bottom:12px;font-weight:bold;font-family:'Anek Malayalam',sans-serif}
+.quiz-opts{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.quiz-opt{background:#F5F5F5;border:2px solid #E0E0E0;border-radius:12px;padding:10px;cursor:pointer;text-align:center;font-size:1.05rem;font-family:'Anek Malayalam',sans-serif}
+.quiz-opt.picked{border-color:var(--blue);background:#E3F2FD}
+.quiz-opt.correct-ans{border-color:#4CAF50;background:#C8E6C9}
+.quiz-opt.wrong-ans{border-color:#F44336;background:#FFCDD2}
+.submit-quiz-btn{background:linear-gradient(135deg,#FF7043,#E64A19);color:#fff;border:none;padding:14px 40px;border-radius:25px;font-size:1.1rem;font-weight:bold;cursor:pointer;margin-top:10px;box-shadow:0 4px 10px rgba(230,74,25,.4);font-family:'Anek Malayalam',cursive}
+.quiz-score-box{background:#FFF9C4;border:2px solid #FBC02D;border-radius:18px;padding:18px;text-align:center;font-size:1.2rem;font-weight:bold;margin-bottom:18px}
+table.vocab-table{width:100%;border-collapse:collapse}
+.vocab-table th{background:var(--primary);color:#fff;padding:10px;font-size:.95rem;font-family:'Anek Malayalam',cursive}
+.vocab-table td{padding:10px;border-bottom:1px solid #eee;font-size:1.1rem;text-align:center;font-family:'Anek Malayalam',sans-serif}
+.vocab-table tr:nth-child(even){background:#FAFAFA}
+.vocab-emoji{font-size:1.6rem}
+.modal-overlay{position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,.7);z-index:100;display:none;justify-content:center;align-items:center;padding:20px}
+.modal-overlay.active{display:flex}
+.reward-card{background:#fff;border-radius:30px;padding:30px;text-align:center;max-width:480px;width:100%;box-shadow:0 20px 40px rgba(0,0,0,.3);border:5px solid #FFD54F}
+.reward-icon{font-size:3.6rem;margin-bottom:10px}
+.reward-title{color:#BF360C;font-size:1.9rem;margin-bottom:8px}
+.reward-subtitle{color:#6A1B9A;font-size:1.1rem;margin-bottom:18px}
+.primary-action-btn{background:linear-gradient(135deg,#FF7043,#E64A19);color:#fff;border:none;padding:12px 28px;border-radius:25px;font-size:1.05rem;font-weight:bold;cursor:pointer;font-family:'Anek Malayalam',cursive}
+.instructions-list{text-align:left;line-height:1.9;font-size:1rem;background:#F5F5F5;padding:20px;border-radius:15px;width:100%}
+.instructions-list li{margin-bottom:8px}
+.qa-line{background:#FFF3E0;border-radius:12px;padding:10px 16px;margin-bottom:10px}
+.qa-line .q{font-weight:bold;color:#BF360C!important;font-family:'Anek Malayalam',sans-serif}
+.qa-line .a{display:none;color:#6A1B9A!important;margin-top:6px;font-family:'Anek Malayalam',sans-serif}
+.qa-line .a.show{display:block}
+.reveal-btn{background:var(--purple);color:#fff;border:none;padding:6px 16px;border-radius:14px;font-size:.85rem;cursor:pointer;margin-top:6px;font-family:'Anek Malayalam',cursive}
+.qp-section{background:#FFF3E0;border:2px solid #FFCC80;border-radius:16px;padding:18px;margin-bottom:18px}
+.qp-heading{color:#BF360C;font-size:1.1rem;font-weight:800;margin-bottom:12px;border-bottom:2px dashed #FFCC80;padding-bottom:6px;font-family:'Anek Malayalam','Anek Malayalam',cursive}
+.qp-q{background:#fff;border-radius:12px;padding:12px 16px;margin-bottom:12px;border-left:4px solid var(--teal);font-size:1.05rem;line-height:1.8;font-family:'Anek Malayalam',sans-serif}
+.qp-q .qnum{font-weight:bold;color:var(--teal)}
+.bio-card{background:#FFF3E0;border-radius:16px;padding:16px;margin-bottom:14px;border:2px solid #FFCC80}
+.bio-row{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px dashed #FFE0B2;flex-wrap:wrap}
+.bio-label{font-weight:bold;color:#BF360C;min-width:150px}
+.bio-photo{font-size:3.4rem;text-align:center;margin-bottom:10px}
+.seq-item{background:#fff;border:2px solid #CFD8DC;border-radius:12px;padding:10px 14px;margin-bottom:8px;cursor:pointer;display:flex;align-items:center;gap:10px;font-family:'Anek Malayalam',sans-serif}
+.seq-item.selected{border-color:var(--accent);background:#FFF8E1}
+.seq-item.correct{border-color:#4CAF50;background:#E8F5E9}
+.seq-num{background:var(--blue);color:#fff;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:bold}
+.progress-big-bar{width:100%;height:22px;background:#ECEFF1;border-radius:12px;overflow:hidden;margin-bottom:18px;border:2px solid #CFD8DC}
+.progress-big-fill{height:100%;background:linear-gradient(90deg,#FF7043,#FFB74D);text-align:center;color:#fff;font-weight:800;font-size:.85rem;line-height:22px;transition:width .5s ease}
+.diary-page{background:#FFFDE7;border:2px dashed #FBC02D;border-radius:14px;padding:16px;margin-bottom:12px}
+.letter-page{background:#F3E5F5;border:2px dashed #CE93D8;border-radius:14px;padding:16px;margin-bottom:12px}
+.poster-box{background:linear-gradient(135deg,#FFF3E0,#FFE0B2);border:3px solid #FFCC80;border-radius:16px;padding:18px;text-align:center;margin-bottom:14px}
+.script-line{background:#fff;border-radius:10px;padding:8px 14px;margin-bottom:8px;border-left:4px solid #7E57C2;font-family:'Anek Malayalam',sans-serif;font-size:1.08rem}
+.script-line b{color:#5E35B1}
+.choose-wrap{display:flex;flex-direction:column;align-items:center;width:100%;max-width:560px;margin:0 auto}
+.unit-qp-paper{background:#fff;border:2px solid #333;border-radius:8px;padding:28px 32px;font-family:'Anek Malayalam','Times New Roman',serif;color:#111;line-height:1.7}
+.unit-qp-paper .qp-school{text-align:center;font-size:1.05rem;font-weight:bold;margin-bottom:4px}
+.unit-qp-paper .qp-title{text-align:center;font-size:1.35rem;font-weight:bold;margin:8px 0 4px;text-decoration:underline}
+.unit-qp-paper .qp-meta{display:flex;justify-content:space-between;flex-wrap:wrap;font-size:.95rem;margin:12px 0 18px;border-bottom:2px solid #333;padding-bottom:10px}
+.unit-qp-paper .qp-act{margin-bottom:22px}
+.unit-qp-paper .qp-act-h{font-weight:bold;font-size:1.08rem;margin-bottom:8px;border-left:4px solid #E65100;padding-left:10px}
+.unit-qp-paper .qp-act p,.unit-qp-paper .qp-act li{font-size:1.05rem;margin-bottom:6px}
+.unit-qp-paper .qp-lines{border-bottom:1px dotted #999;height:22px;margin:4px 0}
+.unit-qp-paper .qp-footer{text-align:center;margin-top:24px;font-size:.9rem;border-top:1px solid #999;padding-top:10px}
+.color-palette{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin:12px 0}
+.color-drop{width:56px;height:56px;border-radius:50%;cursor:pointer;border:3px solid #fff;box-shadow:0 3px 8px rgba(0,0,0,.2)}
+.color-drop.sel{outline:3px solid #333}
+.paint-canvas{width:160px;height:180px;border:3px solid #CFD8DC;border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:5rem;cursor:pointer;background:#fff}
+.balloon{width:110px;height:110px;border-radius:50% 50% 50% 50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:1.15rem;cursor:pointer;box-shadow:0 6px 0 rgba(0,0,0,.15);font-family:'Anek Malayalam',cursive}
+.balloon.found{opacity:.45;transform:scale(.92)}
+.poem-highlight{font-size:1.2rem;line-height:2.2;font-family:'Anek Malayalam',sans-serif}
+.poem-highlight .hit{background:#FFF59D;border-radius:6px;padding:0 4px;font-weight:800}
+@media print{
+header,.progress-container,.section-header,.controls,.btn-menu,.home-card .menu-grid,.listen-btn-big,.reveal-model-btn,.reveal-btn,.check-btn,.submit-quiz-btn,.replay-btn,.mini-play,.read-all-btn,.no-print{display:none!important}
+body{background:#fff!important}
+.content-box{box-shadow:none;border:none;max-width:100%!important;padding:0!important}
+.model-answer-box{display:block!important}
+.unit-qp-paper{border:none;padding:0;box-shadow:none}
+#unitQPScreen.screen{display:flex!important}
+#unitQPScreen .section-header{display:none!important}
 }
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body {
-    background: linear-gradient(180deg, #E8F5E9 0%, #FFF8E1 42%, #fff 72%);
-    min-height: 100vh; overflow-x: hidden; color: var(--ink);
-    font-family: 'Quicksand', 'Segoe UI', sans-serif; direction: ltr; text-align: left;
-}
-h1, h2, h3 { font-family: 'Baloo 2', cursive; }
-.ml { font-family: 'Anek Malayalam', sans-serif; font-weight: 600; line-height: 1.85; }
-
-#app { position: relative; z-index: 1; max-width: 1080px; margin: 0 auto; min-height: 100vh; display: flex; flex-direction: column; padding: 15px; }
-
-header {
-    background: rgba(255,255,255,.97); padding: 12px 20px; border-radius: var(--radius);
-    box-shadow: var(--shadow); display: flex; justify-content: space-between; align-items: center;
-    margin-bottom: 15px; flex-wrap: wrap; gap: 10px; border: 2px solid #C8E6C9;
-}
-.logo-area { display: flex; align-items: center; gap: 10px; cursor: pointer; }
-.logo-area h1 { font-size: 1.22rem; color: var(--primary); font-weight: 800; }
-.logo-area .sub { font-size: 0.82rem; color: #0277BD; }
-.logo-area span { font-size: 0.76rem; background: var(--accent); color: #333; padding: 3px 10px; border-radius: 12px; font-weight: bold; }
-.stats-bar { display: flex; align-items: center; gap: 15px; background: #FFF9C4; padding: 8px 16px; border-radius: 30px; border: 2px solid #FBC02D; font-weight: bold; font-size: 1.05rem; }
-.stat-item { display: flex; align-items: center; gap: 5px; }
-.controls { display: flex; gap: 8px; }
-.icon-btn { background: #fff; border: 2px solid #E0E0E0; width: 40px; height: 40px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 1.1rem; cursor: pointer; box-shadow: 0 3px 6px rgba(0,0,0,.1); transition: 0.2s; }
-.icon-btn:hover { transform: scale(1.08); border-color: var(--primary); }
-
-.screen { display: none; flex-direction: column; align-items: center; width: 100%; flex: 1; animation: fadeIn .3s ease; }
-.screen.active { display: flex; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-
-.home-card { background: rgba(255,255,255,.96); border-radius: 25px; padding: 28px 20px; text-align: center; box-shadow: var(--shadow); width: 100%; max-width: 860px; margin: auto; border: 4px solid #fff; }
-.main-title { color: #1B5E20; font-size: 1.85rem; margin-bottom: 6px; }
-.sub-title { color: #D84315; font-size: 1.12rem; margin-bottom: 8px; font-weight: 700; }
-.author-tag { background: #E1F5FE; color: #01579B; display: inline-block; padding: 6px 18px; border-radius: 20px; font-size: 1rem; margin-bottom: 25px; font-weight: bold; border: 1px dashed #29B6F6; }
-
-.menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; width: 100%; }
-.btn-menu { padding: 15px 16px; border: none; border-radius: 18px; font-size: 1rem; font-weight: 700; color: #fff; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; box-shadow: 0 6px 0 rgba(0,0,0,.2); transition: all .2s; font-family: 'Anek Malayalam', 'Baloo 2', cursive; text-shadow: 1px 1px 2px rgba(0,0,0,.3); }
-.btn-menu:active { transform: translateY(4px); box-shadow: 0 2px 0 rgba(0,0,0,.2); }
-
-.b1 { background: linear-gradient(135deg, #4CAF50, #2E7D32); }
-.b2 { background: linear-gradient(135deg, #FF7043, #E64A19); }
-.b3 { background: linear-gradient(135deg, #1E88E5, #1565C0); }
-.b4 { background: linear-gradient(135deg, #8E24AA, #6A1B9A); }
-.b5 { background: linear-gradient(135deg, #00897B, #00695C); }
-.b6 { background: linear-gradient(135deg, #FB8C00, #EF6C00); }
-.b7 { background: linear-gradient(135deg, #3949AB, #283593); }
-.b8 { background: linear-gradient(135deg, #D81B60, #AD1457); }
-
-.section-header { width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; background: #fff; padding: 12px 18px; border-radius: 15px; box-shadow: var(--shadow); flex-wrap: wrap; gap: 10px; border: 2px solid #A5D6A7; }
-.section-title { font-size: 1.15rem; color: var(--primary); font-weight: 800; display: flex; align-items: center; gap: 8px; }
-.back-btn { background: linear-gradient(135deg, #607D8B, #455A64); color: #fff; border: none; padding: 8px 18px; border-radius: 20px; font-weight: bold; cursor: pointer; font-family: 'Anek Malayalam', sans-serif; }
-.content-box { background: rgba(255,255,255,.97); border-radius: 22px; padding: 22px; box-shadow: var(--shadow); width: 100%; max-width: 900px; margin: 0 auto 20px; border: 3px solid #fff; }
-
-.lesson-pick { background: #fff; border: 3px solid #A5D6A7; border-radius: 18px; padding: 16px 20px; margin-bottom: 12px; cursor: pointer; display: flex; align-items: center; gap: 14px; box-shadow: 0 4px 12px rgba(0,0,0,.08); width: 100%; max-width: 600px; margin-left: auto; margin-right: auto; transition: 0.2s; }
-.lesson-pick:hover { border-color: var(--primary); background: #E8F5E9; transform: translateY(-3px); }
-.lesson-pick .lp-emoji { font-size: 2.3rem; }
-.lesson-pick .lp-title { font-size: 1.2rem; font-weight: 800; color: #1B5E20; }
-.lesson-pick .lp-sub { font-size: 0.95rem; color: #546E7A; font-weight: 600; }
-
-.story-title { text-align: center; font-size: 1.45rem; background: linear-gradient(90deg, #A5D6A7, #66BB6A); display: inline-block; padding: 8px 26px; border-radius: 30px; color: #1B5E20 !important; font-weight: 800; margin-bottom: 15px; }
-.story-para { background: #E8F5E9; border-left: 5px solid var(--primary); padding: 14px 18px; border-radius: 14px; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; font-size: 1.1rem; line-height: 1.9; }
-.story-para.reading { background: #FFF8E1; border-left-color: #FF8F00; box-shadow: 0 0 0 2px #FFE082; }
-.mini-play { background: var(--blue); color: #fff; border: none; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; font-size: 1.1rem; flex-shrink: 0; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
-.read-all-btn { background: linear-gradient(135deg, #43A047, #1B5E20); color: #fff; border: none; padding: 12px 28px; border-radius: 25px; font-size: 1.05rem; font-weight: bold; cursor: pointer; margin-bottom: 16px; font-family: 'Anek Malayalam', sans-serif; box-shadow: 0 4px 10px rgba(0,0,0,0.15); }
-
-.cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 16px; width: 100%; }
-.word-card { background: #fff; border-radius: 18px; padding: 18px; text-align: center; box-shadow: var(--shadow); border: 3px solid #E3F2FD; cursor: pointer; transition: 0.2s; }
-.word-card:hover { transform: translateY(-5px); border-color: var(--blue); }
-.card-emoji { font-size: 3rem; margin-bottom: 8px; }
-.word-ml { font-size: 1.3rem; margin-bottom: 6px; font-weight: 800; color: #1B5E20; }
-.word-meaning { font-size: 1rem; color: #37474F; margin-bottom: 10px; font-weight: 600; }
-.replay-btn { background: #E8EAF6; color: #283593; border: none; padding: 6px 14px; border-radius: 15px; font-size: 0.9rem; font-weight: bold; cursor: pointer; font-family: 'Anek Malayalam', sans-serif; }
-
-.activity-block { background: #FFF8E1; border: 2px solid #FFE082; border-radius: 16px; padding: 20px; margin-bottom: 18px; width: 100%; }
-.activity-heading { color: #E65100; font-size: 1.15rem; margin-bottom: 12px; font-weight: 800; }
-.write-box { width: 100%; min-height: 100px; border: 2px dashed #90A4AE; border-radius: 12px; padding: 12px; font-size: 1.05rem; font-family: 'Anek Malayalam', sans-serif; margin-bottom: 12px; resize: vertical; }
-.model-answer-box { background: #E8F5E9; border: 2px solid #81C784; border-radius: 14px; padding: 16px; margin-top: 10px; font-size: 1.05rem; line-height: 1.8; display: none; color: #1B5E20; font-weight: 600; }
-.reveal-model-btn { background: var(--purple); color: #fff; border: none; padding: 10px 20px; border-radius: 18px; font-size: 1rem; cursor: pointer; font-weight: bold; font-family: 'Anek Malayalam', sans-serif; }
-
-.game-box { background: rgba(255,255,255,.96); border-radius: 22px; padding: 25px; box-shadow: var(--shadow); width: 100%; max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; border: 4px solid #fff; }
-.game-instruction { font-size: 1.1rem; color: #37474F; margin-bottom: 16px; text-align: center; background: #E0F2F1; padding: 10px 22px; border-radius: 20px; font-weight: bold; }
-.meaning-box { font-size: 1.25rem; font-weight: 800; color: #1B5E20; background: #E8F5E9; padding: 16px 24px; border-radius: 18px; margin-bottom: 20px; border: 2px dashed #4CAF50; text-align: center; width: 100%; }
-.options-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; width: 100%; }
-.option-btn { background: #fff; border: 3px solid #81D4FA; padding: 14px; border-radius: 16px; font-size: 1.1rem; font-weight: bold; color: #01579B !important; cursor: pointer; box-shadow: 0 4px 0 #4FC3F7; font-family: 'Anek Malayalam', sans-serif; transition: 0.1s; }
-.option-btn:active { transform: translateY(4px); box-shadow: none; }
-.option-btn.correct { background: #C8E6C9 !important; border-color: #2E7D32 !important; color: #1B5E20 !important; box-shadow: 0 4px 0 #2E7D32 !important; }
-.option-btn.wrong { background: #FFCDD2 !important; border-color: #C62828 !important; color: #B71C1C !important; box-shadow: 0 4px 0 #C62828 !important; }
-
-.modal-overlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,.8); z-index: 100; display: none; justify-content: center; align-items: center; padding: 20px; }
-.modal-overlay.active { display: flex; }
-.reward-card { background: #fff; border-radius: 28px; padding: 35px; text-align: center; max-width: 450px; width: 100%; border: 5px solid #FFD54F; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
-
-.unit-qp-paper { background: #fff; border: 2px solid #333; border-radius: 8px; padding: 30px 40px; font-family: 'Anek Malayalam', serif; color: #111; line-height: 1.8; margin-top: 15px; }
-.qp-lines { border-bottom: 1px dotted #999; height: 26px; margin: 6px 0; }
-
-@media print {
-    header, .controls, .btn-menu, .home-card .menu-grid, .no-print, .back-btn, .mini-play, .read-all-btn, .reveal-model-btn { display: none !important; }
-    body { background: #fff !important; }
-    .content-box { box-shadow: none; border: none; max-width: 100% !important; padding: 0 !important; }
-    .model-answer-box { display: block !important; border: 1px solid #999; }
-    .screen { display: none; }
-    #unitQPScreen { display: block !important; }
-    .unit-qp-paper { border: none; padding: 0; }
-}
-@media (max-width: 600px) {
-    .options-grid { grid-template-columns: 1fr; }
-    .main-title { font-size: 1.5rem; }
-    .menu-grid { grid-template-columns: 1fr; }
-}
+@media (max-width:600px){.main-title{font-size:1.5rem}.sub-title{font-size:1rem}.options-grid{grid-template-columns:1fr}.match-container{flex-direction:column}.quiz-opts{grid-template-columns:1fr}.story-para p{font-size:1.05rem}}
 </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 <body>
 <div id="app">
-    <header>
-        <div class="logo-area" onclick="showScreen('homeScreen')">
-            <div style="font-size:2rem">✨</div>
-            <div>
-                <h1 class="ml">നടക്കുന്തോറും തെളിയും വഴികൾ</h1>
-                <span>STD 9 · UNIT 1</span>
-                <div class="sub ml">കേരളപാഠാവലി · മലയാളം</div>
-            </div>
-        </div>
-        <div class="stats-bar">
-            <div class="stat-item">⭐ <span id="valScore">0</span></div>
-            <div class="stat-item">❤️ <span id="valLives">5</span></div>
-            <div class="stat-item">🏆 <span id="valStars">0</span></div>
-        </div>
-        <div class="controls no-print">
-            <button class="icon-btn" onclick="toggleAudio()" id="btnAudioToggle" title="Sound">🔊</button>
-            <button class="icon-btn" onclick="printPage()" title="Print">🖨️</button>
-            <button class="icon-btn" onclick="showScreen('homeScreen')" title="Home">🏠</button>
-        </div>
-    </header>
+<header>
+<div class="logo-area" onclick="showScreen('homeScreen')"><div style="font-size:1.8rem">😄</div><div><h1>നടക്കുന്നതോറും തെളിയും വഴികൾ</h1><span>STD 9 · UNIT 1</span><div class="sub ml">ഒമ്പതാം ക്ലാസ് • മലയാളം • യൂണിറ്റ് 1</div></div></div>
+<div class="stats-bar"><div class="stat-item">⭐ <span id="valScore">0</span></div><div class="stat-item">❤️ <span id="valLives">5</span></div><div class="stat-item">🏆 <span id="valStars">0</span></div></div>
+<div class="controls">
+<button class="icon-btn" id="btnAudioToggle" onclick="toggleAudio()" title="Sound">🔊</button>
+<button class="icon-btn" onclick="printPage()" title="Print">🖨️</button>
+<button class="icon-btn" onclick="downloadPage()" title="Download">⬇️</button>
+<button class="icon-btn" onclick="toggleFullscreen()" title="Full Screen">⛶</button>
+<button class="icon-btn" onclick="showScreen('homeScreen')" title="Home">🏠</button>
+</div>
+</header>
+<div class="progress-container"><div class="progress-bar" id="progressBar"></div></div>
 
-    <div id="homeScreen" class="screen active">
-        <div class="home-card">
-            <h1 class="main-title ml">✨ നടക്കുന്തോറും തെളിയും വഴികൾ</h1>
-            <h2 class="sub-title ml">യൂണിറ്റ് 1 · ഒമ്പതാം ക്ലാസ് · മലയാളം</h2>
-            <div class="author-tag ml">Prepared by: Smart Vidhya</div>
-            <div class="menu-grid">
-                <button class="btn-menu b1" onclick="openChoose('read')">📖 1. Reading & Listening (വായന)</button>
-                <button class="btn-menu b2" onclick="openChoose('vocab')">🗂️ 2. Vocabulary (പദസമ്പത്ത്)</button>
-                <button class="btn-menu b3" onclick="openChoose('creative')">📝 3. Creative Writing (എഴുത്ത്)</button>
-                <button class="btn-menu b4" onclick="openChoose('rhymes')">🎵 4. Rhymes & Songs (കവിതകൾ)</button>
-                <button class="btn-menu b5" onclick="openChoose('games')">🎮 5. Games & Grammar (കളികൾ)</button>
-                <button class="btn-menu b7" onclick="openChoose('speaking')">🎭 6. Speaking (സംസാരശേഷി)</button>
-                <button class="btn-menu b8" onclick="openChoose('evaluation')">📊 7. Evaluation (മൂല്യനിർണ്ണയം)</button>
-                <button class="btn-menu b6" onclick="showScreen('unitQPScreen')">📋 Model Question Paper</button>
-            </div>
-        </div>
-    </div>
-
-    <div id="chooseScreen" class="screen">
-        <div class="section-header">
-            <div class="section-title ml" id="chooseTitle">പാഠം തിരഞ്ഞെടുക്കുക</div>
-            <button class="back-btn" onclick="showScreen('homeScreen')">തിരികെ</button>
-        </div>
-        <div class="content-box">
-            <div id="chooseList" style="display:flex; flex-direction:column; gap:10px;"></div>
-        </div>
-    </div>
-
-    <div id="contentScreen" class="screen">
-        <div class="section-header">
-            <div class="section-title ml" id="contentTitle">ഉള്ളടക്കം</div>
-            <button class="back-btn" onclick="showScreen('chooseScreen')">തിരികെ</button>
-        </div>
-        <div class="content-box" id="contentBody"></div>
-    </div>
-
-    <div id="gamesMenuScreen" class="screen">
-        <div class="section-header">
-            <div class="section-title ml" id="gamesMenuTitle">🎮 കളികൾ (Games)</div>
-            <button class="back-btn" onclick="showScreen('chooseScreen')">തിരികെ</button>
-        </div>
-        <div class="menu-grid" style="max-width:800px; margin:20px auto;" id="gamesButtons">
-            <button class="btn-menu b1" onclick="launchGame(1)">🎯 ആശയം കണ്ടെത്തുക</button>
-            <button class="btn-menu b2" onclick="launchGame(2)">🧩 അർഥം കണ്ടെത്തുക</button>
-            <button class="btn-menu b3" onclick="launchGame(3)">🎧 കേട്ട് തിരഞ്ഞെടുക്കുക</button>
-            <button class="btn-menu b4" onclick="launchGame(4)">📋 സംഭവങ്ങൾ ക്രമത്തിൽ</button>
-            <button class="btn-menu b5" onclick="launchGame(5)">🎭 ആരാണ് പറഞ്ഞത്?</button>
-            <button class="btn-menu b7" onclick="launchGame(6)">⚖️ ശരിയോ തെറ്റോ</button>
-        </div>
-    </div>
-
-    <div id="activeGameScreen" class="screen">
-        <div class="section-header">
-            <div class="section-title ml">🎮 കളി ആരംഭിച്ചു</div>
-            <button class="back-btn" onclick="endGame()">അവസാനിപ്പിക്കുക</button>
-        </div>
-        <div class="game-box" id="gameArea"></div>
-    </div>
-
-    <div id="unitQPScreen" class="screen">
-        <div class="section-header no-print">
-            <div class="section-title ml">📋 Model Question Paper</div>
-            <button class="back-btn" onclick="showScreen('homeScreen')">തിരികെ</button>
-        </div>
-        <div class="content-box">
-            <div class="no-print" style="text-align:center; margin-bottom: 20px;">
-                <button class="btn-menu b1" style="display:inline-flex; width:auto; padding:10px 20px;" onclick="printPage()">🖨️ അച്ചടിക്കുക (Print)</button>
-                <button class="btn-menu b6" style="display:inline-flex; width:auto; padding:10px 20px; margin-left:10px;" onclick="downloadPDF()">⬇️ PDF ഡൗൺലോഡ്</button>
-            </div>
-            <div id="qpContent" class="unit-qp-paper ml">
-                <div style="text-align:center; font-size:1.1rem; font-weight:bold;">കേരള സർക്കാർ · സ്റ്റാൻഡേർഡ് IX (മലയാളം)</div>
-                <div style="text-align:center; font-size:1.4rem; font-weight:bold; text-decoration:underline; margin: 10px 0;">മാതൃകാ ചോദ്യപേപ്പർ</div>
-                <div style="text-align:center; font-weight:bold; margin-bottom:15px;">യൂണിറ്റ് 1 : നടക്കുന്തോറും തെളിയും വഴികൾ</div>
-                
-                <div style="display:flex; justify-content:space-between; border-bottom:2px solid #333; padding-bottom:10px; margin-bottom:20px; font-weight:bold;">
-                    <span>സമയം: 1.5 മണിക്കൂർ</span>
-                    <span>മാർക്ക്: 40</span>
-                </div>
-                
-                <p><b>I. താഴെ പറയുന്നവയ്ക്ക് ഒറ്റവാക്കിൽ ഉത്തരം എഴുതുക (4 x 1 = 4)</b></p>
-                <p>1. 'കാടുകളുടെ താളം തേടി' എന്ന യാത്രാവിവരണം ആരുടേതാണ്?</p><div class="qp-lines"></div>
-                <p>2. ബംഗാളിലെ ഗ്രാമങ്ങളിൽ ഏത് സംസ്ഥാനത്തിന്റെ പ്രകൃതിഭംഗിയാണ് പ്രതിഫലിക്കുന്നത്?</p><div class="qp-lines"></div>
-                <p>3. മരുഭൂമിയിൽ സൂര്യൻ അസ്തമിക്കുന്നത് എങ്ങനെയാണെന്നാണ് ലേഖകൻ പറയുന്നത്?</p><div class="qp-lines"></div>
-                <p>4. സ്മാരകം എന്ന കവിതയിൽ വിത്തിനെ സംരക്ഷിച്ചുകൊണ്ട് പറക്കുന്നത് എന്ത്?</p><div class="qp-lines"></div>
-                
-                <br><p><b>II. അർഥം എഴുതുക (2 x 1 = 2)</b></p>
-                <p>5. അപ്രമേയത &nbsp;&nbsp;&nbsp;&nbsp; 6. ഖരഖരാരവം</p><div class="qp-lines"></div>
-                
-                <br><p><b>III. ഉത്തരം എഴുതുക (4 x 2 = 8)</b></p>
-                <p>7. ഹിമാലയൻ യാത്ര സുജാതാദേവിക്ക് നൽകിയ പ്രധാന പാഠങ്ങൾ എന്തെല്ലാം?</p><div class="qp-lines"></div><div class="qp-lines"></div>
-                <p>8. ശാന്തിനികേതനത്തിലെ വിദ്യാലയങ്ങളുടെ പ്രത്യേകതകൾ എന്തൊക്കെയാണ്?</p><div class="qp-lines"></div><div class="qp-lines"></div>
-                <p>9. മരുഭൂമിയിലെ അസ്തമയക്കാഴ്ചയെ മുസഫർ അഹമ്മദ് എങ്ങനെ വർണ്ണിക്കുന്നു?</p><div class="qp-lines"></div><div class="qp-lines"></div>
-                <p>10. നജീബിന് അർബാബിന്റെ വണ്ടിയുടെ പുറകിലെ യാത്ര ആദ്യം സന്തോഷം നൽകിയത് എന്തുകൊണ്ട്?</p><div class="qp-lines"></div><div class="qp-lines"></div>
-                
-                <br><p><b>IV. വിശദമായ ഉത്തരം എഴുതുക (3 x 4 = 12)</b></p>
-                <p>11. "യാത്രയിൽക്കൊണ്ട വെയിൽ... തിരികെയെത്തുമ്പോൾ തണലാകുന്നു" - സുജാതാദേവിയുടെ യാത്രാനുഭവവുമായി ഇത് എങ്ങനെ ബന്ധപ്പെട്ടിരിക്കുന്നു? വ്യക്തമാക്കുക.</p>
-                <div class="qp-lines"></div><div class="qp-lines"></div><div class="qp-lines"></div>
-                <p>12. അപ്പൂപ്പൻതാടിയുടെ യാത്രയെ വളരെ വിനീതമായ ഒരു ശ്രമമായി കവി കാണുന്നത് എന്തുകൊണ്ട്? 'സ്മാരകം' എന്ന കവിതയെ അടിസ്ഥാനമാക്കി കുറിപ്പ് തയ്യാറാക്കുക.</p>
-                <div class="qp-lines"></div><div class="qp-lines"></div><div class="qp-lines"></div>
-                <p>13. ഗൾഫിലെ ആദ്യരാത്രിയിൽ നജീബിന്റെ മനസ്സിൽ ഭീതി വലംവയ്ക്കാൻ കാരണമെന്ത്? വിവരിക്കുക.</p>
-                <div class="qp-lines"></div><div class="qp-lines"></div><div class="qp-lines"></div>
-                
-                <br><p><b>V. ഉപന്യാസം എഴുതുക (1 x 14 = 14)</b></p>
-                <p>14. യാത്രകൾ മനുഷ്യന് നൽകുന്ന അറിവും പുതിയ അനുഭവങ്ങളും എന്ന വിഷയത്തിൽ 'നടക്കുന്തോറും തെളിയും വഴികൾ' എന്ന യൂണിറ്റിലെ പാഠഭാഗങ്ങളെ അടിസ്ഥാനമാക്കി ഒരു ഉപന്യാസം തയ്യാറാക്കുക.</p>
-                <div class="qp-lines"></div><div class="qp-lines"></div><div class="qp-lines"></div><div class="qp-lines"></div><div class="qp-lines"></div>
-                <div style="text-align:center; margin-top:20px; font-size:0.9rem; border-top:1px solid #999; padding-top:10px;">***** എല്ലാവർക്കും ആശംസകൾ *****</div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal-overlay" id="rewardModal">
-        <div class="reward-card">
-            <div style="font-size:4rem">🏅</div>
-            <h2 class="ml" style="color:#1B5E20; font-size:2rem; margin:15px 0;">കൊള്ളാം! വളരെ നന്ന്!</h2>
-            <p class="ml" style="color:#E65100; font-size:1.2rem; margin-bottom: 20px;">ഈ പ്രവർത്തനം വിജയകരമായി പൂർത്തിയാക്കി.</p>
-            <button class="reveal-model-btn ml" style="margin:auto" onclick="closeRewardModal()">തുടരുക</button>
-        </div>
-    </div>
-    
-    <div class="modal-overlay" id="messageModal">
-        <div class="reward-card" style="border-color:#E65100;">
-            <div style="font-size:3rem">⚠️</div>
-            <h2 class="ml" id="msgTitle" style="color:#D84315; font-size:1.8rem; margin:10px 0;">ശ്രദ്ധിക്കുക</h2>
-            <p class="ml" id="msgBody" style="color:#37474F; font-size:1.1rem; margin-bottom: 20px;"></p>
-            <button class="reveal-model-btn ml" style="margin:auto; background:#D84315;" onclick="closeMessageModal()">ശരി (OK)</button>
-        </div>
-    </div>
+<div id="homeScreen" class="screen active">
+<div class="home-card">
+<h1 class="main-title hi">🛤️ നടക്കുന്നതോറും തെളിയും വഴികൾ</h1>
+<h2 class="sub-title">UNIT 1 : നടക്കുന്നതോറും തെളിയും വഴികൾ</h2>
+<div class="author-tag">Prepared by: Smart Vidhya</div>
+<div class="menu-grid">
+<button class="btn-menu b1" onclick="openChoose('read')">📖 Read the Lessons</button>
+<button class="btn-menu b2" onclick="openChoose('learn')">🗂️ Learn Words</button>
+<button class="btn-menu b6" onclick="openChoose('activities')">📝 Activities</button>
+<button class="btn-menu b3" onclick="openChoose('games')">🎮 Games</button>
+<button class="btn-menu b4" onclick="openChoose('quiz')">❓ Quiz</button>
+<button class="btn-menu b10" onclick="showScreen('modelQPScreen')">📋 Model Question Paper</button>
+<button class="btn-menu b18" onclick="showScreen('unitQPScreen')">📄 Unit Question Paper</button>
+<button class="btn-menu b7" onclick="openChoose('vocab')">📚 Vocabulary</button>
+<button class="btn-menu b5" onclick="showScreen('bioScreen')">👤 About the Authors</button>
+<button class="btn-menu b11" onclick="openChoose('diary')">📔 My Little Diary</button>
+<button class="btn-menu b12" onclick="openChoose('letter')">✉️ Letter Box</button>
+<button class="btn-menu b13" onclick="openChoose('roleplay')">🎭 Role Play Zone</button>
+<button class="btn-menu b14" onclick="openChoose('grammar')">✏️ Grammar Quest</button>
+<button class="btn-menu b15" onclick="openChoose('punctuation')">❗ Punctuation</button>
+<button class="btn-menu b16" onclick="openChoose('wordfun')">🔤 Word Fun</button>
+<button class="btn-menu b9" onclick="openChoose('poster')">🪧 Poster &amp; Placard</button>
+<button class="btn-menu b17" onclick="showScreen('doorwayScreen')">🎶 Sing Along</button>
+<button class="btn-menu b18" onclick="showScreen('progressScreen')">📊 My Progress</button>
+<button class="btn-menu b8" onclick="showScreen('instructionsScreen')">ℹ️ Instructions</button>
+</div>
+</div>
 </div>
 
+<div id="chooseScreen" class="screen">
+<div class="section-header"><div class="section-title" id="chooseTitle">Choose a Lesson</div><button class="back-btn" onclick="showScreen('homeScreen')">Back</button></div>
+<div class="content-box"><div class="choose-wrap" id="chooseList"></div></div>
+</div>
+
+<div id="contentScreen" class="screen">
+<div class="section-header"><div class="section-title" id="contentTitle">Content</div><button class="back-btn" id="contentBackBtn" onclick="goBackFromContent()">Back</button></div>
+<div class="content-box" id="contentBody"></div>
+</div>
+
+<div id="gamesMenuScreen" class="screen">
+<div class="section-header"><div class="section-title" id="gamesMenuTitle">🎮 Games</div><button class="back-btn" onclick="openChoose('games')">Back</button></div>
+<div class="menu-grid" style="max-width:720px;margin:10px auto" id="gamesButtons"></div>
+</div>
+
+<div id="game1Screen" class="screen"><div class="game-box"><div class="game-instruction">🎮 Guess the correct word!</div><div class="g1-image-box" id="g1ImgBox"></div><div class="options-grid" id="g1OptionsGrid"></div></div></div>
+<div id="game2Screen" class="screen"><div class="game-box"><div class="game-instruction">🔗 Match the word with its meaning!</div><div class="match-container"><div class="match-column" id="g2PicsCol"></div><div class="match-column" id="g2WordsCol"></div></div></div></div>
+<div id="game3Screen" class="screen"><div class="game-box"><div class="game-instruction">🔍 Find the missing letter!</div><div class="g1-image-box" id="g3ImgBox"></div><div class="missing-word-display" id="g3WordDisplay"></div><div class="letters-options" id="g3LettersGrid"></div></div></div>
+<div id="game4Screen" class="screen"><div class="game-box"><div class="game-instruction">🧩 Arrange the letters!</div><div class="target-pic" id="g4ImgBox"></div><div class="drop-slots" id="g4Slots"></div><div class="scrambled-letters" id="g4Tiles"></div></div></div>
+<div id="game5Screen" class="screen"><div class="game-box"><div class="game-instruction">🎧 Listen and choose!</div><button class="listen-btn-big" id="g5ReplayBtn">🔊</button><div class="options-grid" id="g5OptionsGrid"></div></div></div>
+<div id="game6Screen" class="screen"><div class="game-box"><div class="game-instruction">🌟 Pick the Malayalam word!</div><div class="meaning-box ml" id="g6MeaningBox"></div><div class="options-grid" id="g6OptionsGrid"></div></div></div>
+<div id="game7Screen" class="screen"><div class="game-box"><div class="game-instruction">📋 Arrange events in order!</div><div id="g7SeqList" style="width:100%"></div><button class="check-btn" onclick="checkSequence()">✅ Check Order</button><div class="result-msg" id="g7Result"></div></div></div>
+<div id="game8Screen" class="screen"><div class="game-box"><div class="game-instruction">🎭 Who said / did this?</div><div class="meaning-box" id="g8QuoteBox" style="font-size:1.15rem"></div><div class="options-grid" id="g8OptionsGrid"></div></div></div>
+<div id="game9Screen" class="screen"><div class="game-box"><div class="game-instruction">🔄 Synonym / Antonym</div><div class="meaning-box" id="g9PromptBox" style="font-size:1.2rem"></div><div class="options-grid" id="g9OptionsGrid"></div></div></div>
+<div id="game10Screen" class="screen"><div class="game-box"><div class="game-instruction">📝 Complete the sentence!</div><div class="meaning-box" id="g10SentBox" style="font-size:1.15rem"></div><div class="options-grid" id="g10OptionsGrid"></div></div></div>
+
+<div id="modelQPScreen" class="screen"><div class="section-header"><div class="section-title">📋 Model Question Paper</div><button class="back-btn" onclick="showScreen('homeScreen')">Back</button></div><div class="content-box" id="modelQPContainer"></div></div>
+<div id="unitQPScreen" class="screen">
+<div class="section-header">
+<div class="section-title">📄 Unit Question Paper</div>
+<button class="back-btn" onclick="showScreen('homeScreen')">Back</button>
+</div>
+<div class="content-box" style="max-width:900px">
+<div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:18px" class="no-print">
+<button class="btn-menu b1" style="padding:10px 22px;box-shadow:0 4px 0 rgba(0,0,0,.2)" onclick="printUnitQP()">🖨️ Print Question Paper</button>
+<button class="btn-menu b3" style="padding:10px 22px;box-shadow:0 4px 0 rgba(0,0,0,.2)" onclick="downloadUnitQPasPDF()">⬇️ Download as PDF</button>
+</div>
+<div id="unitQPPaper" class="unit-qp-paper"></div>
+</div>
+</div>
+<div id="bioScreen" class="screen"><div class="section-header"><div class="section-title">👤 About the Authors</div><button class="back-btn" onclick="showScreen('homeScreen')">Back</button></div><div class="content-box" id="bioContainer"></div></div>
+<div id="doorwayScreen" class="screen"><div class="section-header"><div class="section-title">🎶 Sing Along</div><button class="back-btn" onclick="showScreen('homeScreen')">Back</button></div><div class="content-box" id="doorwayContainer"></div></div>
+<div id="progressScreen" class="screen"><div class="section-header"><div class="section-title">📊 My Progress</div><button class="back-btn" onclick="showScreen('homeScreen')">Back</button></div><div class="content-box" id="progressContainer"></div></div>
+<div id="instructionsScreen" class="screen">
+<div class="section-header"><div class="section-title">ℹ️ Instructions</div><button class="back-btn" onclick="showScreen('homeScreen')">Back</button></div>
+<div class="content-box"><div class="instructions-list"><ul>
+<li>The home page does not list lesson names.</li>
+<li>Each option (Read / Quiz / Games / Activities...) first shows <b>the lesson names</b>.</li>
+<li>Select a lesson to open its content.</li>
+<li class="hi"><b>5 Lessons:</b> 1) സുജാതാദേവിയുടെ കത്ത് 2) ശാന്തിനികേതനം 3) മറുപനിയുടെ ആത്മകഥ 4) സ്മാരകം 5) മണൽക്കുന്നുകൾക്കിടയിലൂടെ</li>
+<li>All textbook-style activities are included for each lesson, with model answers.</li>
+<li><b>📄 Unit Question Paper</b> — 5 activities from all three lessons. No answers. Print / Download PDF available.</li>
+<li>Use 🔊 to hear Malayalam. First tap unlocks sound. Clear ml-IN / Google voice.</li>
+</ul></div></div>
+</div>
+</div>
+
+<div class="modal-overlay" id="rewardModal"><div class="reward-card"><div class="reward-icon">🏅</div><h2 class="reward-title">Excellent!</h2><p class="reward-subtitle">You completed this activity!</p><button class="primary-action-btn" onclick="closeRewardModal()">Continue</button></div></div>
+
+<audio id="ttsPlayer" playsinline webkit-playsinline style="display:none"></audio>
 <script>
-const LESSONS = [
-    { id: 'l1', emoji: '🏔️', title: 'കാടുകളുടെ താളം തേടി', sub: 'സുജാതാദേവി - യാത്രാവിവരണം' },
-    { id: 'l2', emoji: '🏫', title: 'ശാന്തിനികേതനം', sub: 'എസ്. കെ. പൊറ്റക്കാട്ട് - യാത്രാവിവരണം' },
-    { id: 'l3', emoji: '🐪', title: 'മരുഭൂമിയുടെ ആത്മകഥ', sub: 'വി. മുസഫർ അഹമ്മദ് - യാത്രാക്കുറിപ്പ്' },
-    { id: 'l4', emoji: '🌬️', title: 'സ്മാരകം', sub: 'വീരാൻകുട്ടി - കവിത' },
-    { id: 'l5', emoji: '🚚', title: 'മണൽക്കൂനകൾക്കിടയിലൂടെ', sub: 'ബെന്യാമിൻ (ആടുജീവിതം)' }
+let state={score:0,lives:5,stars:0,audioEnabled:true,activeGame:null,currentGameIndex:0,gameQueue:[],quizSubmitted:false,currentSection:null,currentLesson:null,lastChooseSection:null,visited:{},paintColor:'#e53935'};
+const LESSONS=[
+{id:'sujatha',emoji:'✉️',title:'സുജാതാദേവിയുടെ കത്ത്',sub:'യാത്രാകത്ത് — സുജാതാദേവി'},
+{id:'santhi',emoji:'🌳',title:'ശാന്തിനികേതനം',sub:'യാത്രാവിവരണം — എസ്. കെ. പൊറ്റക്കാട്ട്'},
+{id:'marupani',emoji:'🌅',title:'മറുപനിയുടെ ആത്മകഥ',sub:'യാത്രാക്കുറിപ്പ് — വി. മുസാഫിർ അഹമ്മദ്'},
+{id:'smarakam',emoji:'🌱',title:'സ്മാരകം',sub:'കവിത — വിനോദ് കുറ്റി'},
+{id:'najib',emoji:'🐪',title:'മണൽക്കുന്നുകൾക്കിടയിലൂടെ',sub:'ആടുജീവിതം — ബെന്യാമിൻ'}
 ];
+const SECTION_TITLES={read:'📖 Choose a Lesson to Read',learn:'🗂️ Learn Words – Choose Lesson',activities:'📝 Activities – Choose Lesson',games:'🎮 Games – Choose Lesson',quiz:'❓ Quiz – Choose Lesson',vocab:'📚 Vocabulary – Choose Lesson',diary:'📔 Diary – Choose Lesson',letter:'✉️ Letter – Choose Lesson',roleplay:'🎭 Role Play – Choose Lesson',grammar:'✏️ Grammar – Choose Lesson',punctuation:'❗ Punctuation – Choose Lesson',wordfun:'🔤 Word Fun – Choose Lesson',poster:'🪧 Poster – Choose Lesson'};
 
-const CONTENT = {
-    l1: {
-        text: [
-            "പ്രിയപ്പെട്ട ചേച്ചീ, എത്രനാളായി ഞാനിങ്ങു പോന്നിട്ട്! രണ്ടുമാസം. ഇത്രനാൾ തനിച്ചു വീട്ടിൽനിന്നും മാറിനിന്നിട്ടേയില്ല.",
-            "ഈ യാത്ര എല്ലാ അർഥത്തിലും എനിക്കൊരു ഹിമാലയൻയാത്രയായിരുന്നു. പന്ത്രണ്ടുവർഷത്തെ സാധാരണജീവിതത്തിൽനിന്നു നേടുന്നതിലെത്രയോ അധികം അനുഭവപാഠങ്ങൾ രണ്ടുമാസത്തെ യാത്രയിൽനിന്നു ഞാൻ പഠിച്ചു.",
-            "വഴിവക്കിലെ പെട്ടിക്കടയിൽനിന്നും ഭക്ഷണം കഴിക്കാൻ, പീടികത്തിണ്ണയിലും ചായക്കടയിലും അന്തിയുറങ്ങാൻ, അപരിചിതരുടെ സൈക്കിളിന്റെ പിന്നിലും ലോറിയിലുമൊക്കെക്കയറി യാത്രചെയ്യാൻ, രോഗങ്ങളെ ചെറുക്കാൻ, സ്വന്തം ഭാരം സ്വയം ചുമക്കാൻ, മര്യാദക്കാരോടും മര്യാദയില്ലാത്തവരോടും പെരുമാറാൻ ഞാൻ പഠിച്ചു.",
-            "കാട്ടിനുള്ളിലെ ജീവിതത്തിന്റെ താളമൊന്നു വേറെ. അതു സുഖകരമായ അനുഭൂതിയാണ്. കാടും മലയും പുഴയും കൂടെ തന്നതൊക്കെ പറയാൻ വാക്കില്ല.",
-            "അന്യരായ മനുഷ്യരുമായി ഇടപഴകിയപ്പോൾ അവരുടെയൊക്കെ ജീവിതാനുഭവങ്ങൾ എന്റേതായി മാറിയതുപോലെ. എന്തായാലും നിധികുംഭങ്ങളാണ് ഹിമാലയം തന്നതൊക്കെ."
-        ],
-        qa: [
-            ["ഹിമാലയൻ യാത്ര സുജാതാദേവിക്ക് എപ്രകാരമുള്ള അനുഭവമാണ് നൽകിയത്?", "പന്ത്രണ്ടുവർഷത്തെ സാധാരണജീവിതത്തിൽനിന്നു നേടുന്നതിലെത്രയോ അധികം പ്രായോഗിക അനുഭവപാഠങ്ങൾ ആ യാത്രയിൽനിന്നു അവർ പഠിച്ചു."],
-            ["യാത്രയിൽ നിന്ന് അവർ പഠിച്ച പ്രധാനപ്പെട്ട ജീവിതപാഠങ്ങൾ എന്തെല്ലാമാണ്?", "പെട്ടിക്കടയിൽനിന്ന് ഭക്ഷണം കഴിക്കാനും, പീടികത്തിണ്ണയിൽ അന്തിയുറങ്ങാനും, സ്വന്തം ഭാരം സ്വയം ചുമക്കാനും, പലതരം ആളുകളോട് പെരുമാറാനും അവർ പഠിച്ചു."],
-            ["അന്യരായ മനുഷ്യരുമായി ഇടപഴകിയപ്പോൾ സുജാതാദേവിക്ക് തോന്നിയത് എന്ത്?", "അവരുടെ ജീവിതാനുഭവങ്ങൾ എന്റേതായി മാറിയതുപോലെ തോന്നി എന്ന് അവർ പറയുന്നു."]
-        ],
-        vocab: [
-            { w: 'തീർഥാടനം', m: 'പുണ്യസ്ഥലങ്ങളിലേക്കുള്ള യാത്ര', e: '🏔️' },
-            { w: 'അനുഭൂതി', m: 'അനുഭവിച്ചറിയുന്ന സുഖം', e: '✨' },
-            { w: 'നിധികുംഭം', m: 'നിധിനിറഞ്ഞ കുടം (അമൂല്യമായ അറിവ്)', e: '🏺' },
-            { w: 'അപ്രമേയത', m: 'അളക്കാനാവാത്ത അവസ്ഥ', e: '🌌' }
-        ],
-        activities: {
-            creative: { t: 'കുറിപ്പ് തയ്യാറാക്കാം (Write a Note)', q: '"യാത്രയിൽക്കൊണ്ട വെയിൽ... തിരികെയെത്തുമ്പോൾ തണലാകുന്നു" - സുജാതാദേവിയുടെ യാത്രാനുഭവവുമായി ഇത് എങ്ങനെ ബന്ധപ്പെട്ടിരിക്കുന്നു?', a: 'യാത്രകളിലെ ബുദ്ധിമുട്ടുകളും കഷ്ടപ്പാടുകളും പിന്നീട് ജീവിതത്തിൽ വലിയ അനുഭവപാഠങ്ങളായി മാറും. സുജാതാദേവിയുടെ ഹിമാലയൻ യാത്രയിലെ കഠിനമായ അനുഭവങ്ങൾ അവർക്ക് ജീവിതത്തെക്കുറിച്ച് പുതിയ തിരിച്ചറിവുകൾ നൽകിയത് ഇതിനുദാഹരണമാണ്.' },
-            speaking: { t: 'നമുക്ക് സംസാരിക്കാം (Let\'s Talk)', q: 'നിങ്ങളുടെ ഏറ്റവും പുതിയ യാത്രയെക്കുറിച്ച് ഒരു സുഹൃത്തിനോട് സംസാരിക്കുന്ന സംഭാഷണം (Conversation) തയ്യാറാക്കുക.', a: 'കൂട്ടുകാരൻ: നീ അവധിക്കാലത്ത് എവിടെയെങ്കിലും പോയിരുന്നോ?\nഞാൻ: അതെ, ഞാൻ വയനാട്ടിൽ പോയിരുന്നു.\nകൂട്ടുകാരൻ: അവിടെ എന്തൊക്കെ കണ്ടു?\nഞാൻ: മനോഹരമായ കാടുകളും വെള്ളച്ചാട്ടങ്ങളും കണ്ടു. യാത്ര വളരെ രസകരമായിരുന്നു!' }
-        }
-    },
-    l2: {
-        text: [
-            "കൽക്കത്താനഗരത്തിൽനിന്ന് 100 നാഴിക അകലെക്കിടക്കുന്ന ബോൾപൂർ റെയിൽവേസ്റ്റേഷനിൽ വണ്ടിയിറങ്ങിയ ഉടനെതന്നെ, പരിഷ്കാരസ്പർശമേൽക്കാത്ത ഏകാന്തമായ ഒരുൾനാട്ടിന്റെ മടിത്തട്ടിലാണ് നാം എത്തിച്ചേരുക.",
-            "നഗരത്തിന്റെ നിരന്തരമായ, ഖരഖരാരവത്തിൽനിന്നു നമുക്കു തെല്ലിട നിർവൃതി നൽകുവാൻ പോകുന്ന വിശ്വവിഖ്യാതമായ ആ കുഗ്രാമം.",
-            "ബംഗാളിലെ ഗ്രാമങ്ങളിൽ കേരളത്തിന്റെ പ്രകൃതിഭംഗി പ്രതിഫലിച്ചു കാണുന്നു. തെങ്ങുകളും താലവൃക്ഷങ്ങളും തലയുയർത്തിനിൽക്കുന്ന പറമ്പുകൾ, വാഴത്തോട്ടങ്ങൾ, ആൽത്തറകൾ, ഇവയൊക്കെ നമ്മെ മലയാളത്തെ അനുസ്മരിപ്പിക്കുന്നു.",
-            "ശാന്തിനികേതനത്തിന് അതിർത്തിനിർണ്ണയം ചെയ്യുന്ന ഭിത്തികൾപോലുമില്ല. പുല്ലുമേഞ്ഞ കുറേ കുടിലുകളുടെയും മാന്തോപ്പുകളുടെയും പുൽത്തകിടികളുടെയും മധ്യേ ഒരു വിശ്വവിദ്യാലയം സ്ഥിതിചെയ്യുന്നു.",
-            "കറുത്ത പരുത്ത മൺചുമരുകളും പുല്ലുമേഞ്ഞ മേൽപ്പുരയുമുള്ള ഒരെളിയ പർണ്ണശാലയാണ് വിശ്രുതമായ കലാഭവനം."
-        ],
-        qa: [
-            ["ശാന്തിനികേതനം എവിടെയാണ് സ്ഥിതി ചെയ്യുന്നത്?", "കൽക്കത്താനഗരത്തിൽനിന്ന് 100 നാഴിക അകലെക്കിടക്കുന്ന ബോൾപൂർ റെയിൽവേസ്റ്റേഷനടുത്താണ് ശാന്തിനികേതനം."],
-            ["ബംഗാളിലെ ഗ്രാമങ്ങൾ കേരളത്തെ ഓർമ്മിപ്പിക്കുന്നത് എന്തുകൊണ്ട്?", "തെങ്ങുകളും താലവൃക്ഷങ്ങളും തലയുയർത്തിനിൽക്കുന്ന പറമ്പുകൾ, വാഴത്തോട്ടങ്ങൾ, ആൽത്തറകൾ എന്നിവയുള്ളതുകൊണ്ട്."],
-            ["ശാന്തിനികേതനത്തിലെ വിദ്യാലയങ്ങളുടെ പ്രത്യേകത എന്താണ്?", "കൂറ്റൻ കോൺക്രീറ്റ് കെട്ടിടങ്ങൾക്കും അതിർത്തിമതിലുകൾക്കും പകരം പ്രകൃതിയോടിണങ്ങി നിൽക്കുന്ന, പുല്ലുമേഞ്ഞ മൺകുടിലുകളിലാണവ പ്രവർത്തിക്കുന്നത്."]
-        ],
-        vocab: [
-            { w: 'ഖരഖരാരവം', m: 'കർക്കശമായ ശബ്ദം / ബഹളം', e: '🔊' },
-            { w: 'നിർവൃതി', m: 'സന്തോഷം / ശാന്തി', e: '😌' },
-            { w: 'വിശ്വവിദ്യാലയം', m: 'സർവകലാശാല (University)', e: '🏛️' },
-            { w: 'അർവാചീനം', m: 'നവീനമായത് / പുതിയത്', e: '🆕' }
-        ],
-        activities: {
-            creative: { t: 'വിവരണം തയ്യാറാക്കാം (Description)', q: 'പ്രകൃതിയോടിണങ്ങിയ വിദ്യാഭ്യാസ രീതിയാണ് ശാന്തിനികേതനത്തിലുള്ളത്. ഇതിന്റെ പ്രത്യേകതകൾ സ്വന്തം വാക്കുകളിൽ വിവരിക്കുക.', a: 'മതിലുകൾക്കും നാലുചുവരുകൾക്കും അപ്പുറം പ്രകൃതിയെ അറിഞ്ഞുകൊണ്ടുള്ള വിദ്യാഭ്യാസമാണ് ശാന്തിനികേതനത്തിന്റെ ലക്ഷ്യം. കൂറ്റൻ കെട്ടിടങ്ങൾക്ക് പകരം മരത്തണലുകളിലും പുല്ലുമേഞ്ഞ കുടിലുകളിലുമാണ് പഠനം നടക്കുന്നത്. ഇത് കുട്ടികളിൽ പ്രകൃതിസ്നേഹവും ലാളിത്യവും വളർത്താൻ സഹായിക്കുന്നു.' },
-            speaking: { t: 'Role Play Zone', q: 'ശാന്തിനികേതനം സന്ദർശിക്കാൻ വരുന്ന ഒരാളും അവിടുത്തെ ഒരു വിദ്യാർത്ഥിയും തമ്മിലുള്ള സംഭാഷണം അഭിനയിക്കുക.', a: 'സന്ദർശകൻ: ഇവിടെ വലിയ കെട്ടിടങ്ങളൊന്നും കാണാനില്ലല്ലോ?\nവിദ്യാർത്ഥി: അതെ, ഞങ്ങൾ മരത്തണലുകളിലും ഈ പുല്ലുമേഞ്ഞ കുടിലുകളിലുമാണ് പഠിക്കുന്നത്. പ്രകൃതിയാണ് ഞങ്ങളുടെ യഥാർത്ഥ ക്ലാസ് മുറി.' }
-        }
-    },
-    l3: {
-        text: [
-            "മരുഭൂമിയിൽ സഞ്ചരിക്കുമ്പോൾ സൂര്യൻ അസ്തമിക്കുക പൊടുന്നനെയായിരിക്കും. അസ്തമയത്തിന് ഇനിയും ഏറെനേരമുണ്ടെന്ന മട്ടിലാണ് സൂര്യൻ പെരുമാറുക.",
-            "യാത്രികൻ അനന്തമായ മണൽപ്പരപ്പിൽ ഉന്മാദിയെപ്പോലെ നടക്കുന്നതിനിടയിലായിരിക്കും പെട്ടെന്ന് ഇരുട്ടിന്റെ പരശ്ശതം കമ്പളങ്ങൾ പുതപ്പിച്ച് സൂര്യൻ പിൻവാങ്ങുക.",
-            "പക്ഷേ, സൂര്യൻ അസ്തമിക്കുന്നതിനു തൊട്ടുമുമ്പുള്ള കാഴ്ച രസകരമായിരിക്കും. അസ്തമയരശ്മികൾ മണൽപ്പരപ്പിൽ അസംഖ്യം പതാകകൾ തീർക്കും.",
-            "അസ്തമയത്തിനു തൊട്ടുമുമ്പ് മണൽക്കുന്നുകളിൽ പിറക്കുന്ന നിഴലുകൾക്ക് നീളവും വേഗവും കൂടും. നിഴലുകൾ കെട്ടുപിണയുമ്പോൾ പതാകകളേന്തിയ അസംഖ്യം മനുഷ്യമുഷ്ടികൾ ഉയർന്നുവരികയാണെന്ന് തോന്നും.",
-            "ഒട്ടകക്കൂട്ടങ്ങളും ആട്ടിൻപറ്റങ്ങളും അവയെ തെളിച്ചു പോകുന്നവരും നിഴലുകളായി മാറും."
-        ],
-        qa: [
-            ["മരുഭൂമിയിലെ അസ്തമയത്തിന്റെ പ്രത്യേകത എന്താണ്?", "മരുഭൂമിയിൽ യാതൊരു മുന്നറിയിപ്പുമില്ലാതെ പൊടുന്നനെയാണ് സൂര്യൻ അസ്തമിക്കുന്നത്. പകലിന് ഇനിയും സമയമുണ്ടെന്ന് തോന്നിപ്പിച്ചുകൊണ്ടാണ് പെട്ടെന്ന് ഇരുട്ട് വീഴുന്നത്."],
-            ["അസ്തമയത്തിന് തൊട്ടുമുമ്പുള്ള കാഴ്ചയെ ലേഖകൻ എങ്ങനെ വർണ്ണിക്കുന്നു?", "സൂര്യരശ്മികൾ മണൽപ്പരപ്പിൽ അസംഖ്യം പതാകകൾ തീർക്കുമെന്നും, നിഴലുകൾക്ക് നീളവും വേഗവും കൂടുമെന്നും ലേഖകൻ പറയുന്നു."]
-        ],
-        vocab: [
-            { w: 'ഉന്മാദി', m: 'ഭ്രാന്തൻ / സമനില തെറ്റിയവൻ', e: '😵' },
-            { w: 'പരശ്ശതം', m: 'നൂറുകണക്കിന്', e: '💯' },
-            { w: 'മുഷ്ടി', m: 'ചുരുട്ടിയ കൈ', e: '✊' }
-        ],
-        activities: {
-            creative: { t: 'ഡയറിക്കുറിപ്പ് (Diary Entry)', q: 'മരുഭൂമിയിലെ അപ്രതീക്ഷിതമായ അസ്തമയം കണ്ട ഒരു യാത്രികന്റെ ഡയറിക്കുറിപ്പ് തയ്യാറാക്കുക.', a: 'ഇന്ന് മരുഭൂമിയിലെ അസ്തമയം കണ്ടു. വല്ലാത്തൊരു അനുഭവമായിരുന്നു അത്. പകലിന് ഇനിയും ഏറെ സമയമുണ്ടെന്ന് തോന്നിപ്പിച്ചുക്കൊണ്ട് പെട്ടെന്നാണ് സൂര്യൻ മറഞ്ഞതും ഇരുട്ട് വീണതും. പക്ഷെ അതിനുമുമ്പുള്ള മണൽപ്പരപ്പിലെ കാഴ്ച അതിമനോഹരമായിരുന്നു.' }
-        }
-    },
-    l4: {
-        text: [
-            "അപ്പൂപ്പൻതാടിയുടെ പറക്കത്തെ വിനീതമായ ഒരു ശ്രമമായി കാണണം.",
-            "ചിറകുകളില്ല, ദേശാന്തരം വിധിച്ചിട്ടില്ല, ആകാശവും സ്വന്തമല്ല, എന്നിട്ടും അതു പറക്കുന്നു. കുഞ്ഞിനെ എന്നപോലെ വിത്തിനെ മടിയിൽ വച്ച്.",
-            "അതു കാണും സ്വപ്നത്തിലെ മരത്തിന്റെ തണലിൽ നാളെയൊരാൾ വന്നിളവേൽക്കും എന്ന കവിത അതിനറിയില്ല.",
-            "അറിവില്ലായ്മയുടെ ഭാരക്കുറവിൽ അതു പറക്കുന്നു.",
-            "ധീരമെങ്കിലും എളിയ അതിന്റെ ശ്രമം വീണുപോകുന്നിടത്ത് സ്മാരകമായി ഉയർന്നുവന്നേക്കും ആരുമറിയാതെ നാളെ ഒരു മരം."
-        ],
-        qa: [
-            ["കവി അപ്പൂപ്പൻതാടിയുടെ യാത്രയെ എങ്ങനെ വിശേഷിപ്പിക്കുന്നു?", "ചിറകുകളോ മറ്റ് അനുകൂല സാഹചര്യങ്ങളോ ഇല്ലാതെ തന്നെ, വിത്തിനെ മടിയിൽവെച്ച് അപ്പൂപ്പൻതാടി നടത്തുന്ന പറക്കലിനെ ധീരമെങ്കിലും വിനീതമായ ഒരു ശ്രമമായാണ് കവി കാണുന്നത്."],
-            ["അപ്പൂപ്പൻതാടിയുടെ സ്മാരകമായി ഉയരുന്നത് എന്തായിരിക്കും?", "അത് കൊണ്ടുപോകുന്ന വിത്തിൽനിന്ന് നാളെയൊരു വലിയ മരം വളർന്നുവരും. അതായിരിക്കും അപ്പൂപ്പൻതാടിയുടെ സ്മാരകം."]
-        ],
-        vocab: [
-            { w: 'വിനീതം', m: 'അഹങ്കാരമില്ലാത്ത / എളിയ', e: '🙏' },
-            { w: 'ദേശാന്തരം', m: 'മറ്റൊരു രാജ്യം / ദൂരസ്ഥലം', e: '🌍' },
-            { w: 'സ്മാരകം', m: 'ഓർമ്മയ്ക്കായി നിർമ്മിക്കുന്നത്', e: '🗿' }
-        ],
-        activities: {
-            creative: { t: 'ആസ്വാദനക്കുറിപ്പ് (Appreciation)', q: 'ഒരു ചെറിയ വിത്തിന്റെ യാത്രയെ എത്ര മഹത്തായ രീതിയിലാണ് കവി അവതരിപ്പിച്ചിരിക്കുന്നത്! സ്മാരകം എന്ന കവിതയുടെ ആശയം ഉൾപ്പെടുത്തി ഒരു ആസ്വാദനക്കുറിപ്പ് തയ്യാറാക്കുക.', a: 'ചെറിയ കാര്യങ്ങളിലൂടെ വലിയ മാറ്റങ്ങൾ സൃഷ്ടിക്കാമെന്ന വലിയ സന്ദേശമാണ് വീരാൻകുട്ടിയുടെ സ്മാരകം എന്ന കവിത നൽകുന്നത്. യാതൊരു അനുകൂല സാഹചര്യവുമില്ലാത്ത അപ്പൂപ്പൻതാടി സ്വന്തം കുഞ്ഞിനെപ്പോലെ ഒരു വിത്തിനെ സംരക്ഷിച്ചുകൊണ്ട് പറക്കുന്നു. ഭാവിയിലെ ഫലങ്ങളെക്കുറിച്ച് ചിന്തിക്കാതെ ലളിതമായി കർമ്മം ചെയ്യുന്നതിന്റെ മഹത്ത്വമാണ് ഇവിടെ വരച്ചുകാട്ടുന്നത്.' },
-            rhymes: { t: 'പാട്ടുപെട്ടി (Sing Along)', q: 'ഈ വരികൾ ഈണത്തിൽ പാടി നോക്കൂ.', a: 'അപ്പൂപ്പൻതാടിയുടെ പറക്കത്തെ\nവിനീതമായ ഒരു ശ്രമമായി കാണണം...\nചിറകുകളില്ല\nദേശാന്തരം വിധിച്ചിട്ടില്ല\nആകാശവും സ്വന്തമല്ല...' }
-        }
-    },
-    l5: {
-        text: [
-            "ഞാൻ കണ്ടിട്ടുള്ളതിൽവച്ച് ഏറ്റവും പഴക്കംചെന്ന ഒരു വണ്ടിയായിരുന്നു എന്റെ അർബാബിന്റേത്. ഡോറും ബോണറ്റും ടോപ്പും ഒക്കെ പെയിന്റിളകി തുരുമ്പുപിടിച്ചിരിക്കുന്നു.",
-            "അർബാബ് എന്റെ ബാഗ് തട്ടിപ്പറിച്ച് വണ്ടിയുടെ പിറകിലെ തുറന്ന ഭാഗത്തേക്ക് ഒരേറുവച്ചുകൊടുത്തു. ഉമ്മ തന്നയച്ച മീൻ അച്ചാർ... എന്റെ ചങ്കുപൊള്ളിപ്പോയി.",
-            "അർബാബ് വാതിൽ തുറന്നിറങ്ങിവന്ന് എന്റെ കൈപിടിച്ച് പിന്നിലേക്ക് കൊണ്ടുപോയി പിറകുവശത്തെ തുറന്ന ക്യാബിനിലേക്കു തള്ളി. അത് കണ്ടു ഹക്കീം അവിടേക്ക് ചാടിക്കയറി.",
-            "ഗൾഫിന്റെ വീഥികളിലൂടെയുള്ള എന്റെ ആദ്യയാത്ര. അതിങ്ങനെ തുറന്ന വണ്ടിയിൽ ആയത് എന്നെ കുറച്ച് വേദനിപ്പിച്ചെങ്കിലും കൂടുതൽ സന്തോഷിപ്പിക്കുകയാണ് ചെയ്തത്. നഗരത്തിന്റെ പ്രഭാപൂരം പതിയെ അസ്തമിക്കുകയായിരുന്നു.",
-            "യാത്ര ഇടവഴികൾവിട്ട് മൺപാതയിലേക്കു പ്രവേശിക്കുന്നത് ഞാനറിഞ്ഞു. പൊടിപടലം പറത്തിക്കൊണ്ട് ആ വാഹനം മണൽക്കൂനകൾക്കിടയിലൂടെ ഓടിക്കൊണ്ടേയിരുന്നു.",
-            "അന്നേരം മുതൽ എന്തെന്നറിയാത്ത ഭീതി ഒരു മണിയനീച്ചയെപ്പോലെ എന്റെ മനസ്സിനെ വലംവച്ച് തുടങ്ങി. ഞാൻ മോഹിച്ച തരം ഒരു ഗൾഫിലേക്കല്ല എന്റെ ഈ യാത്ര നീളുന്നത് എന്നൊരു തോന്നൽ."
-        ],
-        qa: [
-            ["അർബാബിന്റെ വണ്ടിയുടെ അവസ്ഥ എന്തായിരുന്നു?", "ഡോറും ബോണറ്റും ടോപ്പും ഒക്കെ പെയിന്റിളകി തുരുമ്പുപിടിച്ച, വളരെ പഴക്കംചെന്ന ഒരു വണ്ടിയായിരുന്നു അത്."],
-            ["ആ തുറന്ന വണ്ടിയിലെ യാത്ര നജീബിനെ ആദ്യം സന്തോഷിപ്പിച്ചത് എന്തുകൊണ്ട്?", "നഗരത്തിന്റെ പ്രഭാപൂരവും മനോഹാരിതയും തെല്ലും ചോരാതെ, പൂർണ്ണമായി കാണാൻ ആ തുറന്ന വണ്ടിയിലെ യാത്ര സഹായിച്ചതുകൊണ്ടാണ് അത് ആദ്യം സന്തോഷം നൽകിയത്."],
-            ["നജീബിന്റെ മനസ്സിൽ ഭീതി വലംവയ്ക്കാൻ കാരണമെന്ത്?", "നഗരം വിട്ട് അന്ധകാരം നിറഞ്ഞ മൺപാതയിലൂടെയും മണൽക്കൂനകൾക്കിടയിലൂടെയുമുള്ള യാത്ര തുടങ്ങിയപ്പോൾ, താൻ സ്വപ്നം കണ്ട ഗൾഫിലേക്കല്ല ഈ യാത്ര പോകുന്നതെന്ന തോന്നലാണ് നജീബിൽ ഭീതി ഉണ്ടാക്കിയത്."]
-        ],
-        vocab: [
-            { w: 'അർബാബ്', m: 'സ്പോൺസർ / തൊഴിലുടമ', e: '👤' },
-            { w: 'ഭീതി', m: 'പേടി / ഭയം', e: '😨' },
-            { w: 'മണിയനീച്ച', m: 'ശബ്ദമുണ്ടാക്കി ശല്യം ചെയ്യുന്ന ഈച്ച (ഉപമ)', e: '🪰' },
-            { w: 'ശോഭനം', m: 'തിളക്കമുള്ളത് / മനോഹരമായ ഭാവി', e: '🌟' }
-        ],
-        activities: {
-            creative: { t: 'ശബ്ദസന്ദേശം (Voice Message)', q: 'ഗൾഫിലെ ആദ്യദിവസത്തെ യാത്രാനുഭവത്തെക്കുറിച്ച് നജീബ് തന്റെ നാട്ടിലെ കൂട്ടുകാരന് അയയ്ക്കാനിടയുള്ള ഒരു വോയ്സ് മെസ്സേജ് തയ്യാറാക്കുക.', a: 'എടാ, ഞാൻ ഇവിടെ എത്തി. പക്ഷെ ഞാൻ വിചാരിച്ചപോലെയൊന്നുമല്ല കാര്യങ്ങൾ. എന്നെ വിളിക്കാൻ വന്ന മുതലാളിയുടെ വണ്ടി കണ്ടാൽ നീ ഞെട്ടും, അത്രയ്ക്കും പഴഞ്ചനാണ്. എന്നെയും ഹക്കീമിനെയും വണ്ടിയുടെ പുറകിലാണ് ഇരുത്തിയത്. ആദ്യം നഗരം കണ്ടപ്പോൾ സന്തോഷം തോന്നി. പക്ഷെ പിന്നെ വണ്ടി ഇരുട്ടിലേക്ക്, മണൽക്കാട്ടിലേക്ക് തിരിഞ്ഞു. എനിക്ക് വല്ലാത്ത പേടി തോന്നുന്നുണ്ട്.' },
-            speaking: { t: 'റോൾ പ്ലേ (Role Play)', q: 'നജീബും അർബാബും തമ്മിലുള്ള ഒരു സാങ്കല്പിക സംഭാഷണം അവതരിപ്പിക്കുക.', a: '(അർബാബ് കോപത്തോടെ നജീബിന്റെ ബാഗ് വലിച്ചെറിയുന്നു)\nനജീബ്: (പേടിയോടെ) എന്റെ ഉമ്മ തന്നയച്ച അച്ചാറാണ് അതിൽ...\nഅർബാബ്: യാ അള്ളാ! വേഗം വണ്ടിയുടെ പുറകിൽ കയറ്!' }
-        }
-    }
+const TEXTS={
+sujatha:['പ്രിയപ്പെട്ട പേട്ടേ, എന്റെയുള്ളിൽ താങ്കളില്ല; പോയിട്ട് രണ്ടുമാസമായി. ഈ യാത്ര എനിക്കൊരു ഹിമാലയത്തോളം വലുതായി തോന്നി.','പുഷ്പനാമങ്ങളെക്കാൾ, അനുഭവസമ്പത്ത് ഈ യാത്രയിൽനിന്ന് ഞാൻ പഠിച്ചു. വീടിനുള്ളിലെ പാഠങ്ങളേക്കാൾ വലുതാണ് അപരിചിതമായ വഴിയിലെ പാഠം.','കാടും മലയും പുഴയും ഒരു പാഠശാലയായി മാറി. അനുഭവം മനുഷ്യനെ ജീവിതഗ്രന്ഥമായി മാറ്റുന്നു.','സ്വർഗം ആകാശത്തല്ല, നടന്ന വഴിയിലാണെന്ന് തോന്നി. യാത്ര ഒരു തുടക്കം മാത്രം. കണ്ടെത്തുകയാണ് യാത്ര. സ്നേഹത്തോടെ, സുജാതാദേവി.'],
+santhi:['കൽക്കത്തയിൽനിന്ന് നൂറു നാഴിക അകലെയുള്ള ബോൾപൂർ സ്റ്റേഷനിൽ ഇറങ്ങിയ ഉടനെ, ഏകാന്തമായ ഒരു ഗ്രാമനാടിന്റെ മടിയിലാണ് നാം എത്തുന്നത്.','ശാന്തിനികേതനത്തിലേക്ക് പോകുന്ന മൂന്നുമൈൽ പാത മുന്നിലുണ്ട്. കാളവണ്ടിയുടെ ചക്രപ്പാടുകൾ പതിഞ്ഞ മൺപാത പാടങ്ങളിലൂടെ വളയുന്നു.','ബംഗാളിലെ ഗ്രാമങ്ങളിൽ കേരളത്തിന്റെ ഭംഗി പ്രതിഫലിക്കുന്നു. തെങ്ങ്, വാഴത്തോട്ടം, ആൽത്തറ, കർഷകക്കുടിൽ — നാം മലയാളത്തെ അനുഭവിക്കുകയാണ്.','വഴിയിൽ ഒരു ബംഗാളിയോട് ഞാൻ ചോദിച്ചു: ശാന്തിനികേതനത്തിലേക്കുള്ള വഴിയേതാണ്? അയാൾ പുഞ്ചിരിച്ചു: ഇതെല്ലാം തന്നെ ശാന്തിനികേതനം.','ഭാവനയിലെ വിശ്വവിദ്യാലയം മായുന്നു. ഉയരംപറഞ്ഞ കെട്ടിടങ്ങളില്ല. പുല്ലുമേഞ്ഞ കലാഭവനം 1922-ൽ തുടങ്ങി. നന്ദലാൽ ബോസിന്റെ ചിത്രങ്ങളും ഗീതാഞ്ജലിയിലെ Where the mind is without fear എന്ന വരികളും ഇവിടെയുണ്ട്.','ശ്രീനികേതനം ഗ്രാമോന്നതിക്കുള്ള കേന്ദ്രമാണ്. സ്വന്തം സുഖത്തിനപ്പുറം ദാരിദ്ര്യനാശത്തിനായി നാട്ടുകാരെ സഹായിക്കുകയാണ് അതിന്റെ ഉള്ളുകരുത്ത്.'],
+marupani:['മരുഭൂമിയിൽ സഞ്ചരിക്കുമ്പോൾ സൂര്യൻ അസ്തമിക്കുക പൊടുന്നനെയായിരിക്കും. അസ്തമയത്തിന് ഇനിയും ദൂരമുണ്ടെന്ന മട്ടിലാണ് സൂര്യൻ പെരുമാറുക.','യാത്രികർ മണൽപ്പരപ്പിൽ നടക്കുന്നതിനിടയിലായിരിക്കും പെരുഞ്ചൂട് പിൻവാങ്ങുക.','അസ്തമയത്തിന് മുമ്പുള്ള കാഴ്ച സുന്ദരം. മണലിൽ അസംഖ്യം താഴ്‌വരകൾ തീരും. നിഴലുകൾക്ക് നീളവും രൂപവും കൂടും.','നിഴലുകൾ കെട്ടുപിണയുമ്പോൾ പതാകകളുയർത്തിയ മനുഷ്യരൂപങ്ങൾ ഉയരുന്നു. ഒട്ടകക്കൂട്ടങ്ങളും ആടുകളും നിഴലാകും. ആ കാഴ്ച മനുഷ്യൻ കടന്നുവന്ന വഴികളെ ഓർമിപ്പിക്കും.'],
+smarakam:['ആപ്പുപ്പൂന്താടിയുടെ പാറക്കലത്തെ വിസ്മിതമായ ഒരു ശ്രമമായി കാണണം. ചിറകുകളില്ല. ആകാശവും സ്വന്തമല്ല. എന്നിട്ടും അതു പറക്കുന്നു.','കുഞ്ഞിനെ എന്നപോലെ വിത്തിനെ മടിയിൽ വച്ച്. അറിവില്ലായ്മയുടെ ഭാരക്കുറവിൽ അതു പറക്കുന്നു.','അതിനെ പക്ഷി എന്നു വിളിക്കാതിരിക്കാൻ നാം കാണിക്കുന്ന കരുത്തയിൽ അതു കുറച്ചുകൂടി ദൂരം പോയേക്കും.','എളിയ അതിന്റെ ശ്രമം വിസ്മയമായി നിൽക്കുന്നിടത്ത് സ്മാരകമായി ഉയരും. ആരുമറിയാതെ നാളെ ഒരു മരം.'],
+najib:['നാട്ടിൽ മണൽവാരൻ തൊഴിലാളിയായിരുന്നു നജീബ്. ജീവിതദുരിതത്തിൽനിന്ന് രക്ഷനേടാൻ ഗൾഫിലേക്ക് പോകാൻ ഒരുങ്ങുന്നു. കൂടെ ഹക്കീമും.','റിയാദിൽ വിമാനമിറങ്ങി അർബാബിനെ കാണുന്നു. അയാളുടെ വണ്ടി ഏറ്റവും പഴക്കംചെന്നതായിരുന്നു.','അർബാബ് ബാഗ് പിറകിലിട്ടു. യാ അള്ളാ എന്നലറി നജീബിനെ പിൻകൂടയിലേക്ക് തള്ളി.','നഗരവെളിച്ചം അസ്തമിച്ചു. വണ്ടി മണൽപ്പാതയിലേക്ക് തിരിഞ്ഞു. പച്ചവെള്ളം മാത്രമായിരുന്നു അന്നത്തെ ആഹാരം.','അന്നുമുതൽ എന്തെന്നറിയാത്ത ഭീതി മനസ്സിനെ വലയം ചെയ്തു. ഞാൻ മോഹിച്ച ഗൾഫിലേക്കല്ല ഈ യാത്ര. ആ കിടപ്പിൽ ഞാൻ ഉറങ്ങിപ്പോയി.']
 };
-
-const GAMES = {
-    1: [ // ആശയം കണ്ടെത്തുക
-        { q: "കാടുകളുടെ താളം തേടി എന്ന പാഠത്തിന്റെ മുഖ്യ ആശയം എന്ത്?", opts: ["യാത്രകൾ നൽകുന്ന പ്രായോഗിക ജീവിതപാഠങ്ങൾ", "ഹിമാലയത്തിലെ കാലാവസ്ഥ", "നഗരജീവിതത്തിന്റെ സൗകര്യങ്ങൾ", "ട്രെയിൻ യാത്രയുടെ ബുദ്ധിമുട്ടുകൾ"], ans: 0 },
-        { q: "ശാന്തിനികേതനം പാഠഭാഗം എന്തിനെയാണ് സൂചിപ്പിക്കുന്നത്?", opts: ["നഗരങ്ങളിലെ ഗതാഗതക്കുരുക്ക്", "പ്രകൃതിയോടിണങ്ങിയ വിദ്യാഭ്യാസ രീതി", "ബംഗാളിലെ കൃഷിരീതികൾ", "മരുഭൂമിയിലെ ജീവിതം"], ans: 1 },
-        { q: "സ്മാരകം എന്ന കവിത നൽകുന്ന സന്ദേശം എന്താണ്?", opts: ["വലിയ കെട്ടിടങ്ങൾ പണിയണം", "ലക്ഷ്യങ്ങളെക്കുറിച്ച് ചിന്തിച്ച് വേവലാതിപ്പെടാതെ കർമ്മം ചെയ്യുക", "മരങ്ങൾ നട്ടുപിടിപ്പിക്കുക", "പക്ഷികളെ സംരക്ഷിക്കുക"], ans: 1 },
-        { q: "മണൽക്കൂനകൾക്കിടയിലൂടെ എന്ന പാഠത്തിന്റെ പ്രമേയം എന്ത്?", opts: ["പ്രവാസജീവിതത്തിന്റെ ആരംഭത്തിലുണ്ടാകുന്ന അരക്ഷിതാവസ്ഥ", "ഗൾഫിലെ നഗരകാഴ്ചകൾ", "വണ്ടി ഓടിക്കുന്ന രീതി", "വിമാനയാത്രയുടെ സുഖം"], ans: 0 }
-    ],
-    2: [ // അർഥം കണ്ടെത്തുക
-        { q: "നിർവൃതി", opts: ["സന്തോഷം / ശാന്തി", "ബഹളം", "ദുഃഖം", "തിരക്ക്"], ans: 0 },
-        { q: "അസംഖ്യം", opts: ["ഒന്നോ രണ്ടോ", "എണ്ണമറ്റ", "കുറഞ്ഞ", "ഭാരം"], ans: 1 },
-        { q: "വിനീതം", opts: ["അഹങ്കാരമുള്ളത്", "വേഗത്തിലുള്ളത്", "അഹങ്കാരമില്ലാത്ത / എളിയ", "ചിറകില്ലാത്തത്"], ans: 2 },
-        { q: "ശോഭനം", opts: ["ഇരുണ്ടത്", "തിളക്കമുള്ളത്", "മനോഹരം", "ചീത്തയായത്"], ans: 1 }
-    ],
-    3: [ // കേട്ട് തിരഞ്ഞെടുക്കുക
-        { q: "ശാന്തിനികേതനത്തിലേക്കുള്ള വഴി...", opts: ["കറുത്ത ടാർ ചെയ്ത റോഡാണ്", "കാളവണ്ടിച്ചക്രങ്ങൾ പതിഞ്ഞ പടുകിഴവൻ പാതയാണ്", "പുതിയതായി പണിത പാലമാണ്", "വെള്ളം നിറഞ്ഞ കുളമാണ്"], ans: 1 },
-        { q: "മരുഭൂമിയിലെ അസ്തമയരശ്മികൾ മണൽപ്പരപ്പിൽ തീർക്കുന്നത്...", opts: ["അസംഖ്യം പതാകകൾ", "വലിയ കെട്ടിടങ്ങൾ", "മഴവില്ലുകൾ", "കറുത്ത മേഘങ്ങൾ"], ans: 0 },
-        { q: "അപ്പൂപ്പൻതാടിയുടെ സ്മാരകമായി ഉയർന്നുവരുന്നത്...", opts: ["വലിയൊരു പ്രതിമ", "അതുകൊണ്ടുപോയ വിത്തിൽ നിന്നുള്ള മരം", "മനോഹരമായ ഒരു പൂന്തോട്ടം", "വലിയൊരു കെട്ടിടം"], ans: 1 },
-        { q: "അർബാബിന്റെ വണ്ടിയുടെ പുറകിലെ യാത്ര നജീബിന് ആദ്യം സന്തോഷം നൽകിയത്...", opts: ["കാറ്റ് കൊള്ളാൻ കഴിഞ്ഞതുകൊണ്ട്", "ഗൾഫ് നഗരത്തിന്റെ മനോഹാരിത മുഴുവൻ കാണാൻ കഴിഞ്ഞതുകൊണ്ട്", "വണ്ടിക്ക് നല്ല വേഗത ഉണ്ടായിരുന്നതുകൊണ്ട്", "ഉറങ്ങാൻ കഴിഞ്ഞതുകൊണ്ട്"], ans: 1 }
-    ],
-    4: [ // സംഭവക്രമം (Sequence logic adapted to MCQ for standard UI)
-        { q: "നജീബിന്റെ യാത്രയിൽ ആദ്യം നടന്ന സംഭവം?", opts: ["മണൽപ്പാതയിലൂടെയുള്ള യാത്ര", "നഗരത്തിലെ വെളിച്ചമുള്ള റോഡിലൂടെയുള്ള യാത്ര", "അർബാബ് ബാഗ് വലിച്ചെറിയുന്നു", "ഹക്കീം ഉറങ്ങുന്നു"], ans: 2 },
-        { q: "സൂര്യൻ അസ്തമിക്കുന്നതിന് തൊട്ടുമുമ്പ് മരുഭൂമിയിൽ നടക്കുന്നത്?", opts: ["ഇരുട്ട് വീഴുന്നു", "നിഴലുകൾക്ക് നീളവും വേഗവും കൂടുന്നു", "മഴ പെയ്യുന്നു", "കാറ്റ് വീശുന്നു"], ans: 1 }
-    ],
-    5: [ // ആരാണ് പറഞ്ഞത്?
-        { q: "\"എത്രനാളായി ഞാനിങ്ങു പോന്നിട്ട്! രണ്ടുമാസം.\"", opts: ["സുജാതാദേവി", "എസ്. കെ. പൊറ്റക്കാട്ട്", "നജീബ്", "വീരാൻകുട്ടി"], ans: 0 },
-        { q: "\"ശാന്തിനികേതനത്തിലേക്കുള്ള വഴിയേതാണ്?\"", opts: ["നജീബ്", "ബംഗാളി", "എസ്. കെ. പൊറ്റക്കാട്ട്", "നന്ദലാൽ ബോസ്"], ans: 2 },
-        { q: "\"ഞാനിപ്പോൾ വിശന്നു ചത്തേക്കുമെന്നാണ്...\"", opts: ["ഹക്കീം", "നജീബ്", "അർബാബ്", "ശശി"], ans: 0 }
-    ],
-    6: [ // ശരിയോ തെറ്റോ
-        { q: "ശാന്തിനികേതനത്തിൽ വലിയ കോൺക്രീറ്റ് കെട്ടിടങ്ങൾ ധാരാളമുണ്ട്.", opts: ["ശരി", "തെറ്റ്"], ans: 1 },
-        { q: "ലേഖിക ഹിമാലയൻ യാത്രയിൽ പ്രായോഗിക ജീവിതപാഠങ്ങൾ ധാരാളം പഠിച്ചു.", opts: ["ശരി", "തെറ്റ്"], ans: 0 },
-        { q: "നജീബിനും ഹക്കീമിനും അർബാബിന്റെ കാറിന്റെ മുൻസീറ്റിലാണ് യാത്ര ചെയ്യാൻ കഴിഞ്ഞത്.", opts: ["ശരി", "തെറ്റ്"], ans: 1 },
-        { q: "മരുഭൂമിയിൽ സൂര്യൻ അസ്തമിക്കുന്നത് യാതൊരു സൂചനയുമില്ലാതെയാണ്.", opts: ["ശരി", "തെറ്റ്"], ans: 0 }
-    ]
+const QA_BY={
+sujatha:[['യാത്രകൾ എന്തിനെല്ലാം?','അറിവിന്, സംസ്കാരം അറിയാൻ, സ്വയം കണ്ടെത്താൻ, ജീവിതപാഠത്തിന്.'],['കത്തിന്റെ ഭാഷയുടെ പ്രത്യേകത?','സ്നേഹസംബോധന, ആത്മകഥാപരമായ സ്വരം, യാത്രയെ പാഠമായി കാണൽ.']],
+santhi:[['വഴിയിലെ മനുഷ്യൻ പറഞ്ഞത്?','ഇതെല്ലാം തന്നെ ശാന്തിനികേതനം — ഭിത്തിയില്ലാത്ത ആശ്രമം.'],['ശ്രീനികേതനത്തിന്റെ ലക്ഷ്യം?','ഗ്രാമോന്നതി, ദാരിദ്ര്യലഘൂകരണം.']],
+marupani:[['മരുഭൂമിയിൽ അസ്തമയം എങ്ങനെ?','പൊടുന്നനെ. നിഴലുകൾ മനുഷ്യരൂപമാകുന്നു.'],['ദൃശ്യാവിഷ്കാരം എന്നാൽ?','കാഴ്ചയെ വായനക്കാരന്റെ മുന്നിൽ നിർത്തുന്ന എഴുത്ത്.']],
+smarakam:[['ചിറകില്ലാതെ പറക്കുക — ആശയം?','മാർഗം കുറഞ്ഞിട്ടും മുന്നോട്ട് പോകുന്ന ജീവിതയാത്ര.'],['വിത്തിനെ മടിയിൽ വച്ച് — പൊരുൾ?','ഭാവിയെ സംരക്ഷിച്ചുള്ള യാത്ര.']],
+najib:[['ഭീതിയുടെ സൂചനകൾ?','അജ്ഞാത അർബാബ്, പിൻകൂട, രാത്രി, മണൽപ്പാത, വിശപ്പ്.'],['പച്ചവെള്ളം എന്നാൽ?','ശുദ്ധജലം / ലളിതമായ ആഹാരം.']]
 };
+const TAJ_STORY=TEXTS.sujatha, UYAR_STORY=TEXTS.santhi, UNNI_LINES=TEXTS.smarakam;
+const TAJ_QA=QA_BY.sujatha, UYAR_QA=QA_BY.santhi, UNNI_QA=QA_BY.smarakam;
 
-let state = { score: 0, lives: 5, stars: 0, currentSection: null, currentLesson: null, activeGame: null, gameIndex: 0, audioEnabled: true };
+let audioCtx=null,chosenVoice=null;
+function initAudio(){if(!audioCtx)audioCtx=new(window.AudioContext||window.webkitAudioContext)()}
+function playSound(type){if(!state.audioEnabled)return;initAudio();const osc=audioCtx.createOscillator(),gain=audioCtx.createGain();osc.connect(gain);gain.connect(audioCtx.destination);const now=audioCtx.currentTime;if(type==='correct'){osc.type='sine';osc.frequency.setValueAtTime(523.25,now);osc.frequency.exponentialRampToValueAtTime(783.99,now+.3);gain.gain.setValueAtTime(.3,now);gain.gain.exponentialRampToValueAtTime(.01,now+.4);osc.start(now);osc.stop(now+.4)}else if(type==='wrong'){osc.type='sawtooth';osc.frequency.setValueAtTime(220,now);osc.frequency.linearRampToValueAtTime(130,now+.3);gain.gain.setValueAtTime(.3,now);gain.gain.exponentialRampToValueAtTime(.01,now+.35);osc.start(now);osc.stop(now+.35)}else if(type==='click'){osc.type='triangle';osc.frequency.setValueAtTime(400,now);gain.gain.setValueAtTime(.15,now);gain.gain.exponentialRampToValueAtTime(.01,now+.08);osc.start(now);osc.stop(now+.08)}else if(type==='fanfare'){[523.25,659.25,783.99,1046.5].forEach((f,i)=>{const o=audioCtx.createOscillator(),g=audioCtx.createGain();o.connect(g);g.connect(audioCtx.destination);o.frequency.setValueAtTime(f,now+i*.12);g.gain.setValueAtTime(.2,now+i*.12);g.gain.exponentialRampToValueAtTime(.01,now+i*.12+.3);o.start(now+i*.12);o.stop(now+i*.12+.3)})}}
+function pickMalayalamVoice(){
+  if(!('speechSynthesis'in window)) return null;
+  const voices=window.speechSynthesis.getVoices()||[];
+  const score=v=>{
+    const n=(v.name||'').toLowerCase(), l=(v.lang||'').toLowerCase();
+    if(!l.startsWith('ml')) return 0;
+    if(/neural|natural|online|google|microsoft|sobhana|midhun|premium/.test(n)) return 5;
+    if(l==='ml-in'||l==='ml_in') return 4;
+    return 3;
+  };
+  let best=null,bestS=0;
+  voices.forEach(v=>{const s=score(v); if(s>bestS){best=v;bestS=s}});
+  return bestS>=3?best:null;
+}
+function pickVoice(){chosenVoice=pickMalayalamVoice();return chosenVoice}
 
-// Audio Context Setup
-let audioCtx, ttsToken = 0, ttsAudio = null;
+let ttsAudio=null, ttsQueue=[], ttsOnEnd=null, ttsStopped=false;
 
-function initAudio() {
-    if (!audioCtx) {
-        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-    }
-    if (audioCtx.state === 'suspended') {
-        audioCtx.resume();
-    }
+function stopSpeech(){
+  ttsStopped=true;
+  ttsQueue=[];
+  ttsOnEnd=null;
+  try{if(ttsAudio){ttsAudio.pause();ttsAudio.src='';ttsAudio=null}}catch(e){}
+  if('speechSynthesis'in window) window.speechSynthesis.cancel();
 }
 
-function playSound(type) {
-    if(!state.audioEnabled) return;
-    try {
-        initAudio();
-        const now = audioCtx.currentTime;
-        const osc = audioCtx.createOscillator();
-        const gain = audioCtx.createGain();
-        osc.connect(gain);
-        gain.connect(audioCtx.destination);
-        
-        if (type === 'correct') {
-            osc.type = 'sine';
-            osc.frequency.setValueAtTime(523.25, now);
-            osc.frequency.exponentialRampToValueAtTime(783.99, now + 0.3);
-            gain.gain.setValueAtTime(0.3, now);
-            gain.gain.exponentialRampToValueAtTime(0.01, now + 0.4);
-            osc.start(now); osc.stop(now + 0.4);
-        } else if (type === 'wrong') {
-            osc.type = 'sawtooth';
-            osc.frequency.setValueAtTime(220, now);
-            osc.frequency.linearRampToValueAtTime(150, now + 0.3);
-            gain.gain.setValueAtTime(0.3, now);
-            gain.gain.exponentialRampToValueAtTime(0.01, now + 0.4);
-            osc.start(now); osc.stop(now + 0.4);
-        } else if (type === 'click') {
-            osc.type = 'triangle';
-            osc.frequency.setValueAtTime(440, now);
-            gain.gain.setValueAtTime(0.1, now);
-            gain.gain.exponentialRampToValueAtTime(0.01, now + 0.1);
-            osc.start(now); osc.stop(now + 0.1);
-        } else if (type === 'fanfare') {
-            [523.25, 659.25, 783.99].forEach((f, i) => {
-                const o = audioCtx.createOscillator(), g = audioCtx.createGain();
-                o.connect(g); g.connect(audioCtx.destination);
-                o.frequency.setValueAtTime(f, now + i*0.15);
-                g.gain.setValueAtTime(0.2, now + i*0.15);
-                g.gain.exponentialRampToValueAtTime(0.01, now + i*0.15 + 0.3);
-                o.start(now + i*0.15); o.stop(now + i*0.15 + 0.3);
-            });
-        }
-    } catch(e){}
+function splitMlChunks(text,maxLen){
+  const clean=String(text||'').replace(/\s+/g,' ').trim();
+  if(!clean) return [];
+  const parts=clean.split(/(?<=[।.!?…,;:\n])\s+/);
+  const out=[];
+  let buf='';
+  parts.forEach(p=>{
+    if((buf+' '+p).trim().length<=maxLen) buf=(buf?buf+' ':'')+p;
+    else{
+      if(buf) out.push(buf.trim());
+      if(p.length<=maxLen) buf=p;
+      else{
+        for(let i=0;i<p.length;i+=maxLen) out.push(p.slice(i,i+maxLen));
+        buf='';
+      }
+    }
+  });
+  if(buf.trim()) out.push(buf.trim());
+  return out.filter(Boolean);
 }
 
-function chunkForTts(text, maxLen) {
-    const raw = String(text || '').replace(/\s+/g, ' ').trim();
-    if (!raw) return [];
-    if (raw.length <= maxLen) return [raw];
-    const parts = raw.split(/(?<=[।.?!;:\n—”])\s+/);
-    const out = [];
-    let buf = '';
-    parts.forEach(p => {
-        const piece = p.trim();
-        if (!piece) return;
-        if ((buf + ' ' + piece).trim().length <= maxLen) {
-            buf = (buf ? buf + ' ' : '') + piece;
-            return;
-        }
-        if (buf) out.push(buf);
-        if (piece.length <= maxLen) {
-            buf = piece;
-            return;
-        }
-        for (let i = 0; i < piece.length; i += maxLen) out.push(piece.slice(i, i + maxLen));
-        buf = '';
-    });
-    if (buf) out.push(buf);
-    return out;
+function googleTtsUrl(text){
+  return 'https://translate.googleapis.com/translate_tts?ie=UTF-8&client=gtx&tl=ml&q='+encodeURIComponent(text);
 }
 
-function speakText(text, onend) {
-    if (!text || !state.audioEnabled) {
-        if (onend) onend();
-        return;
-    }
-    stopSpeak(false);
-    initAudio();
-    const token = ++ttsToken;
-    const isMalayalam = /[\u0D00-\u0D7F]/.test(text);
-    const langCode = isMalayalam ? 'ml' : 'en-IN';
-    const chunks = chunkForTts(text, 160);
-    
-    if (!chunks.length) {
-        if (onend) onend();
-        return;
-    }
+function playGoogleChunks(chunks,onend){
+  ttsStopped=false;
+  let i=0;
+  function next(){
+    if(ttsStopped){if(onend)onend();return}
+    if(i>=chunks.length){if(onend)onend();return}
+    const url=googleTtsUrl(chunks[i++]);
+    const a=document.getElementById('ttsPlayer')||new Audio();
+    try{a.pause()}catch(e){}
+    a.playsInline=true; a.setAttribute('playsinline','true');
+    a.src=url; ttsAudio=a;
+    a.onended=()=>{if(!ttsStopped) next()};
+    a.onerror=()=>{
+      // last-resort: browser synth even if voice is weak
+      if('speechSynthesis'in window){
+        const u=new SpeechSynthesisUtterance(chunks[i-1]);
+        u.lang='ml-IN'; u.rate=.88; u.pitch=1;
+        u.onend=()=>{if(!ttsStopped) next()};
+        u.onerror=()=>{if(!ttsStopped) next()};
+        window.speechSynthesis.speak(u);
+      } else next();
+    };
+    a.play().catch(()=>{if(!ttsStopped) next()});
+  }
+  next();
+}
 
-    // Try native first, fallback to Google URL if native fails or is missing Malayalam
-    let useGoogleFallback = false;
-    if ('speechSynthesis' in window) {
-        let voices = window.speechSynthesis.getVoices();
-        let hasLang = voices.find(v => v.lang.includes(isMalayalam ? 'ml' : 'en'));
-        if(!hasLang && isMalayalam) useGoogleFallback = true;
-    } else {
-        useGoogleFallback = true;
-    }
-
-    let i = 0;
-    function next() {
-        if (token !== ttsToken || !state.audioEnabled) {
-            if (onend) onend();
-            return;
-        }
-        if (i >= chunks.length) {
-            if (onend) onend();
-            return;
-        }
-
-        if (useGoogleFallback) {
-            const url = `https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=${langCode}&q=${encodeURIComponent(chunks[i])}`;
-            const a = new Audio(url);
-            ttsAudio = a;
-            a.onended = () => { i++; next(); };
-            a.onerror = () => { i++; next(); };
-            a.play().catch(() => { i++; next(); });
-        } else {
-            const u = new SpeechSynthesisUtterance(chunks[i]);
-            u.lang = langCode;
-            u.rate = isMalayalam ? 0.85 : 1.0;
-            u.onend = () => { i++; next(); };
-            u.onerror = () => { i++; next(); };
-            window.speechSynthesis.speak(u);
-        }
+function speakText(text,onend){
+  if(!state.audioEnabled){if(onend)onend();return}
+  stopSpeech();
+  ttsStopped=false;
+  const raw=String(text||'').trim();
+  if(!raw){if(onend)onend();return}
+  const mlVoice=pickMalayalamVoice();
+  // Use native only when a real Malayalam voice exists (Edge/Windows neural).
+  if(mlVoice && 'speechSynthesis'in window){
+    const chunks=splitMlChunks(raw,180);
+    let i=0;
+    function next(){
+      if(ttsStopped||i>=chunks.length){if(onend)onend();return}
+      const u=new SpeechSynthesisUtterance(chunks[i++]);
+      u.voice=mlVoice; u.lang=mlVoice.lang||'ml-IN';
+      u.rate=.88; u.pitch=1.0; u.volume=1;
+      u.onend=()=>next();
+      u.onerror=()=>next();
+      window.speechSynthesis.speak(u);
     }
     next();
+    return;
+  }
+  // Clearer Malayalam fallback: Google Translate neural-like TTS
+  playGoogleChunks(splitMlChunks(raw,160),onend);
 }
+function toggleAudio(){state.audioEnabled=!state.audioEnabled;document.getElementById('btnAudioToggle').innerText=state.audioEnabled?'🔊':'🔇';if(!state.audioEnabled)stopSpeech()}
+function toggleFullscreen(){if(!document.fullscreenElement){document.documentElement.requestFullscreen().catch(()=>{})}else if(document.exitFullscreen){document.exitFullscreen()}}
+function printPage(){playSound('click');window.print()}
+function downloadPage(){playSound('click');try{const htmlContent="<!DOCTYPE html>\\n"+document.documentElement.outerHTML;const blob=new Blob([htmlContent],{type:'text/html'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='Nadakkunnathorum_Theliyum_Vazhikal_STD9_Unit1.html';document.body.appendChild(a);a.click();document.body.removeChild(a);setTimeout(()=>URL.revokeObjectURL(url),3000)}catch(e){alert('Download not supported. Use Print.')}}
+function updateStatsUI(){document.getElementById('valScore').innerText=state.score;document.getElementById('valLives').innerText=state.lives;document.getElementById('valStars').innerText=state.stars;document.getElementById('progressBar').style.width=Math.min(100,state.score/2.5)+'%'}
+function showRewardModal(){playSound('fanfare');document.getElementById('rewardModal').classList.add('active')}
+function closeRewardModal(){document.getElementById('rewardModal').classList.remove('active');showScreen('homeScreen')}
+function revealModel(id,btn){const el=document.getElementById(id);const showing=el.style.display==='block';el.style.display=showing?'none':'block';if(!showing){state.score+=5;updateStatsUI();if(btn)btn.innerText='🙈 Hide Answer'}else if(btn){btn.innerText='💡 Show Model Answer'}}
+function genericCheck(selClass,resultId){const sels=document.querySelectorAll('.'+selClass);let correct=0;sels.forEach(s=>{if(s.value===s.dataset.ans){s.style.borderColor='#4CAF50';correct++}else{s.style.borderColor='#F44336'}});const r=document.getElementById(resultId);r.style.color=correct===sels.length?'#2E7D32':'#C62828';r.innerText=`Score: ${correct}/${sels.length}  ${correct===sels.length?'Excellent!':'Try again!'}`;if(correct===sels.length){state.score+=15;state.stars+=1;updateStatsUI();playSound('correct')}else{playSound('wrong')}}
 
-function stopSpeak(resetState = true) {
-    ttsToken++;
-    if (ttsAudio) {
-        try { ttsAudio.pause(); ttsAudio.src = ''; } catch(e){}
-        ttsAudio = null;
-    }
-    if ('speechSynthesis' in window) {
-        window.speechSynthesis.cancel();
-    }
-    // Remove highlights if any
-    document.querySelectorAll('.story-para.reading').forEach(el => el.classList.remove('reading'));
-}
-
-function toggleAudio() {
-    playSound('click');
-    state.audioEnabled = !state.audioEnabled;
-    let btn = document.getElementById('btnAudioToggle');
-    if (state.audioEnabled) {
-        btn.innerText = '🔊';
-    } else {
-        btn.innerText = '🔇';
-        stopSpeak();
-    }
-}
-
-function updateStatsUI() {
-    const elScore = document.getElementById('valScore');
-    const elLives = document.getElementById('valLives');
-    const elStars = document.getElementById('valStars');
-    if(elScore) elScore.innerText = state.score;
-    if(elLives) elLives.innerText = state.lives;
-    if(elStars) elStars.innerText = state.stars;
-}
-
-function showMessageModal(title, message) {
-    document.getElementById('msgTitle').innerText = title;
-    document.getElementById('msgBody').innerText = message;
-    document.getElementById('messageModal').classList.add('active');
-}
-
-function closeMessageModal() {
-    playSound('click');
-    document.getElementById('messageModal').classList.remove('active');
-    showScreen('homeScreen'); // Default fallback action
-}
-
-function showScreen(id) {
-    stopSpeak();
-    document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
-    document.getElementById(id).classList.add('active');
-    window.scrollTo(0, 0);
-}
-
-function openChoose(section) {
-    playSound('click');
-    state.currentSection = section;
-    const titleMap = {
-        read: '📖 Reading & Listening', vocab: '🗂️ Vocabulary Building',
-        creative: '📝 Creative Writing', rhymes: '🎵 Rhymes & Songs',
-        games: '🎮 Games & Grammar', speaking: '🎭 Speaking & Role Play',
-        evaluation: '📊 Evaluation & Practice'
-    };
-    document.getElementById('chooseTitle').innerText = titleMap[section] || 'തിരഞ്ഞെടുക്കുക';
-    
-    let list = document.getElementById('chooseList');
-    list.innerHTML = '';
-    
-    if (section === 'rhymes') {
-        renderLessonItem(LESSONS[3]); // Only smarakam for rhymes
-    } else if (section === 'games') {
-        showScreen('gamesMenuScreen');
-        return;
-    } else {
-        LESSONS.forEach(l => renderLessonItem(l));
-    }
-    showScreen('chooseScreen');
-}
-
-function renderLessonItem(L) {
-    let list = document.getElementById('chooseList');
-    let div = document.createElement('div');
-    div.className = 'lesson-pick';
-    div.innerHTML = `<div class="lp-emoji">${L.emoji}</div><div><div class="lp-title ml">${L.title}</div><div class="lp-sub ml">${L.sub}</div></div>`;
-    div.onclick = () => { playSound('click'); openContent(L.id); };
-    list.appendChild(div);
-}
-
-function openContent(lessonId) {
-    state.currentLesson = lessonId;
-    let L = LESSONS.find(x => x.id === lessonId);
-    let secName = document.getElementById('chooseTitle').innerText;
-    document.getElementById('contentTitle').innerText = `${secName} ➔ ${L.title}`;
-    
-    let body = document.getElementById('contentBody');
-    body.innerHTML = '';
-    
-    let data = CONTENT[lessonId];
-    
-    if (state.currentSection === 'read') {
-        body.innerHTML = `<div class="story-title ml">${L.emoji} ${L.title}</div>
-            <div style="text-align:center; margin-bottom: 20px;">
-                <button class="read-all-btn" id="btnReadAll">🔊 മുഴുവൻ വായിക്കുക (Read All)</button>
-            </div><div id="textLines"></div>`;
-        
-        let container = document.getElementById('textLines');
-        data.text.forEach((txt, idx) => {
-            let p = document.createElement('div');
-            p.className = 'story-para';
-            p.id = 'para' + idx;
-            p.innerHTML = `<span class="ml">${txt}</span><button class="mini-play" onclick="playSinglePara(${idx}, '${txt.replace(/'/g, "\\'")}')">🔊</button>`;
-            container.appendChild(p);
-        });
-        
-        document.getElementById('btnReadAll').onclick = function() {
-            stopSpeak();
-            let i = 0;
-            function nextPara() {
-                if(i >= data.text.length) return;
-                document.querySelectorAll('.story-para').forEach(el => el.classList.remove('reading'));
-                let currentEl = document.getElementById('para' + i);
-                if(currentEl) currentEl.classList.add('reading');
-                speakText(data.text[i], () => {
-                    if(currentEl) currentEl.classList.remove('reading');
-                    i++;
-                    nextPara();
-                });
-            }
-            nextPara();
-        };
-
-    } else if (state.currentSection === 'vocab') {
-        body.innerHTML = `<h3 class="activity-heading ml" style="text-align:center;">പുതിയ വാക്കുകൾ പഠിക്കാം (Learn New Words)</h3><div class="cards-grid" id="vocabGrid"></div>`;
-        let grid = document.getElementById('vocabGrid');
-        data.vocab.forEach(v => {
-            let card = document.createElement('div');
-            card.className = 'word-card';
-            card.innerHTML = `<div class="card-emoji">${v.e}</div><div class="word-ml ml">${v.w}</div><div class="word-meaning ml">${v.m}</div><button class="replay-btn" onclick="speakText('${v.w}')">🔊 കേൾക്കുക</button>`;
-            grid.appendChild(card);
-        });
-
-    } else if (state.currentSection === 'evaluation') {
-        body.innerHTML = `<h3 class="activity-heading ml">ചോദ്യോത്തരങ്ങൾ (Q & A)</h3><div id="qaBox"></div>`;
-        let qaBox = document.getElementById('qaBox');
-        data.qa.forEach((qItem, i) => {
-            let row = document.createElement('div');
-            row.className = 'qa-line';
-            row.innerHTML = `<div class="q ml">${i+1}. ${qItem[0]}</div>
-                <div class="a ml" id="ans${i}">${qItem[1]}</div>
-                <div style="margin-top:10px;">
-                    <button class="reveal-btn ml" onclick="document.getElementById('ans${i}').classList.toggle('show'); playSound('click');">ഉത്തരം കാണുക</button>
-                    <button class="reveal-btn" onclick="speakText('${qItem[0]}')">🔊 ചോദ്യം കേൾക്കാം</button>
-                    <button class="reveal-btn" onclick="document.getElementById('ans${i}').classList.add('show'); speakText('${qItem[1]}');">🔊 ഉത്തരം കേൾക്കാം</button>
-                </div>`;
-            qaBox.appendChild(row);
-        });
-
-    } else if (state.currentSection === 'creative' || state.currentSection === 'speaking' || state.currentSection === 'rhymes') {
-        let actType = state.currentSection;
-        let act = data.activities && data.activities[actType];
-        
-        if(act) {
-            body.innerHTML = `<div class="activity-block">
-                <h3 class="activity-heading ml">${act.t}</h3>
-                <p class="ml" style="font-size: 1.15rem; margin-bottom: 15px; color:#1B5E20; font-weight:bold;">${act.q}</p>
-                <textarea class="write-box ml" placeholder="ഇവിടെ എഴുതുക... (Write here...)"></textarea>
-                <button class="reveal-model-btn ml" onclick="document.getElementById('modelAns').style.display='block'; playSound('click');">മാതൃക കാണുക (Show Model)</button>
-                <div id="modelAns" class="model-answer-box ml">${act.a.replace(/\n/g, '<br>')}</div>
-            </div>`;
-        } else {
-             body.innerHTML = `<div class="activity-block"><h3 class="activity-heading ml">പ്രവർത്തനം (Activity)</h3><p class="ml" style="font-size: 1.1rem; font-weight:bold;">ഈ പാഠഭാഗത്തെ അടിസ്ഥാനമാക്കി താഴെ തന്നിട്ടുള്ള പ്രവർത്തനങ്ങൾ ചെയ്യുക.</p><textarea class="write-box ml" placeholder="ഇവിടെ എഴുതുക... (Write here...)"></textarea><button class="check-btn ml" onclick="playSound('correct'); document.getElementById('rewardModal').classList.add('active');">സമർപ്പിക്കുക (Submit)</button></div>`;
-        }
-    }
-    
-    showScreen('contentScreen');
-}
-
-function playSinglePara(idx, text) {
-    stopSpeak();
-    document.querySelectorAll('.story-para').forEach(el => el.classList.remove('reading'));
-    let currentEl = document.getElementById('para' + idx);
-    if(currentEl) currentEl.classList.add('reading');
-    speakText(text, () => {
-        if(currentEl) currentEl.classList.remove('reading');
-    });
-}
-
-function launchGame(type) {
-    playSound('click');
-    state.activeGame = type;
-    state.gameIndex = 0;
-    if(!GAMES[type]) type = 1;
-    state.currentGameData = [...GAMES[type]].sort(() => Math.random() - 0.5);
-    renderGame();
-    showScreen('activeGameScreen');
-}
-
-function renderGame() {
-    let area = document.getElementById('gameArea');
-    if (state.gameIndex >= state.currentGameData.length) {
-        state.score += 50; 
-        state.stars += 1;
-        updateStatsUI();
-        document.getElementById('rewardModal').classList.add('active');
-        playSound('fanfare');
-        return;
-    }
-    
-    let qData = state.currentGameData[state.gameIndex];
-    area.innerHTML = `
-        <div class="game-instruction ml">ശരിയായ ഉത്തരം തിരഞ്ഞെടുക്കുക</div>
-        <div class="meaning-box ml">${qData.q}</div>
-        <div style="margin-bottom:15px; text-align:center;"><button class="reveal-btn" style="padding: 10px 20px; font-size:1.05rem;" onclick="speakText('${qData.q.replace(/'/g, "\\'")}')">🔊 ചോദ്യം കേൾക്കുക (Listen)</button></div>
-        <div class="options-grid" id="gameOpts"></div>
-    `;
-    
-    let grid = document.getElementById('gameOpts');
-    qData.opts.forEach((opt, idx) => {
-        let btn = document.createElement('button');
-        btn.className = 'option-btn ml';
-        btn.innerText = opt;
-        btn.onclick = () => {
-            speakText(opt);
-            if (idx === qData.ans) {
-                btn.classList.add('correct');
-                playSound('correct');
-                state.score += 10;
-                setTimeout(() => { state.gameIndex++; renderGame(); }, 1200);
-            } else {
-                btn.classList.add('wrong');
-                playSound('wrong');
-                state.lives -= 1;
-                if(state.lives <= 0) {
-                    setTimeout(() => {
-                        showMessageModal('കളി അവസാനിച്ചു!', 'നിങ്ങളുടെ ജീവൻ നഷ്ടപ്പെട്ടു. വീണ്ടും ശ്രമിക്കുക.');
-                        state.lives = 5;
-                        updateStatsUI();
-                    }, 500);
-                }
-            }
-            updateStatsUI();
-        };
-        grid.appendChild(btn);
-    });
-}
-
-function endGame() {
-    playSound('click');
-    showScreen('gamesMenuScreen');
-}
-
-function closeRewardModal() {
-    playSound('click');
-    document.getElementById('rewardModal').classList.remove('active');
-    
-    // Check if we came from games or activities
-    if (document.getElementById('activeGameScreen').classList.contains('active')) {
-        showScreen('gamesMenuScreen');
-    } else {
-        showScreen('chooseScreen'); // Or wherever appropriate
-    }
-}
-
-function printPage() {
-    playSound('click');
-    window.print();
-}
-
-function downloadPDF() {
-    playSound('click');
-    const paper = document.getElementById('qpContent');
-    if(typeof html2pdf === 'undefined') {
-        showMessageModal('ശ്രദ്ധിക്കുക', 'നിങ്ങളുടെ ബ്രൗസറിൽ PDF ഡൗൺലോഡ് പിന്തുണയ്ക്കുന്നില്ല. ദയവായി Print ഓപ്ഷൻ ഉപയോഗിച്ച് Save as PDF ചെയ്യുക.');
-        return;
-    }
-    
-    // Using html2pdf internally works flawlessly in webviews if configuration is correct
-    const opt = {
-        margin:       15,
-        filename:     'Std9_Malayalam_Unit1_QP.pdf',
-        image:        { type: 'jpeg', quality: 0.98 },
-        html2canvas:  { scale: 2, useCORS: true },
-        jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
-    };
-    html2pdf().set(opt).from(paper).save();
-}
-
-// Init
-window.onload = () => { 
-    updateStatsUI(); 
-    // Setup voices on load if supported
-    if ('speechSynthesis' in window) {
-        window.speechSynthesis.getVoices();
-    }
+const VOCAB_BY_LESSON={
+sujatha:[
+{id:'anubhava',word:'അനുഭവസമ്പത്ത്',meaning:'യാത്രയിലൂടെ കിട്ടുന്ന പാഠം',letters:['അനുഭവ','സമ്പത്ത്'],missingLetter:'സമ്പത്ത്',missingDisplay:'അനുഭവ_',emoji:'🎒'},
+{id:'himalaya',word:'ഹിമാലയം',meaning:'വലുപ്പത്തിന്റെ ഉപമ',letters:['ഹിമാ','ലയം'],missingLetter:'ലയം',missingDisplay:'ഹിമാ_',emoji:'🏔️'},
+{id:'vazhiyoram',word:'വഴിയോരം',meaning:'പാതയുടെ അരിക്',letters:['വഴി','യോരം'],missingLetter:'യോരം',missingDisplay:'വഴി_',emoji:'🛤️'},
+{id:'ekanthatha',word:'ഏകാന്തത',meaning:'തനിച്ചിരിക്കൽ',letters:['ഏകാ','ന്തത'],missingLetter:'ന്തത',missingDisplay:'ഏകാ_',emoji:'🌙'},
+{id:'grantham',word:'ജീവിതഗ്രന്ഥം',meaning:'അനുഭവം തന്നെ പുസ്തകം',letters:['ജീവിത','ഗ്രന്ഥം'],missingLetter:'ഗ്രന്ഥം',missingDisplay:'ജീവിത_',emoji:'📖'}
+],
+santhi:[
+{id:'nazhika',word:'നാഴിക',meaning:'പഴയ ദൂരമളവ്',letters:['നാ','ഴിക'],missingLetter:'ഴിക',missingDisplay:'നാ_',emoji:'📏'},
+{id:'ekantham',word:'ഏകാന്തം',meaning:'ഒറ്റപ്പെട്ട നിശബ്ദത',letters:['ഏകാ','ന്തം'],missingLetter:'ന്തം',missingDisplay:'ഏകാ_',emoji:'🌾'},
+{id:'kudil',word:'കുടിൽ',meaning:'ചെറിയ വീട്',letters:['കു','ടിൽ'],missingLetter:'ടിൽ',missingDisplay:'കു_',emoji:'🏡'},
+{id:'kalabhavan',word:'കലാഭവനം',meaning:'ശാന്തിനികേതനത്തിലെ കലാവിഭാഗം',letters:['കലാ','ഭവനം'],missingLetter:'ഭവനം',missingDisplay:'കലാ_',emoji:'🎨'},
+{id:'sriniketan',word:'ശ്രീനികേതനം',meaning:'ഗ്രാമോന്നതിക്കേന്ദ്രം',letters:['ശ്രീ','നികേതനം'],missingLetter:'നികേതനം',missingDisplay:'ശ്രീ_',emoji:'🌱'},
+{id:'viswabharati',word:'വിശ്വഭാരതി',meaning:'ടാഗോർ സ്ഥാപിച്ച സർവകലാശാല',letters:['വിശ്വ','ഭാരതി'],missingLetter:'ഭാരതി',missingDisplay:'വിശ്വ_',emoji:'🌄'}
+],
+marupani:[
+{id:'asthamayam',word:'അസ്തമയം',meaning:'സൂര്യൻ മറയുന്ന നേരം',letters:['അസ്ത','മയം'],missingLetter:'മയം',missingDisplay:'അസ്ത_',emoji:'☀️'},
+{id:'manal',word:'മണൽപ്പരപ്പ്',meaning:'വിശാലമായ മണൽനിരപ്പ്',letters:['മണൽ','പ്പരപ്പ്'],missingLetter:'പ്പരപ്പ്',missingDisplay:'മണൽ_',emoji:'🏜️'},
+{id:'ottaka',word:'ഒട്ടകക്കൂട്ടം',meaning:'ഒട്ടകങ്ങളുടെ സംഘം',letters:['ഒട്ടക','ക്കൂട്ടം'],missingLetter:'ക്കൂട്ടം',missingDisplay:'ഒട്ടക_',emoji:'🐪'},
+{id:'pathaka',word:'പതാക',meaning:'കൊടി',letters:['പ','താക'],missingLetter:'താക',missingDisplay:'പ_',emoji:'🚩'},
+{id:'nizhal',word:'നിഴൽ',meaning:'വെളിച്ചത്തിനെതിരെ വീഴുന്ന രൂപം',letters:['നി','ഴൽ'],missingLetter:'ഴൽ',missingDisplay:'നി_',emoji:'👤'}
+],
+smarakam:[
+{id:'appu',word:'ആപ്പുപ്പൂന്താടി',meaning:'വിത്ത് പറത്തുന്ന ചെടി',letters:['ആപ്പു','പ്പൂന്താടി'],missingLetter:'പ്പൂന്താടി',missingDisplay:'ആപ്പു_',emoji:'🌼'},
+{id:'vineetham',word:'വിനീതം',meaning:'താഴ്മയുള്ളത്',letters:['വി','നീതം'],missingLetter:'നീതം',missingDisplay:'വി_',emoji:'🕊️'},
+{id:'desadanam',word:'ദേശാടനം',meaning:'ദൂരയാത്ര',letters:['ദേശാ','ടനം'],missingLetter:'ടനം',missingDisplay:'ദേശാ_',emoji:'✈️'},
+{id:'smarakam',word:'സ്മാരകം',meaning:'ഓർമ നിലനിർത്തുന്ന അടയാളം',letters:['സ്മാ','രകം'],missingLetter:'രകം',missingDisplay:'സ്മാ_',emoji:'🗿'},
+{id:'vithu',word:'വിത്ത്',meaning:'മുളയ്ക്കാനുള്ള കുരു',letters:['വി','ത്ത്'],missingLetter:'ത്ത്',missingDisplay:'വി_',emoji:'🌱'}
+],
+najib:[
+{id:'manalvaral',word:'മണൽവാരൽ',meaning:'മണൽ വാരുന്ന തൊഴിൽ',letters:['മണൽ','വാരൽ'],missingLetter:'വാരൽ',missingDisplay:'മണൽ_',emoji:'🪣'},
+{id:'arbab',word:'അർബാബ്',meaning:'യജമാനൻ',letters:['അർ','ബാബ്'],missingLetter:'ബാബ്',missingDisplay:'അർ_',emoji:'👤'},
+{id:'koodu',word:'കൂടുവണ്ടി',meaning:'പിന്നിൽ തുറന്ന ലോറി',letters:['കൂടു','വണ്ടി'],missingLetter:'വണ്ടി',missingDisplay:'കൂടു_',emoji:'🚛'},
+{id:'bheethi',word:'ഭീതി',meaning:'ഭയം',letters:['ഭീ','തി'],missingLetter:'തി',missingDisplay:'ഭീ_',emoji:'😨'},
+{id:'pachavellam',word:'പച്ചവെള്ളം',meaning:'ശുദ്ധജലം',letters:['പച്ച','വെള്ളം'],missingLetter:'വെള്ളം',missingDisplay:'പച്ച_',emoji:'💧'},
+{id:'gulf',word:'ഗൾഫ്',meaning:'അറേബ്യൻ ഗൾഫ് രാജ്യങ്ങൾ',letters:['ഗൾ','ഫ്'],missingLetter:'ഫ്',missingDisplay:'ഗൾ_',emoji:'🛫'}
+]
 };
-// Ensure audio plays by unlocking context on first click
-document.addEventListener('click', function once() { initAudio(); document.removeEventListener('click', once); }, {once: true});
+const QUIZ_BY_LESSON={
+sujatha:[{q:'സുജാതാദേവി കത്ത് എഴുതുന്നത് ആർക്ക്?',opts:['പേട്ടേക്ക്','നജീബിന്','ടാഗോറിന്','അർബാബിന്'],ans:0},{q:'യാത്രയെ കത്തിൽ എന്തായി കാണുന്നു?',opts:['വെറും വിനോദം','ജീവിതപാഠം','യുദ്ധം','ശിക്ഷ'],ans:1},{q:'സ്വർഗം എവിടെയാണെന്ന് കത്ത് പറയുന്നു?',opts:['ആകാശത്ത്','നടന്ന വഴിയിൽ','കടലിൽ','കോട്ടയിൽ'],ans:1}],
+santhi:[{q:'ശാന്തിനികേതനം വിവരിക്കുന്നത്?',opts:['ബെന്യാമിൻ','എസ്. കെ. പൊറ്റക്കാട്ട്','സുജാതാദേവി','വിനോദ് കുറ്റി'],ans:1},{q:'അടുത്ത റെയിൽവേ സ്റ്റേഷൻ?',opts:['കൊൽക്കത്ത','ബോൾപൂർ','റിയാദ്','കോഴിക്കോട്'],ans:1},{q:'വിശ്വഭാരതി സ്ഥാപിച്ചത്?',opts:['ഗാന്ധിജി','രവീന്ദ്രനാഥ ടാഗോർ','നന്ദലാൽ ബോസ്','സാനു'],ans:1},{q:'കലാഭവനം തുടങ്ങിയ വർഷം?',opts:['1922','1947','1901','1960'],ans:0},{q:'ഗ്രാമോന്നതിക്കേന്ദ്രം?',opts:['കലാഭവനം','ശ്രീനികേതനം','സംഗീതഭവനം','ബനാറസ്'],ans:1}],
+marupani:[{q:'മറുപനിയുടെ ആത്മകഥ എഴുതിയത്?',opts:['വി. മുസാഫിർ അഹമ്മദ്','പൊറ്റക്കാട്ട്','ബെന്യാമിൻ','ടാഗോർ'],ans:0},{q:'മരുഭൂമിയിൽ സൂര്യൻ അസ്തമിക്കുന്നത്?',opts:['പതുക്കെ','പൊടുന്നനെ','രാത്രി മുഴുവൻ','ഉച്ചയ്ക്ക്'],ans:1},{q:'നിഴലുകൾ കോർത്തുപിണയുമ്പോൾ തോന്നുന്നത്?',opts:['കടൽ','പതാകകളണിഞ്ഞ മനുഷ്യരൂപങ്ങൾ','നഗരം','മഴ'],ans:1}],
+smarakam:[{q:'സ്മാരകം എന്ന കവിതയുടെ കവി?',opts:['കുമാരനാശാൻ','വിനോദ് കുറ്റി','ടാഗോർ','ബാലമണിയമ്മ'],ans:1},{q:'ആപ്പുപ്പൂന്താടി എന്തിനെ മടിയിൽ വയ്ക്കുന്നു?',opts:['കല്ല്','വിത്ത്','വെള്ളം','പുസ്തകം'],ans:1},{q:'നാളെ അത് എന്തായേക്കാം?',opts:['ഒരു മരം','ഒരു കോട്ട','ഒരു നഗരം','ഒരു കപ്പൽ'],ans:0}],
+najib:[{q:'ആടുജീവിതം എഴുതിയത്?',opts:['ബെന്യാമിൻ','പൊറ്റക്കാട്ട്','സുജാതാദേവി','വിനോദ് കുറ്റി'],ans:0},{q:'നജീബിന്റെ നാട്ടിലെ തൊഴിൽ?',opts:['അധ്യാപകൻ','മണൽവാരൽ','വൈദ്യൻ','കപ്പിത്താൻ'],ans:1},{q:'നജീബിനൊപ്പം യാത്ര ചെയ്തത്?',opts:['ശശി','ഹക്കീം','ടാഗോർ','മുസാഫിർ'],ans:1},{q:'നജീബിനെ ഇരുത്തിയത്?',opts:['മുൻസീറ്റിൽ','പിൻകൂടയിൽ','വിമാനത്തിൽ','കപ്പലിൽ'],ans:1}]
+};
+const SEQ_EVENTS=[
+{text:'കത്ത് താമസിച്ചെഴുതിയതിന് ക്ഷമ ചോദിക്കുന്നു',order:1},
+{text:'യാത്രയെ ഹിമാലയത്തോളം വലുതായി കാണുന്നു',order:2},
+{text:'വഴിയിലെ പാഠം വീട്ടിലെ പാഠത്തേക്കാൾ വലുത്',order:3},
+{text:'സ്നേഹത്തോടെ ഒപ്പിടുന്നു',order:4}
+];
+const SEQ_BY={
+sujatha:[{text:'കത്ത് താമസിച്ചെഴുതിയതിന് ക്ഷമ ചോദിക്കുന്നു',order:1},{text:'യാത്രയെ ഹിമാലയമായി കാണുന്നു',order:2},{text:'വഴിയിലെ പാഠം വലുതാകുന്നു',order:3},{text:'സ്നേഹത്തോടെ ഒപ്പിടുന്നു',order:4}],
+santhi:[{text:'ബോൾപൂർ സ്റ്റേഷനിൽ ഇറങ്ങുന്നു',order:1},{text:'മൺപാതയിലൂടെ നടക്കുന്നു',order:2},{text:'കേരളസാദൃശ്യം കാണുന്നു',order:3},{text:'ഇതെല്ലാം ശാന്തിനികേതനം',order:4},{text:'കലാഭവനവും ശ്രീനികേതനവും',order:5}],
+marupani:[{text:'സൂര്യൻ പൊടുന്നനെ അസ്തമിക്കാൻ തുടങ്ങുന്നു',order:1},{text:'മണലിൽ താഴ്‌വരകൾ തെളിയുന്നു',order:2},{text:'നിഴലുകൾ നീളുന്നു',order:3},{text:'ഒട്ടകങ്ങളും ആടുകളും നിഴലാകുന്നു',order:4}],
+smarakam:[{text:'ആപ്പുപ്പൂന്താടി വിനീതമായി പറക്കുന്നു',order:1},{text:'വിത്തിനെ മടിയിൽ വയ്ക്കുന്നു',order:2},{text:'അറിവില്ലായ്മയുടെ ഭാരക്കുറവിൽ സഞ്ചരിക്കുന്നു',order:3},{text:'നാളെ ഒരു മരമായി സ്മാരകമാകുന്നു',order:4}],
+najib:[{text:'നജീബ് ഗൾഫിലേക്ക് പുറപ്പെടുന്നു',order:1},{text:'റിയാദിൽ അർബാബിനെ കാണുന്നു',order:2},{text:'പഴയ വണ്ടിയിൽ കയറ്റുന്നു',order:3},{text:'പിൻകൂടയിൽ ഇരുത്തുന്നു',order:4},{text:'മണൽക്കുന്നിലൂടെ രാത്രിയാത്ര',order:5}]
+};
+const CHAR_QUOTES={
+sujatha:[{quote:'ഈ യാത്ര എനിക്കൊരു ഹിമാലയത്തോളം വലുതായി തോന്നി.',ans:'സുജാതാദേവി',opts:['സുജാതാദേവി','നജീബ്','ടാഗോർ','അർബാബ്']}],
+santhi:[{quote:'ഇതെല്ലാം തന്നെ ശാന്തിനികേതനം.',ans:'ബംഗാളി ഗ്രാമീണൻ',opts:['ടാഗോർ','ബംഗാളി ഗ്രാമീണൻ','നന്ദലാൽ ബോസ്','നജീബ്']},{quote:'Where the mind is without fear',ans:'ടാഗോർ / ഗീതാഞ്ജലി',opts:['ബെന്യാമിൻ','ടാഗോർ / ഗീതാഞ്ജലി','വിനോദ് കുറ്റി','സുജാതാദേവി']}],
+marupani:[{quote:'ഒട്ടകക്കൂട്ടങ്ങളും ആടുകളും നിഴലുകളായി മാറും.',ans:'മുസാഫിർ അഹമ്മദ്',opts:['മുസാഫിർ അഹമ്മദ്','പൊറ്റക്കാട്ട്','നജീബ്','വിനോദ് കുറ്റി']}],
+smarakam:[{quote:'കുഞ്ഞിനെ എന്നപോലെ വിത്തിനെ മടിയിൽ വച്ച്.',ans:'വിനോദ് കുറ്റി',opts:['വിനോദ് കുറ്റി','ടാഗോർ','ബെന്യാമിൻ','പൊറ്റക്കാട്ട്']}],
+najib:[{quote:'യാ അള്ളാ',ans:'അർബാബ്',opts:['നജീബ്','ഹക്കീം','അർബാബ്','സുജാതാദേവി']},{quote:'ഞാൻ മോഹിച്ച തരം ഗൾഫിലേക്കല്ല ഈ യാത്ര.',ans:'നജീബ്',opts:['ഹക്കീം','നജീബ്','ശശി','ടാഗോർ']}]
+};
+const SYN_ANT={
+sujatha:[{prompt:'യാത്രയുടെ സമാനപദം',ans:'സഞ്ചാരം',opts:['സഞ്ചാരം','നിശ്ചലത','ഉറക്കം','വേലി']}],
+santhi:[{prompt:'ഏകാന്തത്തിന്റെ വിപരീതം',ans:'ആരവം',opts:['ആരവം','തണൽ','പാത','മണ്ണ്']},{prompt:'വിശ്രുതം എന്നാൽ',ans:'പ്രശസ്തമായ',opts:['പ്രശസ്തമായ','ചെറുതായ','പുതിയ','ഇരുണ്ട']}],
+marupani:[{prompt:'അസ്തമയത്തിന്റെ വിപരീതം',ans:'ഉദയം',opts:['ഉദയം','മഴ','നിഴൽ','മണൽ']}],
+smarakam:[{prompt:'വിനീതം എന്നാൽ',ans:'താഴ്മയുള്ളത്',opts:['താഴ്മയുള്ളത്','അഹങ്കാരം','വേഗം','ഇരുട്ട്']}],
+najib:[{prompt:'ഭീതിയുടെ സമാനപദം',ans:'ഭയം',opts:['ഭയം','സന്തോഷം','വിശപ്പ്','പ്രകാശം']}]
+};
+const SENT_COMP={
+sujatha:[{sent:'യാത്ര ഒരു ________ ആണ്.',ans:'ജീവിതപാഠം',opts:['ജീവിതപാഠം','ശിക്ഷ','നിഷേധം','യന്ത്രം']}],
+santhi:[{sent:'ഇതെല്ലാം തന്നെ ________.',ans:'ശാന്തിനികേതനം',opts:['ശാന്തിനികേതനം','കൊൽക്കത്ത','റിയാദ്','മരുഭൂമി']},{sent:'കലാഭവനം തുടങ്ങിയത് ________-ൽ.',ans:'1922',opts:['1922','2000','1857','1947']}],
+marupani:[{sent:'മരുഭൂമിയിൽ സൂര്യൻ അസ്തമിക്കുക ________ ആയിരിക്കും.',ans:'പൊടുന്നനെ',opts:['പൊടുന്നനെ','ഒരിക്കലും','രാത്രി മുഴുവൻ','മഴയോടെ']}],
+smarakam:[{sent:'ആപ്പുപ്പൂന്താടി ________നെ മടിയിൽ വയ്ക്കുന്നു.',ans:'വിത്ത്',opts:['വിത്ത്','കല്ല്','പുസ്തകം','വാൾ']}],
+najib:[{sent:'നജീബിനെ ഇരുത്തിയത് വണ്ടിയുടെ ________ ആയിരുന്നു.',ans:'പിൻകൂട',opts:['പിൻകൂട','പൈലറ്റ് സീറ്റ്','വിമാനം','കപ്പൽ']}]
+};
+
+function showScreen(id){playSound('click');if('speechSynthesis'in window)window.speechSynthesis.cancel();document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));const t=document.getElementById(id);if(t)t.classList.add('active');if(id==='modelQPScreen')renderModelQP();if(id==='unitQPScreen')renderUnitQP();if(id==='bioScreen')renderBio();if(id==='doorwayScreen')renderDoorway();if(id==='progressScreen')renderProgress()}
+function openChoose(section){state.currentSection=section;state.lastChooseSection=section;document.getElementById('chooseTitle').innerText=SECTION_TITLES[section]||'Choose a Lesson';const list=document.getElementById('chooseList');list.innerHTML='';LESSONS.forEach(L=>{const d=document.createElement('div');d.className='lesson-pick';d.innerHTML=`<div class="lp-emoji">${L.emoji}</div><div><div class="lp-title">${L.title}</div><div class="lp-sub">${L.sub}</div></div>`;d.onclick=()=>selectLesson(L.id);list.appendChild(d)});showScreen('chooseScreen')}
+function selectLesson(lessonId){state.currentLesson=lessonId;state.visited[state.currentSection+'_'+lessonId]=true;if(state.currentSection==='games'){openGamesMenu(lessonId);return}renderContentFor(state.currentSection,lessonId)}
+function goBackFromContent(){if(state.lastChooseSection)openChoose(state.lastChooseSection);else showScreen('homeScreen')}
+function openGamesMenu(lessonId){const L=LESSONS.find(x=>x.id===lessonId);document.getElementById('gamesMenuTitle').innerText=`🎮 Games – ${L?L.title:''}`;document.getElementById('gamesButtons').innerHTML=`<button class="btn-menu b1" onclick="launchGame(1)">🖼️ Picture Detective</button><button class="btn-menu b2" onclick="launchGame(2)">🔗 Word–Meaning Match</button><button class="btn-menu b3" onclick="launchGame(3)">🔍 Missing Letter Hunter</button><button class="btn-menu b4" onclick="launchGame(4)">🧩 Word Builder</button><button class="btn-menu b5" onclick="launchGame(5)">🎧 Listening Challenge</button><button class="btn-menu b9" onclick="launchGame(6)">🌟 Meaning Master</button><button class="btn-menu b6" onclick="launchGame(7)">📋 Sequence the Events</button><button class="btn-menu b10" onclick="launchGame(8)">🎭 Who Said / Did It?</button><button class="btn-menu b14" onclick="launchGame(9)">🔄 Synonym / Antonym</button><button class="btn-menu b15" onclick="launchGame(10)">📝 Sentence Completer</button>`;showScreen('gamesMenuScreen')}
+
+function renderContentFor(section,lessonId){const L=LESSONS.find(x=>x.id===lessonId);document.getElementById('contentTitle').innerText=(SECTION_TITLES[section]||section)+' → '+(L?L.title:'');const body=document.getElementById('contentBody');body.innerHTML='';if(section==='read')renderRead(body,lessonId);else if(section==='learn')renderLearn(body,lessonId);else if(section==='activities')renderActivities(body,lessonId);else if(section==='quiz')renderQuiz(body,lessonId);else if(section==='vocab')renderVocab(body,lessonId);else if(section==='diary')renderDiary(body,lessonId);else if(section==='letter')renderLetter(body,lessonId);else if(section==='roleplay')renderRoleplay(body,lessonId);else if(section==='grammar')renderGrammar(body,lessonId);else if(section==='punctuation')renderPunctuation(body,lessonId);else if(section==='wordfun')renderWordFun(body,lessonId);else if(section==='poster')renderPoster(body,lessonId);showScreen('contentScreen')}
+
+function renderRead(body,lessonId){
+  const L=LESSONS.find(x=>x.id===lessonId)||LESSONS[0];
+  const lines=TEXTS[lessonId]||TEXTS.santhi;
+  const qa=QA_BY[lessonId]||QA_BY.santhi;
+  body.innerHTML=`<div class="story-title-wrap"><span class="story-title">${L.emoji} ${L.title}</span></div>
+  <div class="activity-sub ml">${L.sub}</div>
+  <button class="read-all-btn" id="readAllBtn">🔊 Read All / Stop</button>
+  <div id="storyParas"></div>
+  <div class="activity-block" style="margin-top:20px"><div class="activity-heading">🔎 Let's Explore</div><div id="qaBox"></div></div>`;
+  const paras=document.getElementById('storyParas');
+  lines.forEach(line=>{
+    const div=document.createElement('div');
+    div.className='story-para';
+    const safe=line.replace(/"/g,'&quot;');
+    div.innerHTML=`<p class="ml">${line}</p><button class="mini-play" onclick="speakText(this.dataset.t)" data-t="${safe}">🔊</button>`;
+    paras.appendChild(div);
+  });
+  const box=document.getElementById('qaBox');
+  qa.forEach((pair,i)=>{
+    const d=document.createElement('div');
+    d.className='qa-line';
+    d.innerHTML=`<div class="q">${pair[0]}</div><button class="reveal-btn" onclick="this.nextElementSibling.classList.toggle('show')">Answer</button><div class="a">${pair[1]}</div>`;
+    box.appendChild(d);
+  });
+  let reading=false;
+  document.getElementById('readAllBtn').onclick=function(){
+    if(reading){stopSpeech();reading=false;document.querySelectorAll('.story-para').forEach(p=>p.classList.remove('reading-now'));this.innerText='🔊 Read All / Stop';return;}
+    reading=true; this.innerText='⏹ Stop';
+    const nodes=[...document.querySelectorAll('#storyParas .story-para')];
+    let i=0;
+    const next=()=>{
+      if(!reading||i>=lines.length){reading=false;document.getElementById('readAllBtn').innerText='🔊 Read All / Stop';nodes.forEach(p=>p.classList.remove('reading-now'));return;}
+      nodes.forEach(p=>p.classList.remove('reading-now'));
+      nodes[i].classList.add('reading-now');
+      nodes[i].scrollIntoView({behavior:'smooth',block:'center'});
+      speakText(lines[i],()=>{i++;next();});
+    };
+    next();
+  };
+}
+
+function renderLearn(body,lessonId){const vocab=VOCAB_BY_LESSON[lessonId]||[];body.innerHTML=`<div class="cards-grid" id="learnGrid"></div>`;const grid=document.getElementById('learnGrid');vocab.forEach(item=>{const card=document.createElement('div');card.className='word-card';card.onclick=()=>{card.classList.add('playing');speakText(item.word);playSound('click');setTimeout(()=>card.classList.remove('playing'),1200)};card.innerHTML=`<div class="card-emoji">${item.emoji}</div><div class="word-eng">${item.word}</div><div class="word-meaning ml">${item.meaning}</div><button class="replay-btn">🔊 Listen</button>`;grid.appendChild(card)})}
+
+function renderActivities(body,lessonId){
+  const blocks={
+    sujatha:`<div class="activity-block"><div class="activity-heading">1. യാത്രകൾ എന്തിനെല്ലാം?</div><div class="activity-sub">നേടിയ അനുഭവപാഠങ്ങൾ ചർച്ച ചെയ്യുക.</div><textarea class="write-box"></textarea><button class="reveal-model-btn" onclick="revealModel('a1',this)">💡 Show Model</button><div class="model-answer-box" id="a1">അറിവ് നിർമിക്കാൻ, സംസ്കാരങ്ങൾ അറിയാൻ, സ്വയം കണ്ടെത്താൻ, തൊഴിൽ / തീർഥാടനം / സൗഹൃദം.</div></div>
+<div class="activity-block"><div class="activity-heading">2. ശീർഷകത്തിന്റെ ഔചിത്യം</div><div class="activity-sub">നടക്കുന്നതോറും തെളിയും വഴികൾ — എന്തുകൊണ്ട്?</div><textarea class="write-box"></textarea><button class="reveal-model-btn" onclick="revealModel('a2',this)">💡 Show Model</button><div class="model-answer-box" id="a2">നടക്കുന്തോറും പുതിയ വഴികളും മൂല്യങ്ങളും തെളിയുന്നു. യാത്ര അനുഭവത്തിന്റെ വെളിച്ചമാണ്.</div></div>
+<div class="activity-block"><div class="activity-heading">3. കത്തിലെ ആവിഷ്കാരം</div><textarea class="write-box"></textarea><button class="reveal-model-btn" onclick="revealModel('a3',this)">💡 Show Model</button><div class="model-answer-box" id="a3">സ്നേഹസംബോധന, ആത്മകഥാപരമായ സ്വരം, യാത്രയെ ജീവിതപാഠമായി കാണൽ.</div></div>`,
+    santhi:`<div class="activity-block"><div class="activity-heading">1. ബംഗാളും കേരളവും</div><div class="activity-sub">ബംഗാൾ ഗ്രാമം സ്വന്തം നാടിനെ ഓർമിപ്പിക്കുന്നത് എങ്ങനെ?</div><textarea class="write-box"></textarea><button class="reveal-model-btn" onclick="revealModel('s1',this)">💡 Show Model</button><div class="model-answer-box" id="s1">തെങ്ങ്, വാഴത്തോട്ടം, ആൽത്തറ, പാടം, കർഷകക്കുടിൽ — പൊറ്റക്കാട്ട് കേരളത്തെ അനുഭവിക്കുകയാണ്.</div></div>
+<div class="activity-block"><div class="activity-heading">2. “ഇതെല്ലാം തന്നെ ശാന്തിനികേതനം”</div><textarea class="write-box"></textarea><button class="reveal-model-btn" onclick="revealModel('s2',this)">💡 Show Model</button><div class="model-answer-box" id="s2">വിദ്യാലയം ഭിത്തിക്കുള്ളിൽ ഒതുങ്ങുന്നില്ല. പ്രകൃതിയും ഗ്രാമവും തന്നെ പാഠശാല.</div></div>
+<div class="activity-block"><div class="activity-heading">3. കലാഭവനവും ശ്രീനികേതനവും</div><textarea class="write-box"></textarea><button class="reveal-model-btn" onclick="revealModel('s3',this)">💡 Show Model</button><div class="model-answer-box" id="s3">കലാഭവനം: ചിത്രകല. ശ്രീനികേതനം: ഗ്രാമോന്നതി.</div></div>`,
+    marupani:`<div class="activity-block"><div class="activity-heading">1. കാഴ്ചയെ മറ്റൊരു രൂപത്തിൽ</div><textarea class="write-box"></textarea><button class="reveal-model-btn" onclick="revealModel('m1',this)">💡 Show Model</button><div class="model-answer-box" id="m1">സൂര്യൻ കനൽനിറമായി പിൻമാറുന്നു. നിഴൽ പതാകപോലെ ഉയരുന്നു.</div></div>
+<div class="activity-block"><div class="activity-heading">2. ദൃശ്യാവിഷ്കാരം</div><textarea class="write-box"></textarea><button class="reveal-model-btn" onclick="revealModel('m2',this)">💡 Show Model</button><div class="model-answer-box" id="m2">കാഴ്ചയെ വായനക്കാരന്റെ മുന്നിൽ നിർത്തുന്ന യാത്രാവിവരണരീതി.</div></div>
+<div class="activity-block"><div class="activity-heading">3. എത്രനാളായി! / എത്രനാളായി?</div><textarea class="write-box"></textarea><button class="reveal-model-btn" onclick="revealModel('m3',this)">💡 Show Model</button><div class="model-answer-box" id="m3">ആശ്ചര്യചിഹ്നം — വിസ്മയം. ചോദ്യചിഹ്നം — വിവരം തേടൽ.</div></div>`,
+    smarakam:`<div class="activity-block"><div class="activity-heading">1. വിനീതമായ ശ്രമം</div><textarea class="write-box"></textarea><button class="reveal-model-btn" onclick="revealModel('p1',this)">💡 Show Model</button><div class="model-answer-box" id="p1">ചിറകില്ല, ആകാശം സ്വന്തമല്ല. എന്നിട്ടും വിത്തുമായി പറക്കുന്നു.</div></div>
+<div class="activity-block"><div class="activity-heading">2. വിത്തിനെ മടിയിൽ വച്ച്</div><textarea class="write-box"></textarea><button class="reveal-model-btn" onclick="revealModel('p2',this)">💡 Show Model</button><div class="model-answer-box" id="p2">ഭാവിജീവിതത്തെ സംരക്ഷിച്ചുള്ള യാത്ര.</div></div>
+<div class="activity-block"><div class="activity-heading">3. അറിവില്ലായ്മയുടെ ഭാരക്കുറവ്</div><textarea class="write-box"></textarea><button class="reveal-model-btn" onclick="revealModel('p3',this)">💡 Show Model</button><div class="model-answer-box" id="p3">അറിവിന്റെ അഹങ്കാരം ഭാരം. അറിയില്ലെന്ന തിരിച്ചറിവ് യാത്രയെ സാധ്യമാക്കുന്നു.</div></div>`,
+    najib:`<div class="activity-block"><div class="activity-heading">1. ഭീതിയുടെ സൂചനകൾ</div><textarea class="write-box"></textarea><button class="reveal-model-btn" onclick="revealModel('n1',this)">💡 Show Model</button><div class="model-answer-box" id="n1">അജ്ഞാതനായ അർബാബ്, പിൻകൂട, രാത്രി, മണൽപ്പാത, വിശപ്പ്, പ്രതീക്ഷയുടെ തകർച്ച.</div></div>
+<div class="activity-block"><div class="activity-heading">2. പച്ചവെള്ളം</div><textarea class="write-box"></textarea><button class="reveal-model-btn" onclick="revealModel('n2',this)">💡 Show Model</button><div class="model-answer-box" id="n2">പച്ചവെള്ളം = ശുദ്ധജലം. ഉദാ: പച്ചക്കറി, പച്ചമണ്ണ്.</div></div>
+<div class="activity-block"><div class="activity-heading">3. വോയ്സ് മെസേജ്</div><textarea class="write-box"></textarea><button class="reveal-model-btn" onclick="revealModel('n3',this)">💡 Show Model</button><div class="model-answer-box" id="n3">സുഹൃത്തേ, റിയാദിൽ ഇറങ്ങി. പഴയ വണ്ടിയുടെ പിന്നിൽ മണൽക്കുന്ന്. ഇതാണോ ഞാൻ കണ്ട സ്വപ്നം?</div></div>`
+  };
+  body.innerHTML=blocks[lessonId]||blocks.santhi;
+}
+
+function renderQuiz(body,lessonId){const quiz=QUIZ_BY_LESSON[lessonId]||[];state.quizSubmitted=false;body.innerHTML=`<div id="quizScoreBox" style="display:none" class="quiz-score-box"></div><div id="quizContainer"></div><div style="text-align:center"><button class="submit-quiz-btn" onclick="submitQuiz('${lessonId}')">✅ Submit Answers</button></div>`;const c=document.getElementById('quizContainer');quiz.forEach((item,qi)=>{const qd=document.createElement('div');qd.className='quiz-q';qd.innerHTML=`<div class="qtext">${qi+1}. ${item.q}</div><div class="quiz-opts" id="qopts${qi}"></div>`;c.appendChild(qd);const od=qd.querySelector('#qopts'+qi);item.opts.forEach((opt,oi)=>{const b=document.createElement('div');b.className='quiz-opt';b.innerText=opt;b.dataset.qi=qi;b.dataset.oi=oi;b.onclick=()=>{if(state.quizSubmitted)return;document.querySelectorAll('#qopts'+qi+' .quiz-opt').forEach(e=>e.classList.remove('picked'));b.classList.add('picked');playSound('click')};od.appendChild(b)})})}
+function submitQuiz(lessonId){if(state.quizSubmitted)return;state.quizSubmitted=true;const quiz=QUIZ_BY_LESSON[lessonId]||[];let score=0;quiz.forEach((item,qi)=>{const opts=document.querySelectorAll('#qopts'+qi+' .quiz-opt');const picked=document.querySelector('#qopts'+qi+' .picked');if(picked&&parseInt(picked.dataset.oi)===item.ans)score++;opts.forEach(o=>{if(parseInt(o.dataset.oi)===item.ans)o.classList.add('correct-ans');else if(o.classList.contains('picked'))o.classList.add('wrong-ans')})});state.score+=score*10;state.stars+=(score>=Math.ceil(quiz.length*.8)?2:1);updateStatsUI();const box=document.getElementById('quizScoreBox');box.style.display='block';box.innerHTML=`Your Score: ${score} / ${quiz.length}  ${score>=Math.ceil(quiz.length*.8)?'Excellent!':score>=Math.ceil(quiz.length*.5)?'Good job!':'Keep practicing!'}`;playSound(score>=Math.ceil(quiz.length*.8)?'fanfare':'correct')}
+
+function renderVocab(body,lessonId){const vocab=VOCAB_BY_LESSON[lessonId]||[];body.innerHTML=`<table class="vocab-table"><thead><tr><th>പദം</th><th>അർത്ഥം (Malayalam / English)</th></tr></thead><tbody>${vocab.map(v=>`<tr><td><span class="vocab-emoji">${v.emoji}</span> <b>${v.word}</b></td><td class="ml">${v.meaning}</td></tr>`).join('')}</tbody></table>`}
+function renderDiary(body,lessonId){
+  const models={sujatha:'ഇന്ന് വഴിയോരത്ത് ഒരു അപരിചിത മുഖം കണ്ടു. യാത്ര കാലടി മാത്രമല്ല, ഉള്ളിലെ വെളിച്ചവും കൂടിയാണ്.',santhi:'ശാന്തിനികേതനത്തിലെ മൺപാതയിലൂടെ നടന്നു. ഭിത്തിയില്ലാത്ത ഒരു വിദ്യാലയം. തെങ്ങിൻതോപ്പ് കേരളത്തെ ഓർമിപ്പിച്ചു.',marupani:'മരുഭൂമിയിൽ സൂര്യൻ പൊടുന്നനെ മറഞ്ഞു. നിഴലുകൾ മനുഷ്യരൂപമായി.',smarakam:'ഒരു വിത്ത് കാറ്റിൽ പറന്നു. ചിറകില്ല. നാളെ ഒരു മരമായേക്കും.',najib:'റിയാദ് രാത്രി. വണ്ടിയുടെ പിറകിൽ മണൽ. വിശപ്പും ഭീതിയും.'};
+  body.innerHTML=`<div class="activity-heading">📔 എന്റെ യാത്രാദിനക്കുറിപ്പ്</div><div class="diary-page"><textarea class="write-box" style="min-height:140px" placeholder="തീയതി / സ്ഥലം / അനുഭവം..."></textarea></div><button class="reveal-model-btn" onclick="revealModel('d1',this)">💡 Show Model</button><div class="model-answer-box" id="d1">${models[lessonId]||models.santhi}</div>`;
+}
+
+function renderLetter(body,lessonId){
+  const models={sujatha:'പ്രിയ സുഹൃത്തേ, വീടിനുള്ളിലെ പാഠത്തേക്കാൾ വലുതാണ് വഴിയിലെ പാഠം. സ്നേഹത്തോടെ.',santhi:'പ്രിയ സുഹൃത്തേ, ശാന്തിനികേതനം ഒരു കെട്ടിടമല്ല. “ഇതെല്ലാം തന്നെ ശാന്തിനികേതനം.”',marupani:'പ്രിയമേ, മരുഭൂമിയിലെ അസ്തമയം ഒരു കവിതപോലെ. നിഴലുകൾ പതാകയുയർത്തി.',smarakam:'സ്നേഹിതാ, ഒരു വിത്തിന്റെ യാത്ര വായിച്ചു. ചെറിയ ശ്രമം നാളെ മരമാകും.',najib:'സുഹൃത്തേ, ഗൾഫിൽ ഇറങ്ങി. പഴയ വണ്ടിയുടെ പിറകിൽ മണൽക്കുന്ന്. ഭയം ഉണ്ട്.'};
+  body.innerHTML=`<div class="activity-heading">✉️ Letter to a friend</div><div class="letter-page"><div>പ്രിയ സുഹൃത്തേ,</div><textarea class="write-box" style="min-height:130px"></textarea><div style="text-align:right;margin-top:6px">നിന്റെ സ്നേഹിതൻ / സ്നേഹിത</div></div><button class="reveal-model-btn" onclick="revealModel('lm',this)">💡 Show Model</button><div class="model-answer-box" id="lm">${models[lessonId]||models.santhi}</div>`;
+}
+
+function renderRoleplay(body,lessonId){
+  const scripts={
+    sujatha:`<div class="script-line"><b>സുജാതാദേവി:</b> പേട്ടേ, ഈ യാത്ര എനിക്കൊരു ഹിമാലയമായി.</div><div class="script-line"><b>സുഹൃത്ത്:</b> എന്താണ് ഏറ്റവും വലിയ പാഠം?</div><div class="script-line"><b>സുജാതാദേവി:</b> വഴിയോരത്തെ മനുഷ്യരാണ് യഥാർഥ പുസ്തകം.</div>`,
+    santhi:`<div class="script-line"><b>പൊറ്റക്കാട്ട്:</b> ശാന്തിനികേതനത്തിലേക്കുള്ള വഴി ഏതാണ്?</div><div class="script-line"><b>ബംഗാളി:</b> ഇതെല്ലാം തന്നെ ശാന്തിനികേതനം.</div><div class="script-line"><b>പൊറ്റക്കാട്ട്:</b> ഭിത്തിയില്ലാത്ത ഒരു വിദ്യാലയം!</div>`,
+    marupani:`<div class="script-line"><b>യാത്രികൻ:</b> സൂര്യൻ ഇനിയും ഉയരെയല്ലേ?</div><div class="script-line"><b>സഹയാത്രികൻ:</b> മരുഭൂമിയിൽ അസ്തമയം പൊടുന്നനെയാണ്.</div>`,
+    smarakam:`<div class="script-line"><b>കവി:</b> ചിറകില്ലാത്ത ഒരു യാത്രയെ ഞാൻ കണ്ടു.</div><div class="script-line"><b>കുട്ടി:</b> അതെങ്ങനെ പറക്കും?</div><div class="script-line"><b>കവി:</b> വിത്തിനെ മടിയിൽ വച്ച്. നാളെ അത് മരമാകും.</div>`,
+    najib:`<div class="script-line"><b>നജീബ്:</b> ഇതാണോ നമ്മുടെ അർബാബ്?</div><div class="script-line"><b>അർബാബ്:</b> യാ അള്ളാ! പിറകിലേക്ക്.</div><div class="script-line"><b>നജീബ്:</b> ഞാൻ മോഹിച്ച ഗൾഫല്ല ഇത്.</div>`
+  };
+  body.innerHTML=`<div class="activity-heading">🎭 Role Play</div>`+(scripts[lessonId]||scripts.santhi);
+}
+
+function renderGrammar(body,lessonId){
+body.innerHTML=`<div class="activity-block"><div class="activity-heading">പേരും പ്രവൃത്തിയും</div><div class="activity-sub">നാമവും ക്രിയയും തിരിച്ചറിയുക.</div><div id="kriyaFill"></div><button class="check-btn" onclick="genericCheck('kri-sel','kriRes')">✅ Check</button><div class="result-msg" id="kriRes"></div></div>
+<div class="activity-block"><div class="activity-heading">ലിംഗം തിരിച്ചറിയുക</div><div id="lingFill"></div><button class="check-btn" onclick="genericCheck('ling-sel','lingRes')">✅ Check</button><div class="result-msg" id="lingRes"></div></div>`;
+const kri=[
+{b:'രാജൻ വളരെനേരം ',a:'ആലോചിച്ചു',aft:'।',o:['ആലോചിച്ചു','ആലോചന','മല']},
+{b:'അമ്മ പുഞ്ചിരി ',a:'തൂകി',aft:'।',o:['തൂകി','പുഞ്ചിരി','അമ്മ']},
+{b:'ബസ്സ് ചുരം ',a:'കയറി',aft:'।',o:['കയറി','ബസ്സ്','ചുരം']},
+{b:'ഉണ്ണി വിമാനത്തിൽ ',a:'പറന്നു',aft:'।',o:['പറന്നു','വിമാനം','കുട്ടി']}
+];
+const kDiv=document.getElementById('kriyaFill');kri.forEach(p=>{const row=document.createElement('div');row.className='activity-line';row.innerHTML=`${p.b}<select class="fillbox kri-sel" data-ans="${p.a}"><option value="">--</option>${p.o.map(x=>'<option>'+x+'</option>').join('')}</select>${p.aft}`;kDiv.appendChild(row)});
+const ling=[{w:'രാജൻ',a:'പുല്ലിംഗം'},{w:'അമ്മു',a:'സ്ത്രീലിംഗം'},{w:'അണക്കെട്ട്',a:'പുല്ലിംഗം'},{w:'യാത്ര',a:'സ്ത്രീലിംഗം'},{w:'വിമാനം',a:'പുല്ലിംഗം'}];
+const lDiv=document.getElementById('lingFill');ling.forEach(p=>{const row=document.createElement('div');row.className='activity-line';row.innerHTML=`<b>${p.w}</b> — <select class="fillbox ling-sel" data-ans="${p.a}"><option value="">--</option><option>പുല്ലിംഗം</option><option>സ്ത്രീലിംഗം</option></select>`;lDiv.appendChild(row)});
+}
+function renderPunctuation(body,lessonId){
+body.innerHTML=`<div class="activity-sub">ശരിയായ വിരാമചിഹ്നം തിരഞ്ഞെടുക്കുക.</div><div id="punctFill"></div><button class="check-btn" onclick="genericCheck('punct-sel','punctResult')">✅ Check</button><div class="result-msg" id="punctResult"></div>`;
+const items=[
+{b:'താജ്‌മഹൽ ആഗ്രയിലാണ്',a:'।',aft:'',o:['।','?','!']},
+{b:'അപ്പാ താജ്‌മഹൽ എവിടെ',a:'?',aft:'',o:['?','।','!']},
+{b:'എന്തൊരു ഉയരം',a:'!',aft:'',o:['!','?','।']},
+{b:'കൊടൈക്കനാൽ എത്തി',a:'।',aft:'',o:['।','!','?']}
+];
+const pDiv=document.getElementById('punctFill');items.forEach(p=>{const row=document.createElement('div');row.className='activity-line';row.innerHTML=`${p.b} <select class="fillbox punct-sel" data-ans="${p.a}"><option value="">--</option>${p.o.map(x=>'<option>'+x+'</option>').join('')}</select>`;pDiv.appendChild(row)});
+}
+function renderWordFun(body,lessonId){
+body.innerHTML=`
+<div class="activity-block"><div class="activity-heading">വിപരീതപദം</div><div id="oppFill"></div><button class="check-btn" onclick="genericCheck('opp-sel','oppRes')">✅ Check</button><div class="result-msg" id="oppRes"></div></div>
+<div class="activity-block"><div class="activity-heading">സമാനപദം</div><div id="synFill"></div><button class="check-btn" onclick="genericCheck('syn-sel','synRes')">✅ Check</button><div class="result-msg" id="synRes"></div></div>
+<div class="activity-block"><div class="activity-heading">പദം — അർത്ഥം</div><div id="meanFill"></div><button class="check-btn" onclick="genericCheck('mean-sel','meanRes')">✅ Check</button><div class="result-msg" id="meanRes"></div></div>`;
+const opp=[{word:'ഉയരുക',ans:'ഇറങ്ങുക',opts:['ഇറങ്ങുക','പാടുക','ഓടുക']},{word:'തണുപ്പ്',ans:'ചൂട്',opts:['ചൂട്','മഞ്ഞ്','മഴ']},{word:'ദൂരം',ans:'സമീപം',opts:['സമീപം','ഉയരം','താഴ്ച']},{word:'സന്തോഷം',ans:'ദുഃഖം',opts:['ദുഃഖം','യാത്ര','മല']},{word:'തുറക്കുക',ans:'അടയ്ക്കുക',opts:['അടയ്ക്കുക','പറക്കുക','നോക്കുക']}];
+const oDiv=document.getElementById('oppFill');
+opp.forEach(o=>{const row=document.createElement('div');row.style.cssText='display:flex;align-items:center;gap:10px;margin:8px;flex-wrap:wrap';row.innerHTML=`<span style="flex:1;min-width:120px;font-weight:700">${o.word}</span> വിപരീതം <select class="fillbox opp-sel" data-ans="${o.ans}"><option value="">തിരഞ്ഞെടുക്കുക</option>${o.opts.map(x=>'<option>'+x+'</option>').join('')}</select>`;oDiv.appendChild(row)});
+const syn=[{word:'വിസ്മയം',ans:'അത്ഭുതം',opts:['അത്ഭുതം','ദുഃഖം','കോപം']},{word:'യാത്ര',ans:'സഞ്ചാരം',opts:['സഞ്ചാരം','ഇരിപ്പ്','ഉറക്കം']},{word:'ചുരം',ans:'മലപ്പാത',opts:['മലപ്പാത','നദി','വീട്']},{word:'മുകിൽ',ans:'മേഘം',opts:['മേഘം','സൂര്യൻ','മണൽ']}];
+const sDiv=document.getElementById('synFill');
+syn.forEach(o=>{const row=document.createElement('div');row.style.cssText='display:flex;align-items:center;gap:10px;margin:8px;flex-wrap:wrap';row.innerHTML=`<span style="flex:1;min-width:120px;font-weight:700">${o.word}</span> സമാനം <select class="fillbox syn-sel" data-ans="${o.ans}"><option value="">തിരഞ്ഞെടുക്കുക</option>${o.opts.map(x=>'<option>'+x+'</option>').join('')}</select>`;sDiv.appendChild(row)});
+const mean=[{word:'അണക്കെട്ട്',ans:'നദിയെ തടയുന്ന വൻ ഭിത്തി',opts:['നദിയെ തടയുന്ന വൻ ഭിത്തി','ഒരു പുഴ','ഒരു വീട്']},{word:'താഴ്‌വര',ans:'മലകൾക്കിടയിലുള്ള താണ പ്രദേശം',opts:['മലകൾക്കിടയിലുള്ള താണ പ്രദേശം','കടൽത്തീരം','നഗരം']},{word:'വിമാനം',ans:'ആകാശത്ത് പറക്കുന്ന വാഹനം',opts:['ആകാശത്ത് പറക്കുന്ന വാഹനം','കപ്പൽ','തീവണ്ടി']},{word:'മഞ്ഞ്',ans:'തണുത്ത വെളുത്ത തുള്ളി',opts:['തണുത്ത വെളുത്ത തുള്ളി','തീ','മണൽ']}];
+const mDiv=document.getElementById('meanFill');
+mean.forEach(o=>{const row=document.createElement('div');row.style.cssText='display:flex;align-items:center;gap:10px;margin:8px;flex-wrap:wrap';row.innerHTML=`<span style="flex:1;min-width:140px;font-weight:700">${o.word}</span> അർത്ഥം <select class="fillbox mean-sel" data-ans="${o.ans}"><option value="">തിരഞ്ഞെടുക്കുക</option>${o.opts.map(x=>'<option>'+x+'</option>').join('')}</select>`;mDiv.appendChild(row)});
+}
+function renderPoster(body,lessonId){
+body.innerHTML=`<div class="activity-sub">Theme: യാത്ര ചെയ്ക്കാം / നടക്കുന്നതോറും തെളിയും വഴികൾ</div><div class="poster-box"><div style="font-size:1.3rem;font-weight:800;color:#1565C0;margin-bottom:8px">🚌 യാത്ര ചെയ്ക്കാം</div><textarea class="write-box" style="min-height:100px;background:#fff" placeholder="സന്ദേശം..."></textarea></div><button class="reveal-model-btn" onclick="revealModel('pm',this)">💡 Show Sample</button><div class="model-answer-box" id="pm">🏞️ സ്വന്തം നാട്ടിലും താജ്‌മഹലുണ്ട്.<br>⛰️ ഉയരങ്ങളിലേക്ക് യാത്ര ചെയ്യൂ.<br>✈️ ലോകം ഒരു ചിത്രമായി കാണൂ.<br>കണ്ണുതുറന്നാൽ യാത്ര ആരംഭിക്കും.</div>`
+}
+function renderModelQP(){document.getElementById('modelQPContainer').innerHTML=`<div style="text-align:center;margin-bottom:18px"><h2 style="color:#1565C0;font-size:1.4rem">Model Question Paper</h2><div>Unit 1 • നടക്കുന്നതോറും തെളിയും വഴികൾ</div><div style="font-size:.95rem;color:#555;margin-top:6px">Max Marks: 20 | Time: 45 minutes</div></div>
+<div class="qp-section"><div class="qp-heading">I. ഹ്രസ്വചോദ്യങ്ങൾ</div>
+<div class="qp-q"><span class="qnum">1.</span> യാത്രകൾ എന്തിനെല്ലാം? (2)</div>
+<div class="qp-q"><span class="qnum">2.</span> “ഇതെല്ലാം തന്നെ ശാന്തിനികേതനം” — ആശയം. (3)</div>
+<div class="qp-q"><span class="qnum">3.</span> മരുഭൂമിയിലെ അസ്തമയക്കാഴ്ച ദൃശ്യാവിഷ്കാരമാക്കിയത് എങ്ങനെ? (3)</div>
+<div class="qp-q"><span class="qnum">4.</span> ആപ്പുപ്പൂന്താടിയുടെ യാത്ര ജീവിതയാത്രയുടെ പ്രതീകമാകുന്നത് എങ്ങനെ? (4)</div>
+<div class="qp-q"><span class="qnum">5.</span> നജീബിന്റെ ഭീതിയുടെ സൂചനകൾ. (4)</div>
+<div class="qp-q"><span class="qnum">6.</span> യൂണിറ്റ് ശീർഷകത്തിന്റെ ഔചിത്യം. (4)</div></div>
+<button class="reveal-model-btn" onclick="revealModel('mqpA',this)">💡 Show Model</button>
+<div class="model-answer-box" id="mqpA">1. അറിവ്, സംസ്കാരം, സ്വയംതിരിച്ചറിവ്.<br>2. വിദ്യാലയം ഭിത്തിക്കുള്ളിൽ ഒതുങ്ങുന്നില്ല.<br>3. നിഴലുകൾ മനുഷ്യരൂപവും പതാകയുമാകുന്നു.<br>4. ചിറകില്ലാതെയും വിത്തുമായി പറക്കുന്നു; നാളെ മരം.<br>5. അജ്ഞാത അർബാബ്, പിൻകൂട, മണൽപ്പാത, വിശപ്പ്.<br>6. നടക്കുന്തോറും പുതിയ വഴികളും മൂല്യങ്ങളും തെളിയുന്നു.</div>`;}
+
+function renderBio(){document.getElementById('bioContainer').innerHTML=`
+<div class="bio-photo">✍️</div>
+<div class="bio-card"><div class="bio-row"><span class="bio-label">സുജാതാദേവി</span><span>യാത്രാകത്ത് — യാത്രയെ ജീവിതപാഠമായി കാണുന്നു.</span></div></div>
+<div class="bio-card"><div class="bio-row"><span class="bio-label">എസ്. കെ. പൊറ്റക്കാട്ട്</span><span>ശാന്തിനികേതനം — ടാഗോറിന്റെ വിദ്യാഭ്യാസദർശനം.</span></div></div>
+<div class="bio-card"><div class="bio-row"><span class="bio-label">വി. മുസാഫിർ അഹമ്മദ്</span><span>മറുപനിയുടെ ആത്മകഥ — മരുഭൂമിയെ ദൃശ്യകാവ്യമാക്കുന്നു.</span></div></div>
+<div class="bio-card"><div class="bio-row"><span class="bio-label">വിനോദ് കുറ്റി</span><span>സ്മാരകം — വിത്തിന്റെ എളിയ യാത്ര.</span></div></div>
+<div class="bio-card"><div class="bio-row"><span class="bio-label">ബെന്യാമിൻ</span><span>ആടുജീവിതം — പ്രവാസത്തിന്റെ ഭീതി.</span></div></div>`;}
+
+function renderDoorway(){document.getElementById('doorwayContainer').innerHTML=`
+<div class="story-title-wrap"><span class="story-title">🎶 സ്മാരകം</span></div>
+<div class="story-para"><p class="ml">${TEXTS.smarakam.join('<br>')}</p><button class="mini-play" onclick="speakText(TEXTS.smarakam.join(' '))">🔊</button></div>
+<div class="activity-sub">യൂണിറ്റ് ആശയം: നടക്കുന്നതോറും തെളിയും വഴികൾ — യാത്ര, അനുഭവം, എളിയ ശ്രമം.</div>`;}
+
+function renderProgress(){const done=Object.keys(state.visited).length;const pct=Math.min(100,Math.round(done*5));document.getElementById('progressContainer').innerHTML=`<div class="activity-heading" style="text-align:center">📊 My Progress</div><div class="progress-big-bar"><div class="progress-big-fill" style="width:${pct}%">${pct}%</div></div><div class="activity-sub">You have opened ${done} section(s). Keep exploring all three lessons!</div><div class="activity-sub ml">മൂന്ന് പാഠങ്ങളും (നടക്കുന്നതോറും തെളിയും വഴികൾ, കാട്ടിലെ മഴ, ഡെയ്സിച്ചെടി) പൂർത്തിയാക്കുക.</div>`}
+
+function getCurrentVocab(){return VOCAB_BY_LESSON[state.currentLesson]||VOCAB_BY_LESSON.sujatha}
+function launchGame(n){state.activeGame=n;state.currentGameIndex=0;state.gameQueue=[...getCurrentVocab()].sort(()=>Math.random()-.5);if(n===7){showScreen('game7Screen');renderGame7();return}if(n===8){showScreen('game8Screen');renderGame8();return}if(n===9){showScreen('game9Screen');renderGame9();return}if(n===10){showScreen('game10Screen');renderGame10();return}renderCurrentGame()}
+function nextQuestion(){state.currentGameIndex++;if(state.currentGameIndex>=5||state.currentGameIndex>=state.gameQueue.length){state.stars+=1;updateStatsUI();showRewardModal()}else renderCurrentGame()}
+function renderCurrentGame(){if(state.activeGame===1)renderGame1();else if(state.activeGame===2)renderGame2();else if(state.activeGame===3)renderGame3();else if(state.activeGame===4)renderGame4();else if(state.activeGame===5)renderGame5();else if(state.activeGame===6)renderGame6()}
+function handleAnswer(isCorrect,el){if(isCorrect){state.score+=10;playSound('correct');if(el)el.classList.add('correct');updateStatsUI();setTimeout(nextQuestion,900)}else{playSound('wrong');if(el)el.classList.add('wrong');state.lives--;updateStatsUI();if(state.lives<=0){setTimeout(()=>{alert('Game Over! Try again.');showScreen('homeScreen');state.lives=5;updateStatsUI()},500)}}}
+function renderGame1(){showScreen('game1Screen');const vocab=getCurrentVocab();const item=state.gameQueue[state.currentGameIndex]||vocab[0];document.getElementById('g1ImgBox').innerHTML=item.emoji;const options=[item.word];while(options.length<4){const r=vocab[Math.floor(Math.random()*vocab.length)].word;if(!options.includes(r))options.push(r)}options.sort(()=>Math.random()-.5);const grid=document.getElementById('g1OptionsGrid');grid.innerHTML='';options.forEach(opt=>{const btn=document.createElement('button');btn.className='option-btn';btn.innerText=opt;btn.onclick=()=>{speakText(opt);handleAnswer(opt===item.word,btn)};grid.appendChild(btn)})}
+let g2SelPic=null,g2SelWord=null,g2Matches=0;
+function renderGame2(){showScreen('game2Screen');g2SelPic=null;g2SelWord=null;g2Matches=0;const items=state.gameQueue.slice(0,Math.min(4,state.gameQueue.length));const shuffled=[...items].sort(()=>Math.random()-.5);const pc=document.getElementById('g2PicsCol'),wc=document.getElementById('g2WordsCol');pc.innerHTML='';wc.innerHTML='';items.forEach(item=>{const d=document.createElement('div');d.className='match-item';d.dataset.id=item.id;d.innerHTML=`<div class="text-thumb">${item.word}</div>`;d.onclick=()=>{playSound('click');document.querySelectorAll('#g2PicsCol .match-item').forEach(e=>e.classList.remove('selected'));d.classList.add('selected');g2SelPic=item.id;checkMatch()};pc.appendChild(d)});shuffled.forEach(item=>{const d=document.createElement('div');d.className='match-item';d.dataset.id=item.id;d.innerHTML=`<div class="text-thumb ml" style="font-size:.95rem">${item.meaning}</div>`;d.onclick=()=>{speakText(item.word);document.querySelectorAll('#g2WordsCol .match-item').forEach(e=>e.classList.remove('selected'));d.classList.add('selected');g2SelWord=item.id;checkMatch()};wc.appendChild(d)})}
+function checkMatch(){if(g2SelPic&&g2SelWord){if(g2SelPic===g2SelWord){playSound('correct');state.score+=10;g2Matches++;const p=document.querySelector(`#g2PicsCol .match-item[data-id="${g2SelPic}"]`),w=document.querySelector(`#g2WordsCol .match-item[data-id="${g2SelWord}"]`);if(p)p.classList.add('matched');if(w)w.classList.add('matched');g2SelPic=null;g2SelWord=null;updateStatsUI();if(g2Matches>=4||g2Matches>=state.gameQueue.slice(0,4).length)setTimeout(()=>{state.stars+=1;updateStatsUI();showRewardModal()},900)}else{playSound('wrong');state.lives--;updateStatsUI();const p=document.querySelector('#g2PicsCol .selected'),w=document.querySelector('#g2WordsCol .selected');if(p)p.classList.add('wrong');if(w)w.classList.add('wrong');setTimeout(()=>{if(p)p.classList.remove('selected','wrong');if(w)w.classList.remove('selected','wrong');g2SelPic=null;g2SelWord=null},600)}}}
+function renderGame3(){showScreen('game3Screen');const item=state.gameQueue[state.currentGameIndex];document.getElementById('g3ImgBox').innerHTML=item.emoji;document.getElementById('g3WordDisplay').innerText=item.missingDisplay;const vocab=getCurrentVocab();const pool=vocab.map(v=>v.missingLetter);const shuffled=[...new Set([item.missingLetter,...pool])].sort(()=>Math.random()-.5).slice(0,5);if(!shuffled.includes(item.missingLetter))shuffled[0]=item.missingLetter;const grid=document.getElementById('g3LettersGrid');grid.innerHTML='';shuffled.forEach(l=>{const btn=document.createElement('button');btn.className='letter-btn';btn.innerText=l;btn.onclick=()=>{speakText(l);handleAnswer(l===item.missingLetter,btn)};grid.appendChild(btn)})}
+let g4Letters=[];
+function renderGame4(){showScreen('game4Screen');const item=state.gameQueue[state.currentGameIndex];g4Letters=[];document.getElementById('g4ImgBox').innerHTML=item.emoji;const slotsDiv=document.getElementById('g4Slots');slotsDiv.innerHTML='';item.letters.forEach(()=>{const s=document.createElement('div');s.className='letter-slot';slotsDiv.appendChild(s)});const scrambled=[...item.letters].sort(()=>Math.random()-.5);const tilesDiv=document.getElementById('g4Tiles');tilesDiv.innerHTML='';scrambled.forEach(l=>{const t=document.createElement('div');t.className='tile-btn';t.innerText=l;t.onclick=()=>{if(t.style.visibility==='hidden')return;speakText(l);playSound('click');g4Letters.push(l);t.style.visibility='hidden';const slots=document.querySelectorAll('#g4Slots .letter-slot');slots[g4Letters.length-1].innerText=l;if(g4Letters.length===item.letters.length){const ok=g4Letters.join('')===item.letters.join('');handleAnswer(ok,null)}};tilesDiv.appendChild(t)})}
+function renderGame5(){showScreen('game5Screen');const vocab=getCurrentVocab();const item=state.gameQueue[state.currentGameIndex];const options=[item];while(options.length<4){const r=vocab[Math.floor(Math.random()*vocab.length)];if(!options.find(o=>o.id===r.id))options.push(r)}options.sort(()=>Math.random()-.5);const grid=document.getElementById('g5OptionsGrid');grid.innerHTML='';options.forEach(opt=>{const btn=document.createElement('button');btn.className='option-btn img-opt';btn.innerHTML=opt.emoji+'<br><span style="font-size:.9rem">'+opt.word+'</span>';btn.onclick=()=>{handleAnswer(opt.id===item.id,btn)};grid.appendChild(btn)});document.getElementById('g5ReplayBtn').onclick=()=>speakText(item.word);setTimeout(()=>speakText(item.word),400)}
+function renderGame6(){showScreen('game6Screen');const vocab=getCurrentVocab();const item=state.gameQueue[state.currentGameIndex];document.getElementById('g6MeaningBox').innerText=item.meaning;const options=[item.word];while(options.length<4){const r=vocab[Math.floor(Math.random()*vocab.length)].word;if(!options.includes(r))options.push(r)}options.sort(()=>Math.random()-.5);const grid=document.getElementById('g6OptionsGrid');grid.innerHTML='';options.forEach(opt=>{const btn=document.createElement('button');btn.className='option-btn';btn.innerText=opt;btn.onclick=()=>{speakText(opt);handleAnswer(opt===item.word,btn)};grid.appendChild(btn)})}
+let seqSelected=[];
+function renderGame7(){seqSelected=[];const list=document.getElementById('g7SeqList');list.innerHTML='';
+const events=SEQ_BY[state.currentLesson]||SEQ_EVENTS;
+const shuffled=[...events].sort(()=>Math.random()-.5);
+shuffled.forEach((e,i)=>{const d=document.createElement('div');d.className='seq-item';d.dataset.order=e.order;d.innerHTML=`<span class="seq-num">${i+1}</span><span>${e.text}</span>`;
+d.onclick=()=>{if(d.classList.contains('correct'))return;playSound('click');if(d.classList.contains('selected')){d.classList.remove('selected');seqSelected=seqSelected.filter(x=>x!==d)}else{d.classList.add('selected');seqSelected.push(d)}};list.appendChild(d)});
+document.getElementById('g7Result').innerText='';}
+
+function checkSequence(){const selectedOrders=seqSelected.map(s=>parseInt(s.dataset.order));const n=seqSelected.length;const isCorrect=n>=5&&selectedOrders.every((o,i)=>o===i+1);const r=document.getElementById('g7Result');if(isCorrect){r.style.color='#2E7D32';r.innerText='Excellent! Correct sequence!';state.score+=20;state.stars+=1;updateStatsUI();playSound('correct');seqSelected.forEach(s=>s.classList.add('correct'));setTimeout(()=>showRewardModal(),1200)}else{r.style.color='#C62828';r.innerText='Not quite. Try the story / poem order.';playSound('wrong');state.lives--;updateStatsUI()}}
+function renderGame8(){const quotes=CHAR_QUOTES[state.currentLesson]||CHAR_QUOTES.sujatha;const item=quotes[state.currentGameIndex%quotes.length];document.getElementById('g8QuoteBox').innerText=item.quote;const grid=document.getElementById('g8OptionsGrid');grid.innerHTML='';item.opts.sort(()=>Math.random()-.5).forEach(opt=>{const btn=document.createElement('button');btn.className='option-btn';btn.innerText=opt;btn.onclick=()=>{handleAnswer(opt===item.ans,btn);if(opt===item.ans)setTimeout(()=>{state.currentGameIndex++;if(state.currentGameIndex>=quotes.length){state.stars+=1;updateStatsUI();showRewardModal()}else renderGame8()},900)};grid.appendChild(btn)})}
+function renderGame9(){const items=SYN_ANT[state.currentLesson]||SYN_ANT.sujatha;const item=items[state.currentGameIndex%items.length];document.getElementById('g9PromptBox').innerText=item.prompt;const grid=document.getElementById('g9OptionsGrid');grid.innerHTML='';item.opts.sort(()=>Math.random()-.5).forEach(opt=>{const btn=document.createElement('button');btn.className='option-btn';btn.innerText=opt;btn.onclick=()=>{handleAnswer(opt===item.ans,btn);if(opt===item.ans)setTimeout(()=>{state.currentGameIndex++;if(state.currentGameIndex>=items.length){state.stars+=1;updateStatsUI();showRewardModal()}else renderGame9()},900)};grid.appendChild(btn)})}
+function renderGame10(){const items=SENT_COMP[state.currentLesson]||SENT_COMP.sujatha;const item=items[state.currentGameIndex%items.length];document.getElementById('g10SentBox').innerText=item.sent;const grid=document.getElementById('g10OptionsGrid');grid.innerHTML='';item.opts.sort(()=>Math.random()-.5).forEach(opt=>{const btn=document.createElement('button');btn.className='option-btn';btn.innerText=opt;btn.onclick=()=>{handleAnswer(opt===item.ans,btn);if(opt===item.ans)setTimeout(()=>{state.currentGameIndex++;if(state.currentGameIndex>=items.length){state.stars+=1;updateStatsUI();showRewardModal()}else renderGame10()},900)};grid.appendChild(btn)})}
+
+function renderUnitQP(){
+  const el=document.getElementById('unitQPPaper');
+  if(!el) return;
+  el.innerHTML=`
+<div class="qp-school">Standard IX – Malayalam</div>
+<div class="qp-title">UNIT QUESTION PAPER</div>
+<div style="text-align:center;font-weight:bold;margin-bottom:6px">Unit 1 : നടക്കുന്നതോറും തെളിയും വഴികൾ</div>
+<div class="qp-meta"><span>Time: 45 minutes</span><span>Max. Marks: 20</span></div>
+<div class="qp-act"><div class="qp-act-h">Activity 1 – സുജാതാദേവിയുടെ കത്ത് (4)</div>
+<p>ക) യാത്രയെ എന്തായി കാണുന്നു?</p><div class="qp-lines"></div>
+<p>ഖ) ശീർഷകത്തിന്റെ ഔചിത്യം.</p><div class="qp-lines"></div></div>
+<div class="qp-act"><div class="qp-act-h">Activity 2 – ശാന്തിനികേതനം (4)</div>
+<p>ക) “ഇതെല്ലാം തന്നെ ശാന്തിനികേതനം” — വിശദമാക്കുക.</p><div class="qp-lines"></div>
+<p>ഖ) ശ്രീനികേതനത്തിന്റെ ലക്ഷ്യം.</p><div class="qp-lines"></div></div>
+<div class="qp-act"><div class="qp-act-h">Activity 3 – മറുപനി / സ്മാരകം (6)</div>
+<p>ക) അസ്തമയക്കാഴ്ച വിവരിക്കുക. (3)</p><div class="qp-lines"></div>
+<p>ഖ) “വിത്തിനെ മടിയിൽ വച്ച്” — പൊരുൾ. (3)</p><div class="qp-lines"></div></div>
+<div class="qp-act"><div class="qp-act-h">Activity 4 – ആടുജീവിതം / ഭാഷ (6)</div>
+<p>ക) ഭീതിയുടെ സൂചനകൾ. (3)</p><div class="qp-lines"></div>
+<p>ഖ) എത്രനാളായി! / എത്രനാളായി? — ചിഹ്നവ്യത്യാസം. (3)</p><div class="qp-lines"></div></div>
+<div class="qp-footer">Prepared by Smart Vidhya</div>`;
+}
+
+function printUnitQP(){playSound('click');showScreen('unitQPScreen');setTimeout(function(){window.print();},300)}
+function downloadUnitQPasPDF(){
+  playSound('click');
+  const paper=document.getElementById('unitQPPaper');
+  if(!paper){alert('Question paper not ready.');return;}
+  if(typeof html2pdf==='undefined'){alert('PDF library loading... Use Print → Save as PDF.');return;}
+  html2pdf().set({margin:[10,12,10,12],filename:'Unit1_Nadakkunnathorum_STD9_Prashn_Patra.pdf',image:{type:'jpeg',quality:0.98},html2canvas:{scale:2,useCORS:true},jsPDF:{unit:'mm',format:'a4',orientation:'portrait'}}).from(paper).save();
+}
+window.onload=function(){updateStatsUI();if('speechSynthesis'in window){window.speechSynthesis.getVoices();window.speechSynthesis.onvoiceschanged=pickVoice}};
 </script>
 </body>
-</html>
-```
 </html>
